@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glassfish-ejb-jar PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 EJB 3.1//EN"
+"http://glassfish.org/dtds/glassfish-ejb-jar_3_1-1.dtd">
+<glassfish-ejb-jar>
+    <enterprise-beans>
+        <ejb>
+            <ejb-name>AreasServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>AreasServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        <ejb>
+            <ejb-name>ConceptosServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>ConceptosServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+         <ejb>
+            <ejb-name>EquipoDicomServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>EquipoDicomServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        <ejb>
+            <ejb-name>InstitucionServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>InstitucionServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        <ejb>
+            <ejb-name>PacienteServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>PacienteServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        <ejb>
+            <ejb-name>VentaConceptosServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>VentaConceptosServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+    </enterprise-beans>
+</glassfish-ejb-jar>
