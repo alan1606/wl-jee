@@ -47,4 +47,10 @@ public class PacienteServiceRS {
         return pacienteService.encontrarPacientePorCurp(new Pacientes(curp));
     }
     
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("fecha/{fecha}")//hace referencia a /personas/{id}
+    public List<Pacientes> encontrarPacientesEnVentaConceptos(@PathParam("fecha") String fecha) {
+        return pacienteService.encontrarEnVentaConceptos(fecha);
+    }
 }

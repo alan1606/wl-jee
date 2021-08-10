@@ -72,7 +72,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "VentaConceptos.findBySalvadoVc", query = "SELECT v FROM VentaConceptos v WHERE v.salvadoVc = :salvadoVc"),
     @NamedQuery(name = "VentaConceptos.findByIdOrdenVenta", query = "SELECT v FROM VentaConceptos v WHERE v.idOrdenVenta = :idOrdenVenta"),
     @NamedQuery(name = "VentaConceptos.findByFechaAsignado", query = "SELECT v FROM VentaConceptos v WHERE v.fechaAsignado = :fechaAsignado"),
-    @NamedQuery(name = "VentaConceptos.findByHoraAsgnado", query = "SELECT v FROM VentaConceptos v WHERE v.horaAsgnado = :horaAsgnado"),
+    @NamedQuery(name = "VentaConceptos.findByHoraAsignado", query = "SELECT v FROM VentaConceptos v WHERE v.horaAsignado = :horaAsignado"),
     @NamedQuery(name = "VentaConceptos.findByEnWorklist", query = "SELECT v FROM VentaConceptos v WHERE v.enWorklist = :enWorklist")})
 public class VentaConceptos implements Serializable {
 
@@ -225,9 +225,9 @@ public class VentaConceptos implements Serializable {
     private Date fechaAsignado;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "hora_asgnado")
+    @Column(name = "hora_asignado")
     @Temporal(TemporalType.TIME)
-    private Date horaAsgnado;
+    private Date horaAsignado;
     @Basic(optional = false)
     @NotNull
     @Column(name = "en_worklist")
@@ -265,7 +265,7 @@ public class VentaConceptos implements Serializable {
         this.salvadoVc = salvadoVc;
         this.idOrdenVenta = idOrdenVenta;
         this.fechaAsignado = fechaAsignado;
-        this.horaAsgnado = horaAsgnado;
+        this.horaAsignado = horaAsgnado;
         this.enWorklist = enWorklist;
     }
 
@@ -622,11 +622,11 @@ public class VentaConceptos implements Serializable {
     }
 
     public Date getHoraAsgnado() {
-        return horaAsgnado;
+        return horaAsignado;
     }
 
     public void setHoraAsgnado(Date horaAsgnado) {
-        this.horaAsgnado = horaAsgnado;
+        this.horaAsignado = horaAsgnado;
     }
 
     public boolean getEnWorklist() {

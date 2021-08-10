@@ -5,7 +5,6 @@
  */
 package mx.com.gm.sga.servicio;
 
-import java.util.Date;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
@@ -52,6 +51,7 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin) {
         return ventaConceptosDao.findVentaConceptosByInstitucionFechas(institucion, fechaInicio, fechaFin);
     }
+
     
     
 }

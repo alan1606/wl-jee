@@ -18,5 +18,7 @@ public interface PacienteDao {
     public Pacientes findPacientesById(Pacientes paciente);
     
     public Pacientes findPacienteByCurp(Pacientes paciente);
+
+    public List<Pacientes> findPacientesVentaConceptosByDate(String fecha);
     
 }

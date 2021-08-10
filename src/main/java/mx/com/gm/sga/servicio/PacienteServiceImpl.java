@@ -47,5 +47,10 @@ public class PacienteServiceImpl implements PacienteService, PacienteServiceRemo
     public Pacientes encontrarPacientePorCurp(Pacientes paciente) {
         return pacienteDao.findPacienteByCurp(paciente);
     }
+
+    @Override
+    public List<Pacientes> encontrarEnVentaConceptos(String fecha) {
+        return pacienteDao.findPacientesVentaConceptosByDate(fecha);
+    }
     
 }

@@ -50,4 +50,6 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         return query.getResultList();
     }
 
+   
+
 }

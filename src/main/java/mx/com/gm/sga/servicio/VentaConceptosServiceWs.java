@@ -28,4 +28,5 @@ public interface VentaConceptosServiceWs {
 
     @WebMethod
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin);
+    
 }

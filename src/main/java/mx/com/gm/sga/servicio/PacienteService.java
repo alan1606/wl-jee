@@ -21,4 +21,6 @@ public interface PacienteService {
     public Pacientes encontrarPacientePorId(Pacientes paciente);
     
     public Pacientes encontrarPacientePorCurp(Pacientes paciente);
+    
+    public List<Pacientes> encontrarEnVentaConceptos(String fecha);
 }
