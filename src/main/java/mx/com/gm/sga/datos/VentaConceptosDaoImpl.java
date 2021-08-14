@@ -6,11 +6,13 @@
 package mx.com.gm.sga.datos;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import mx.com.gm.sga.domain.Institucion;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
 import mx.com.gm.sga.domain.VentaConceptos;
 import org.apache.logging.log4j.*;
@@ -22,7 +24,7 @@ import org.apache.logging.log4j.*;
 public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     static Logger log = LogManager.getRootLogger();
-    
+
     @PersistenceContext(unitName = "SgaPU")
     EntityManager em;
 
@@ -50,6 +52,39 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         return query.getResultList();
     }
 
-   
+    @Override
+    public VentaConceptos findByIdPacs(String idPacs) {
+        Query query = em.createQuery("from VentaConceptos v where v.idPacs = :idPacs");
+        query.setParameter("idPacs", idPacs);
+        return (VentaConceptos) query.getSingleResult();
+    }
+
+    @Override
+    public boolean actualizarIdOrdenVenta() {
+        String jpql = null;
+        Iterator iter = null;
+        Object[] tupla = null;
+        boolean cambiosHechos=false;
+        
+        //Se obtiene el máximo id de orden de venta
+        jpql = "select max(o.idOv) from OrdenVenta o";
+        Long encontrada = (Long) em.createQuery(jpql).getSingleResult();
+
+        
+        ///Obtiene la lista de ventasConceptos a actualizar
+        Query query = em.createQuery("from VentaConceptos v where v.idOrdenVenta.idOv = 1");
+        List<VentaConceptos> insertadosPeroNoActualizados = query.getResultList();
+        
+        
+        //Recorre la lista y setea la orden de venta con el id de la última orden de venta
+        for(VentaConceptos venta : insertadosPeroNoActualizados){
+            venta.setIdOrdenVenta(new OrdenVenta(encontrada));
+            em.merge(venta);
+            cambiosHechos=true;
+        }
+       
+        
+        return cambiosHechos;
+    }
 
 }

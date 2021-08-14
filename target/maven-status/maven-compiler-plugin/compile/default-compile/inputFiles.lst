@@ -41,6 +41,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\criteria\PruebaApiCriteria.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\VentaConceptos.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\OrdenVenta.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\cascade\PersistenciaCascadaJPA.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\asociaciones\ClienteAsociacionesJPA.java
@@ -57,6 +58,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceWs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuarioServiceRemote.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\CatalogoFormaPago.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRemote.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUPersonaDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDao.java

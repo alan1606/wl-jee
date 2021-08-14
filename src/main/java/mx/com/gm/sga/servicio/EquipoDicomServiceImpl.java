@@ -23,7 +23,7 @@ import mx.com.gm.sga.domain.EquipoDicom;
  */
 
 @Stateless
-@WebService(endpointInterface = "mx.com.gm.sga.servicio.EquipoDicomServiceServiceWs")
+@WebService(endpointInterface = "mx.com.gm.sga.servicio.EquipoDicomServiceWs")
 @DeclareRoles({"ROLE_ADMIN","ROLE_USER"})
 @RolesAllowed({"ROLE_ADMIN","ROLE_USER"})
 

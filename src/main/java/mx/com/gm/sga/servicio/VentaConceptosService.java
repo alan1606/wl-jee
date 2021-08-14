@@ -25,4 +25,8 @@ public interface VentaConceptosService {
 
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin);
     
+    public VentaConceptos encontrarVentaConceptosPorIdPacs(String idPacs);
+    
+    public boolean actualizarIdOrdenVenta();
+    
 }

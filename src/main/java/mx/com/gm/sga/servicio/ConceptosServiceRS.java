@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -33,5 +34,12 @@ public class ConceptosServiceRS {
     @Path("{id}")//hace referencia a /personas/{id}
     public Conceptos encontrarConceptoPorId(@PathParam("id") Long id) {
         return conceptosService.encontrarConceptoPorId(new Conceptos(id));
+    }
+    
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("/ventaConceptos/{idVentaConceptos}")//hace referencia a /personas/{id}
+    public List<Conceptos> encontrarConceptosPorIdVentaConceptos(@PathParam("id") Long idVentaConceptos) {
+        return conceptosService.encontrarConceptosPorIdVentaConceptos(idVentaConceptos);
     }
 }

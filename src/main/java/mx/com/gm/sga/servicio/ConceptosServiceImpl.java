@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
@@ -36,6 +37,11 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
     @Override
     public Conceptos encontrarConceptoPorId(Conceptos conceptos) {
         return conceptosDao.findConceptoById(new Conceptos(conceptos.getIdTo()));
+    }
+
+    @Override
+    public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos) {
+        return conceptosDao.findConceptosByidVentaConcepto(idVentaConceptos);
     }
     
 }

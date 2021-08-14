@@ -22,6 +22,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -38,6 +40,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "EquipoDicom.findByModalidad", query = "SELECT e FROM EquipoDicom e WHERE e.modalidad = :modalidad"),
     @NamedQuery(name = "EquipoDicom.findByNombre", query = "SELECT e FROM EquipoDicom e WHERE e.nombre = :nombre"),
     @NamedQuery(name = "EquipoDicom.findByAeTitle", query = "SELECT e FROM EquipoDicom e WHERE e.aeTitle = :aeTitle")})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class EquipoDicom implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -59,11 +62,11 @@ public class EquipoDicom implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "ae_title")
     private String aeTitle;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipoDicom")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEquipoDicom")
     private List<VentaConceptos> ventaConceptosList;
     @JoinColumn(name = "id_area", referencedColumnName = "id_a")
     @ManyToOne(optional = false)
-    private Areas areas;
+    private Areas idArea;
 
     public EquipoDicom() {
     }
@@ -120,12 +123,12 @@ public class EquipoDicom implements Serializable {
         this.ventaConceptosList = ventaConceptosList;
     }
 
-    public Areas getAreas() {
-        return areas;
+    public Areas getIdArea() {
+        return idArea;
     }
 
-    public void setAreas(Areas areas) {
-        this.areas = areas;
+    public void setIdArea(Areas idArea) {
+        this.idArea = idArea;
     }
 
     @Override

@@ -52,6 +52,16 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.findVentaConceptosByInstitucionFechas(institucion, fechaInicio, fechaFin);
     }
 
+    @Override
+    public VentaConceptos encontrarVentaConceptosPorIdPacs(String idPacs) {
+        return ventaConceptosDao.findByIdPacs(idPacs);
+    }
+
+    @Override
+    public boolean actualizarIdOrdenVenta() {
+        return ventaConceptosDao.actualizarIdOrdenVenta();
+    }
+
     
     
 }

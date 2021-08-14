@@ -55,4 +55,19 @@ public class VentaConceptosServiceRS {
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(@PathParam("idInstitucion")Long idInstitucion, @PathParam("fechaInicio")String fechaInicio, @PathParam("fechaFin")String fechaFin) {
         return ventaConceptosService.encontrarVentaConceptosPorInstitucionFechas(new Institucion(idInstitucion), fechaInicio, fechaFin);
     }
+    
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("idPacs/{idPacs}")//hace referencia a /personas/{id}
+    public VentaConceptos encontrarVentaConceptosPorIdPacs(@PathParam("idPacs")String idPacs) {
+        return ventaConceptosService.encontrarVentaConceptosPorIdPacs(idPacs);
+    }
+    
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("actualizarOrdenVenta")//hace referencia a /personas/{id}
+    public boolean actualizarOrdenVenta() {
+        return ventaConceptosService.actualizarIdOrdenVenta();
+    }
+    
 }

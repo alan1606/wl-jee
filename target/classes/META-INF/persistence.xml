@@ -8,6 +8,8 @@
     <class>mx.com.gm.sga.domain.VentaConceptos</class>
     <class>mx.com.gm.sga.domain.EquipoDicom</class>
     <class>mx.com.gm.sga.domain.Areas</class>
+    <class>mx.com.gm.sga.domain.CatalogoFormaPago</class>
+    <class>mx.com.gm.sga.domain.OrdenVenta</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>

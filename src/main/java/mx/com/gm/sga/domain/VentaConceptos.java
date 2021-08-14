@@ -24,6 +24,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -55,7 +57,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "VentaConceptos.findByFechaEdo5e", query = "SELECT v FROM VentaConceptos v WHERE v.fechaEdo5e = :fechaEdo5e"),
     @NamedQuery(name = "VentaConceptos.findByUsuarioEdo6e", query = "SELECT v FROM VentaConceptos v WHERE v.usuarioEdo6e = :usuarioEdo6e"),
     @NamedQuery(name = "VentaConceptos.findByFechaEdo6e", query = "SELECT v FROM VentaConceptos v WHERE v.fechaEdo6e = :fechaEdo6e"),
-    @NamedQuery(name = "VentaConceptos.findByIdConceptoEs", query = "SELECT v FROM VentaConceptos v WHERE v.idConceptoEs = :idConceptoEs"),
     @NamedQuery(name = "VentaConceptos.findByReferenciaVc", query = "SELECT v FROM VentaConceptos v WHERE v.referenciaVc = :referenciaVc"),
     @NamedQuery(name = "VentaConceptos.findByContadorVc", query = "SELECT v FROM VentaConceptos v WHERE v.contadorVc = :contadorVc"),
     @NamedQuery(name = "VentaConceptos.findByBiradVc", query = "SELECT v FROM VentaConceptos v WHERE v.biradVc = :biradVc"),
@@ -70,10 +71,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "VentaConceptos.findByUsuarioTransfiereVc", query = "SELECT v FROM VentaConceptos v WHERE v.usuarioTransfiereVc = :usuarioTransfiereVc"),
     @NamedQuery(name = "VentaConceptos.findByFechaTransfiereVc", query = "SELECT v FROM VentaConceptos v WHERE v.fechaTransfiereVc = :fechaTransfiereVc"),
     @NamedQuery(name = "VentaConceptos.findBySalvadoVc", query = "SELECT v FROM VentaConceptos v WHERE v.salvadoVc = :salvadoVc"),
-    @NamedQuery(name = "VentaConceptos.findByIdOrdenVenta", query = "SELECT v FROM VentaConceptos v WHERE v.idOrdenVenta = :idOrdenVenta"),
     @NamedQuery(name = "VentaConceptos.findByFechaAsignado", query = "SELECT v FROM VentaConceptos v WHERE v.fechaAsignado = :fechaAsignado"),
     @NamedQuery(name = "VentaConceptos.findByHoraAsignado", query = "SELECT v FROM VentaConceptos v WHERE v.horaAsignado = :horaAsignado"),
     @NamedQuery(name = "VentaConceptos.findByEnWorklist", query = "SELECT v FROM VentaConceptos v WHERE v.enWorklist = :enWorklist")})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class VentaConceptos implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -140,10 +141,6 @@ public class VentaConceptos implements Serializable {
     @Column(name = "fechaEdo6_e")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaEdo6e;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "id_concepto_es")
-    private int idConceptoEs;
     @Size(max = 20)
     @Column(name = "referencia_vc")
     private String referenciaVc;
@@ -216,10 +213,6 @@ public class VentaConceptos implements Serializable {
     private short salvadoVc;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "id_orden_venta")
-    private long idOrdenVenta;
-    @Basic(optional = false)
-    @NotNull
     @Column(name = "fecha_asignado")
     @Temporal(TemporalType.DATE)
     private Date fechaAsignado;
@@ -232,15 +225,21 @@ public class VentaConceptos implements Serializable {
     @NotNull
     @Column(name = "en_worklist")
     private boolean enWorklist;
+    @JoinColumn(name = "id_concepto_es", referencedColumnName = "id_to")
+    @ManyToOne(optional = false)
+    private Conceptos idConceptoEs;
     @JoinColumn(name = "id_equipo_dicom", referencedColumnName = "id_equipo")
     @ManyToOne(optional = false)
-    private EquipoDicom equipoDicom;
+    private EquipoDicom idEquipoDicom;
     @JoinColumn(name = "id_paciente_vc", referencedColumnName = "id_p")
     @ManyToOne(optional = false)
-    private Pacientes pacientes;
+    private Pacientes idPacienteVc;
     @JoinColumn(name = "id_institucion", referencedColumnName = "id_institucion")
     @ManyToOne(optional = false)
-    private Institucion institucion;
+    private Institucion idInstitucion;
+    @JoinColumn(name = "id_orden_venta", referencedColumnName = "id_ov")
+    @ManyToOne(optional = false)
+    private OrdenVenta idOrdenVenta;
 
     public VentaConceptos() {
     }
@@ -249,7 +248,7 @@ public class VentaConceptos implements Serializable {
         this.idVc = idVc;
     }
 
-    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, int idConceptoEs, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, long idOrdenVenta, Date fechaAsignado, Date horaAsgnado, boolean enWorklist) {
+    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, Date fechaAsignado, Date horaAsignado, boolean enWorklist) {
         this.idVc = idVc;
         this.idPersonalMedicoVc = idPersonalMedicoVc;
         this.precioVc = precioVc;
@@ -257,15 +256,13 @@ public class VentaConceptos implements Serializable {
         this.idUsuarioVc = idUsuarioVc;
         this.fechaVentaVc = fechaVentaVc;
         this.estatusVc = estatusVc;
-        this.idConceptoEs = idConceptoEs;
         this.temporalVc = temporalVc;
         this.idConceptosBeneficios = idConceptosBeneficios;
         this.esBeneficioVc = esBeneficioVc;
         this.idRadiologoExterno = idRadiologoExterno;
         this.salvadoVc = salvadoVc;
-        this.idOrdenVenta = idOrdenVenta;
         this.fechaAsignado = fechaAsignado;
-        this.horaAsignado = horaAsgnado;
+        this.horaAsignado = horaAsignado;
         this.enWorklist = enWorklist;
     }
 
@@ -427,14 +424,6 @@ public class VentaConceptos implements Serializable {
 
     public void setFechaEdo6e(Date fechaEdo6e) {
         this.fechaEdo6e = fechaEdo6e;
-    }
-
-    public int getIdConceptoEs() {
-        return idConceptoEs;
-    }
-
-    public void setIdConceptoEs(int idConceptoEs) {
-        this.idConceptoEs = idConceptoEs;
     }
 
     public String getReferenciaVc() {
@@ -605,14 +594,6 @@ public class VentaConceptos implements Serializable {
         this.salvadoVc = salvadoVc;
     }
 
-    public long getIdOrdenVenta() {
-        return idOrdenVenta;
-    }
-
-    public void setIdOrdenVenta(long idOrdenVenta) {
-        this.idOrdenVenta = idOrdenVenta;
-    }
-
     public Date getFechaAsignado() {
         return fechaAsignado;
     }
@@ -621,12 +602,12 @@ public class VentaConceptos implements Serializable {
         this.fechaAsignado = fechaAsignado;
     }
 
-    public Date getHoraAsgnado() {
+    public Date getHoraAsignado() {
         return horaAsignado;
     }
 
-    public void setHoraAsgnado(Date horaAsgnado) {
-        this.horaAsignado = horaAsgnado;
+    public void setHoraAsignado(Date horaAsignado) {
+        this.horaAsignado = horaAsignado;
     }
 
     public boolean getEnWorklist() {
@@ -637,28 +618,44 @@ public class VentaConceptos implements Serializable {
         this.enWorklist = enWorklist;
     }
 
-    public EquipoDicom getEquipoDicom() {
-        return equipoDicom;
+    public Conceptos getIdConceptoEs() {
+        return idConceptoEs;
     }
 
-    public void setEquipoDicom(EquipoDicom equipoDicom) {
-        this.equipoDicom = equipoDicom;
+    public void setIdConceptoEs(Conceptos idConceptoEs) {
+        this.idConceptoEs = idConceptoEs;
     }
 
-    public Pacientes getPacientes() {
-        return pacientes;
+    public EquipoDicom getIdEquipoDicom() {
+        return idEquipoDicom;
     }
 
-    public void setPacientes(Pacientes pacientes) {
-        this.pacientes = pacientes;
+    public void setIdEquipoDicom(EquipoDicom idEquipoDicom) {
+        this.idEquipoDicom = idEquipoDicom;
     }
 
-    public Institucion getInstitucion() {
-        return institucion;
+    public Pacientes getIdPacienteVc() {
+        return idPacienteVc;
     }
 
-    public void setInstitucion(Institucion institucion) {
-        this.institucion = institucion;
+    public void setIdPacienteVc(Pacientes idPacienteVc) {
+        this.idPacienteVc = idPacienteVc;
+    }
+
+    public Institucion getIdInstitucion() {
+        return idInstitucion;
+    }
+
+    public void setIdInstitucion(Institucion idInstitucion) {
+        this.idInstitucion = idInstitucion;
+    }
+
+    public OrdenVenta getIdOrdenVenta() {
+        return idOrdenVenta;
+    }
+
+    public void setIdOrdenVenta(OrdenVenta idOrdenVenta) {
+        this.idOrdenVenta = idOrdenVenta;
     }
 
     @Override

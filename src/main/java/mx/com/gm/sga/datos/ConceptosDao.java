@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.util.List;
 import mx.com.gm.sga.domain.Conceptos;
 
 /**
@@ -13,4 +14,5 @@ import mx.com.gm.sga.domain.Conceptos;
  */
 public interface ConceptosDao {
     public Conceptos findConceptoById(Conceptos conceptos);
+    public List<Conceptos> findConceptosByidVentaConcepto(Long idVentaConcepto);
 }

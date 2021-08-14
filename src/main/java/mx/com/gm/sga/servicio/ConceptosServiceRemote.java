@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Remote;
 import mx.com.gm.sga.domain.Conceptos;
 
@@ -16,4 +17,5 @@ import mx.com.gm.sga.domain.Conceptos;
 public interface ConceptosServiceRemote {
         public Conceptos encontrarConceptoPorId(Conceptos conceptos);
 
+            public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos);
 }

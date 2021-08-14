@@ -19,6 +19,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -32,6 +34,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Institucion.findAll", query = "SELECT i FROM Institucion i"),
     @NamedQuery(name = "Institucion.findByIdInstitucion", query = "SELECT i FROM Institucion i WHERE i.idInstitucion = :idInstitucion"),
     @NamedQuery(name = "Institucion.findByNombreInstitucion", query = "SELECT i FROM Institucion i WHERE i.nombreInstitucion = :nombreInstitucion")})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Institucion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,7 +48,7 @@ public class Institucion implements Serializable {
     @Size(min = 1, max = 30)
     @Column(name = "nombre_institucion")
     private String nombreInstitucion;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "institucion")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idInstitucion")
     private List<VentaConceptos> ventaConceptosList;
 
     public Institucion() {

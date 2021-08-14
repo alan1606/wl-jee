@@ -24,5 +24,7 @@ public interface VentaConceptosDao {
 
     public List<VentaConceptos> findVentaConceptosByInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin);
 
-    
+    public VentaConceptos findByIdPacs(String idPacs);
+
+    public boolean actualizarIdOrdenVenta();
 }

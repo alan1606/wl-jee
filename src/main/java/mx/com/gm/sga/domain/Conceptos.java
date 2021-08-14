@@ -7,20 +7,28 @@ package mx.com.gm.sga.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -33,7 +41,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Conceptos.findByIdTo", query = "SELECT c FROM Conceptos c WHERE c.idTo = :idTo"),
     @NamedQuery(name = "Conceptos.findByConceptoTo", query = "SELECT c FROM Conceptos c WHERE c.conceptoTo = :conceptoTo"),
     @NamedQuery(name = "Conceptos.findByIdDepartamentoTo", query = "SELECT c FROM Conceptos c WHERE c.idDepartamentoTo = :idDepartamentoTo"),
-    @NamedQuery(name = "Conceptos.findByIdAreaTo", query = "SELECT c FROM Conceptos c WHERE c.idAreaTo = :idAreaTo"),
     @NamedQuery(name = "Conceptos.findByIdTipoConceptoTo", query = "SELECT c FROM Conceptos c WHERE c.idTipoConceptoTo = :idTipoConceptoTo"),
     @NamedQuery(name = "Conceptos.findByPrecioTo", query = "SELECT c FROM Conceptos c WHERE c.precioTo = :precioTo"),
     @NamedQuery(name = "Conceptos.findByPrecioUrgenciaTo", query = "SELECT c FROM Conceptos c WHERE c.precioUrgenciaTo = :precioUrgenciaTo"),
@@ -58,6 +65,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Conceptos.findByIdMarcaTo", query = "SELECT c FROM Conceptos c WHERE c.idMarcaTo = :idMarcaTo"),
     @NamedQuery(name = "Conceptos.findByIdModeloTo", query = "SELECT c FROM Conceptos c WHERE c.idModeloTo = :idModeloTo"),
     @NamedQuery(name = "Conceptos.findByIdPresentacionTo", query = "SELECT c FROM Conceptos c WHERE c.idPresentacionTo = :idPresentacionTo")})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Conceptos implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -75,10 +83,6 @@ public class Conceptos implements Serializable {
     @NotNull
     @Column(name = "id_departamento_to")
     private short idDepartamentoTo;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "id_area_to")
-    private short idAreaTo;
     @Basic(optional = false)
     @NotNull
     @Column(name = "id_tipo_concepto_to")
@@ -153,6 +157,11 @@ public class Conceptos implements Serializable {
     private Integer idModeloTo;
     @Column(name = "id_presentacion_to")
     private Integer idPresentacionTo;
+    @JoinColumn(name = "id_area_to", referencedColumnName = "id_a")
+    @ManyToOne(optional = false)
+    private Areas idAreaTo;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConceptoEs")
+    private List<VentaConceptos> ventaConceptosList;
 
     public Conceptos() {
     }
@@ -161,11 +170,10 @@ public class Conceptos implements Serializable {
         this.idTo = idTo;
     }
 
-    public Conceptos(Long idTo, String conceptoTo, short idDepartamentoTo, short idAreaTo, short idTipoConceptoTo, float precioTo, float precioUrgenciaTo, int usuarioTo, int idConvenioTo, float precioM, float precioMu) {
+    public Conceptos(Long idTo, String conceptoTo, short idDepartamentoTo, short idTipoConceptoTo, float precioTo, float precioUrgenciaTo, int usuarioTo, int idConvenioTo, float precioM, float precioMu) {
         this.idTo = idTo;
         this.conceptoTo = conceptoTo;
         this.idDepartamentoTo = idDepartamentoTo;
-        this.idAreaTo = idAreaTo;
         this.idTipoConceptoTo = idTipoConceptoTo;
         this.precioTo = precioTo;
         this.precioUrgenciaTo = precioUrgenciaTo;
@@ -197,14 +205,6 @@ public class Conceptos implements Serializable {
 
     public void setIdDepartamentoTo(short idDepartamentoTo) {
         this.idDepartamentoTo = idDepartamentoTo;
-    }
-
-    public short getIdAreaTo() {
-        return idAreaTo;
-    }
-
-    public void setIdAreaTo(short idAreaTo) {
-        this.idAreaTo = idAreaTo;
     }
 
     public short getIdTipoConceptoTo() {
@@ -413,6 +413,23 @@ public class Conceptos implements Serializable {
 
     public void setIdPresentacionTo(Integer idPresentacionTo) {
         this.idPresentacionTo = idPresentacionTo;
+    }
+
+    public Areas getIdAreaTo() {
+        return idAreaTo;
+    }
+
+    public void setIdAreaTo(Areas idAreaTo) {
+        this.idAreaTo = idAreaTo;
+    }
+
+    @XmlTransient
+    public List<VentaConceptos> getVentaConceptosList() {
+        return ventaConceptosList;
+    }
+
+    public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
+        this.ventaConceptosList = ventaConceptosList;
     }
 
     @Override

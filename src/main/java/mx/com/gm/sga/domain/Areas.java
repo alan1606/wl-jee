@@ -22,6 +22,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -42,6 +44,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Areas.findByHoraInicio", query = "SELECT a FROM Areas a WHERE a.horaInicio = :horaInicio"),
     @NamedQuery(name = "Areas.findByHoraFin", query = "SELECT a FROM Areas a WHERE a.horaFin = :horaFin"),
     @NamedQuery(name = "Areas.findByDuracionMinutos", query = "SELECT a FROM Areas a WHERE a.duracionMinutos = :duracionMinutos")})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Areas implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -83,7 +86,9 @@ public class Areas implements Serializable {
     @NotNull
     @Column(name = "duracion_minutos")
     private int duracionMinutos;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "areas")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAreaTo")
+    private List<Conceptos> conceptosList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idArea")
     private List<EquipoDicom> equipoDicomList;
 
     public Areas() {
@@ -173,6 +178,15 @@ public class Areas implements Serializable {
 
     public void setDuracionMinutos(int duracionMinutos) {
         this.duracionMinutos = duracionMinutos;
+    }
+
+    @XmlTransient
+    public List<Conceptos> getConceptosList() {
+        return conceptosList;
+    }
+
+    public void setConceptosList(List<Conceptos> conceptosList) {
+        this.conceptosList = conceptosList;
     }
 
     @XmlTransient

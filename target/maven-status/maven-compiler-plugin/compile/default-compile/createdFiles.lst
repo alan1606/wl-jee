@@ -21,6 +21,7 @@ mx\com\gm\sga\datos\PacienteDaoImpl.class
 mx\com\gm\sga\servicio\PacienteService.class
 mx\com\gm\sga\servicio\AreasServiceWs.class
 mx\com\gm\sga\servicio\AreasService.class
+mx\com\gm\sga\domain\CatalogoFormaPago.class
 mx\com\gm\sga\servicio\PacienteServiceImpl.class
 mx\com\gm\sga\servicio\InstitucionServiceWs.class
 mx\com\gm\sga\servicio\VentaConceptosServiceImpl.class
@@ -36,6 +37,7 @@ mx\com\gm\sga\servicio\EquipoDicomServiceImpl.class
 com\mycompany\hapi\prueba.class
 mx\com\gm\sga\datos\PacienteDao.class
 mx\com\gm\sga\datos\VentaConceptosDao.class
+mx\com\gm\sga\domain\OrdenVenta.class
 mx\com\gm\sga\domain\EquipoDicom.class
 mx\com\gm\sga\domain\VentaConceptos.class
 mx\com\gm\sga\servicio\ConceptosServiceImpl.class

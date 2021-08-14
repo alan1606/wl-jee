@@ -5,7 +5,6 @@
  */
 package mx.com.gm.sga.datos;
 
-import java.util.Iterator;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -45,9 +44,8 @@ public class PacienteDaoImpl implements PacienteDao {
     @Override
     public List<Pacientes> findPacientesVentaConceptosByDate(String fecha) {
         
-        Iterator iter = null;
+
         String jpql = null;
-        Object[] tupla = null;
         Query q = null;
 
         jpql = "select distinct v.pacientes from VentaConceptos v where v.fechaVentaVc like :fecha and v.enWorklist = :wl";
