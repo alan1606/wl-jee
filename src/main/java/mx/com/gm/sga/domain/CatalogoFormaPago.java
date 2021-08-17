@@ -20,8 +20,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -36,7 +34,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "CatalogoFormaPago.findAll", query = "SELECT c FROM CatalogoFormaPago c"),
     @NamedQuery(name = "CatalogoFormaPago.findByIdFp", query = "SELECT c FROM CatalogoFormaPago c WHERE c.idFp = :idFp"),
     @NamedQuery(name = "CatalogoFormaPago.findByFormaPagoFp", query = "SELECT c FROM CatalogoFormaPago c WHERE c.formaPagoFp = :formaPagoFp")})
-@XmlAccessorType(XmlAccessType.FIELD)
 public class CatalogoFormaPago implements Serializable {
 
     private static final long serialVersionUID = 1L;

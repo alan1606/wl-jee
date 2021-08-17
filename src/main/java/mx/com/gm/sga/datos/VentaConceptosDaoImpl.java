@@ -87,4 +87,23 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         return cambiosHechos;
     }
 
+    @Override
+    public void registrarVentaConceptos(VentaConceptos ventaConceptos) {
+        em.persist(ventaConceptos);
+    }
+
+    @Override
+    public void registrarVentaConceptos(List<VentaConceptos> ventaConceptos) {
+        for(VentaConceptos venta : ventaConceptos){
+            em.persist(venta);
+        }
+    }
+
+    @Override
+    public List<VentaConceptos> findByIdOrdenVenta(Long idOrdenVenta) {
+        Query query = em.createQuery("from VentaConceptos v where v.idOrdenVenta.idOv = :idOrdenVenta");
+        query.setParameter("idOrdenVenta", idOrdenVenta);
+        return query.getResultList();
+    }
+
 }

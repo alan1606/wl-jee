@@ -42,4 +42,12 @@ public class ConceptosServiceRS {
     public List<Conceptos> encontrarConceptosPorIdVentaConceptos(@PathParam("id") Long idVentaConceptos) {
         return conceptosService.encontrarConceptosPorIdVentaConceptos(idVentaConceptos);
     }
+    
+    
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("/idArea/{idArea}")//hace referencia a /personas/{id}
+    public List<Conceptos> encontrarConceptosPorIdArea(@PathParam("idArea") Integer idArea) {
+        return conceptosService.encontrarConceptosPorIdArea(idArea);
+    }
 }

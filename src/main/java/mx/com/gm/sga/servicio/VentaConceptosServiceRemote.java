@@ -29,4 +29,7 @@ public interface VentaConceptosServiceRemote {
     public VentaConceptos encontrarVentaConceptosPorIdPacs(String idPacs);
     
     public boolean actualizarIdOrdenVenta();
+    
+        public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+
 }

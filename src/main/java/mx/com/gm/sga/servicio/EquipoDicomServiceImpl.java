@@ -49,5 +49,10 @@ public class EquipoDicomServiceImpl implements EquipoDicomService, EquipoDicomSe
     public List<EquipoDicom> encontrarEquipoDicomPorModalidad(String modalidad) {
         return equipoDicomDao.findEquipoDicomByModalidad(modalidad);
     }
+
+    @Override
+    public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea) {
+        return equipoDicomDao.findEquipoDicomByArea(new Areas(idArea));
+    }
     
 }

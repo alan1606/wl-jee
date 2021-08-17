@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.util.List;
 import mx.com.gm.sga.domain.Areas;
 
 /**
@@ -13,4 +14,6 @@ import mx.com.gm.sga.domain.Areas;
  */
 public interface AreasDao {
      public Areas findAreaById(Areas area);
+     
+     public List<Areas> findAllAreas();
 }

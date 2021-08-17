@@ -15,7 +15,11 @@ import mx.com.gm.sga.domain.Conceptos;
  */
 @Remote
 public interface ConceptosServiceRemote {
-        public Conceptos encontrarConceptoPorId(Conceptos conceptos);
 
-            public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos);
+    public Conceptos encontrarConceptoPorId(Conceptos conceptos);
+
+    public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos);
+
+    public List<Conceptos> encontrarConceptosPorIdArea(Integer idArea);
+
 }

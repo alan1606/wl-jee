@@ -23,8 +23,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -87,7 +85,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Pacientes.findByEmailPf", query = "SELECT p FROM Pacientes p WHERE p.emailPf = :emailPf"),
     @NamedQuery(name = "Pacientes.findByApgarP", query = "SELECT p FROM Pacientes p WHERE p.apgarP = :apgarP"),
     @NamedQuery(name = "Pacientes.findByTamizP", query = "SELECT p FROM Pacientes p WHERE p.tamizP = :tamizP")})
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Pacientes implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -256,6 +253,12 @@ public class Pacientes implements Serializable {
         this.idP = idP;
     }
 
+    public Pacientes(String curpP) {
+        this.curpP = curpP;
+    }
+
+    
+    
     public Pacientes(Long idP, String nombreP, String apaternoP, short idSucursalp, short activoP, int idUsuarioRp, short nacionalidadP) {
         this.idP = idP;
         this.nombreP = nombreP;
@@ -266,12 +269,6 @@ public class Pacientes implements Serializable {
         this.nacionalidadP = nacionalidadP;
     }
 
-    public Pacientes(String curpP) {
-        this.curpP = curpP;
-    }
-
-    
-    
     public Long getIdP() {
         return idP;
     }

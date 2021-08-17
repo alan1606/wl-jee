@@ -17,14 +17,13 @@ import org.apache.logging.log4j.Logger;
  *
  * @author alanm
  */
-public class ConceptosDaoImpl implements ConceptosDao{
+public class ConceptosDaoImpl implements ConceptosDao {
 
-        static Logger log = LogManager.getRootLogger();
+    static Logger log = LogManager.getRootLogger();
 
-    
     @PersistenceContext(unitName = "SgaPU")
     EntityManager em;
-    
+
     @Override
     public Conceptos findConceptoById(Conceptos conceptos) {
         return em.find(Conceptos.class, conceptos.getIdTo());
@@ -36,10 +35,21 @@ public class ConceptosDaoImpl implements ConceptosDao{
         Query q = null;
 
         jpql = "select v.idConceptoEs from VentaConceptos v where v.idVc = :idVc ";
-   
+
         q = em.createQuery(jpql);
         q.setParameter("idVc", idVentaConcepto);
         return q.getResultList();
     }
-    
+
+    @Override
+    public List<Conceptos> findByIdArea(Integer idArea) {
+        String jpql = null;
+        Query q = null;
+        
+        jpql = "select c from Conceptos c where c.idAreaTo.idA = :idArea ";
+        q = em.createQuery(jpql);
+        q.setParameter("idArea", idArea);
+        return q.getResultList();
+    }
+
 }

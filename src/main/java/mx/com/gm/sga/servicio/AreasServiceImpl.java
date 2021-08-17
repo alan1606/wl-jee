@@ -37,5 +37,10 @@ public class AreasServiceImpl implements AreasService, AreasServiceWs, AreasServ
     public Areas listarPorId(Areas area) {
         return areasDao.findAreaById(area);
     }
+
+    @Override
+    public List<Areas> listarTodo() {
+        return areasDao.findAllAreas();
+    }
     
 }

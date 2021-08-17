@@ -21,4 +21,15 @@ public interface PacienteDao {
 
     public List<Pacientes> findPacientesVentaConceptosByDate(String fecha);
     
+    public List<Pacientes> findPacienteLikeNombre(String nombre);
+    
+    public List<Pacientes> findPacienteLikeCurp(String curp);
+    
+    public void registrarPaciente(Pacientes paciente);
+    
+    public void actualizarPaciente(Pacientes paciente);
+            
+    
+    
+    
 }

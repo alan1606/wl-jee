@@ -43,5 +43,10 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
     public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos) {
         return conceptosDao.findConceptosByidVentaConcepto(idVentaConceptos);
     }
+
+    @Override
+    public List<Conceptos> encontrarConceptosPorIdArea(Integer idArea) {
+        return conceptosDao.findByIdArea(idArea);
+    }
     
 }

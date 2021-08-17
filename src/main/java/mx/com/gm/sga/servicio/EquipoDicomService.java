@@ -19,4 +19,7 @@ public interface EquipoDicomService {
     public EquipoDicom encontrarEquipoDicomPorId(EquipoDicom equipo);
     public List<EquipoDicom> encontrarEquipoDicomPorArea(Areas area);
     public List<EquipoDicom> encontrarEquipoDicomPorModalidad(String modalidad);
+        public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea);
+
+    
 }

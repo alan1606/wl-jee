@@ -70,4 +70,11 @@ public class VentaConceptosServiceRS {
         return ventaConceptosService.actualizarIdOrdenVenta();
     }
     
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("idOrdenVenta/{idOrdenVenta}")//hace referencia a /personas/{id}
+    public List<VentaConceptos> encontrarVentaConceptosPorIdOrdenVenta(@PathParam("idOrdenVenta")Long idOrdenVenta) {
+        return ventaConceptosService.encontarVentaConceptosPorIdOrdenVenta(idOrdenVenta);
+    }
+    
 }

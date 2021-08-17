@@ -43,19 +43,50 @@ public class PacienteDaoImpl implements PacienteDao {
 
     @Override
     public List<Pacientes> findPacientesVentaConceptosByDate(String fecha) {
-        
 
         String jpql = null;
         Query q = null;
 
         jpql = "select distinct v.pacientes from VentaConceptos v where v.fechaVentaVc like :fecha and v.enWorklist = :wl";
-   
+
         q = em.createQuery(jpql);
         fecha += "%";
         q.setParameter("fecha", fecha);
         q.setParameter("wl", false);
-        return  q.getResultList();
-    
+        return q.getResultList();
+
+    }
+
+    @Override
+    public List<Pacientes> findPacienteLikeNombre(String nombre) {
+        String jpql = null;
+        Query q = null;
+        jpql = "select p from Pacientes p where CONCAT(p.nombreP, ' ', p.apaternoP, ' ', p.amaternoP) like :nombre";
+        q = em.createQuery(jpql);
+        nombre += "%";
+        q.setParameter("nombre", nombre);
+        return q.getResultList();
+    }
+
+    @Override
+    public List<Pacientes> findPacienteLikeCurp(String curp) {
+        String jpql = null;
+        Query q = null;
+        jpql = "select p from Pacientes p where p.curpP like :curp";
+        q = em.createQuery(jpql);
+        curp += "%";
+        q.setParameter("curp", curp);
+        return q.getResultList();
+    }
+
+    @Override
+    public void registrarPaciente(Pacientes paciente) {
+        em.persist(paciente);
+    }
+
+    @Override
+    public void actualizarPaciente(Pacientes paciente) {
+        em.merge(paciente);
     }
 
 }

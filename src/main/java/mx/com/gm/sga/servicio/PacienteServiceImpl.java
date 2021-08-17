@@ -52,5 +52,30 @@ public class PacienteServiceImpl implements PacienteService, PacienteServiceRemo
     public List<Pacientes> encontrarEnVentaConceptos(String fecha) {
         return pacienteDao.findPacientesVentaConceptosByDate(fecha);
     }
+
+    @Override
+    public List<Pacientes> encontrarPacienteLikeNombre(String nombre) {
+        return pacienteDao.findPacienteLikeNombre(nombre);
+    }
+
+    @Override
+    public List<Pacientes> encontrarPacienteLikeCurp(String curp) {
+        return pacienteDao.findPacienteLikeCurp(curp);
+    }
+
+    @Override
+    public void registrarPaciente(Pacientes paciente) {
+        pacienteDao.registrarPaciente(paciente);
+    }
+
+    @Override
+    public void actualizarPaciente(Pacientes paciente) {
+        try {
+            pacienteDao.actualizarPaciente(paciente);
+        } catch (Throwable t) {
+            contexto.setRollbackOnly();
+            t.printStackTrace(System.out);
+        }
+    }
     
 }

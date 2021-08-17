@@ -23,4 +23,12 @@ public interface PacienteServiceRemote {
     public Pacientes encontrarPacientePorCurp(Pacientes paciente);
     
     public List<Pacientes> encontrarEnVentaConceptos(String fecha);
+    
+    public List<Pacientes> encontrarPacienteLikeNombre(String nombre);
+    
+    public List<Pacientes> encontrarPacienteLikeCurp(String curp);
+    
+    public void registrarPaciente(Pacientes paciente);
+    
+    public void actualizarPaciente(Pacientes paciente);
 }

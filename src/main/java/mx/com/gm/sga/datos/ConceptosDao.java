@@ -15,4 +15,5 @@ import mx.com.gm.sga.domain.Conceptos;
 public interface ConceptosDao {
     public Conceptos findConceptoById(Conceptos conceptos);
     public List<Conceptos> findConceptosByidVentaConcepto(Long idVentaConcepto);
+    public List<Conceptos> findByIdArea(Integer idArea);
 }

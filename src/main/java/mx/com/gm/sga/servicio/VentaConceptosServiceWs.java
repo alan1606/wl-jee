@@ -28,10 +28,14 @@ public interface VentaConceptosServiceWs {
 
     @WebMethod
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin);
-    
+
     @WebMethod
     public VentaConceptos encontrarVentaConceptosPorIdPacs(String idPacs);
-    
+
     @WebMethod
     public boolean actualizarIdOrdenVenta();
+
+    @WebMethod
+    public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+
 }

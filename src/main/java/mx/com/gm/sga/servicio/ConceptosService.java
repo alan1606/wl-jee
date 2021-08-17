@@ -19,4 +19,7 @@ public interface ConceptosService {
     public Conceptos encontrarConceptoPorId(Conceptos conceptos);
     
     public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos);
+    
+        public List<Conceptos> encontrarConceptosPorIdArea(Integer idArea);
+
 }

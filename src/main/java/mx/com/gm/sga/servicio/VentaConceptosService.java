@@ -5,7 +5,6 @@
  */
 package mx.com.gm.sga.servicio;
 
-import java.util.Date;
 import java.util.List;
 import javax.ejb.Local;
 import mx.com.gm.sga.domain.Institucion;
@@ -24,9 +23,11 @@ public interface VentaConceptosService {
     public List<VentaConceptos> encontrarVentaConceptosPorPacienteFechaEnWorklist(Pacientes paciente, String fecha, boolean enWorklist);
 
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin);
-    
+
     public VentaConceptos encontrarVentaConceptosPorIdPacs(String idPacs);
-    
+
     public boolean actualizarIdOrdenVenta();
-    
+
+    public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+
 }

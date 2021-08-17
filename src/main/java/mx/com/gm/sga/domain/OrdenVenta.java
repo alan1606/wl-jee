@@ -26,8 +26,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -93,8 +91,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "OrdenVenta.findByMotivoDescLOv", query = "SELECT o FROM OrdenVenta o WHERE o.motivoDescLOv = :motivoDescLOv"),
     @NamedQuery(name = "OrdenVenta.findByMotivoDescSOv", query = "SELECT o FROM OrdenVenta o WHERE o.motivoDescSOv = :motivoDescSOv"),
     @NamedQuery(name = "OrdenVenta.findByMotivoDescFOv", query = "SELECT o FROM OrdenVenta o WHERE o.motivoDescFOv = :motivoDescFOv"),
-    @NamedQuery(name = "OrdenVenta.findByRequiereFactura", query = "SELECT o FROM OrdenVenta o WHERE o.requiereFactura = :requiereFactura")})
-@XmlAccessorType(XmlAccessType.FIELD)
+    @NamedQuery(name = "OrdenVenta.findByRequiereFactura", query = "SELECT o FROM OrdenVenta o WHERE o.requiereFactura = :requiereFactura"),
+    @NamedQuery(name = "OrdenVenta.findByPagado", query = "SELECT o FROM OrdenVenta o WHERE o.pagado = :pagado")})
 public class OrdenVenta implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -288,6 +286,9 @@ public class OrdenVenta implements Serializable {
     @NotNull
     @Column(name = "requiere_factura")
     private boolean requiereFactura;
+    @Basic(optional = false)
+    @NotNull
+    private boolean pagado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
     private List<VentaConceptos> ventaConceptosList;
     @JoinColumn(name = "id_forma_pago", referencedColumnName = "id_fp")
@@ -301,7 +302,7 @@ public class OrdenVenta implements Serializable {
         this.idOv = idOv;
     }
 
-    public OrdenVenta(Long idOv, float subtotalOv, float ivaOv, int usuarioOv, long idPacienteOv, Date fechaVentaOv, short pDescCta, float descDCta, float tDescCta, short pDescImg, float descDImg, float tDescImg, short pDescLab, float descDLab, float tDescLab, short pDescServ, float descDServ, float tDescServ, short pDescPro, float descDPro, float tDescPro, int contadorOv, short facturadaOv, short estatusOv, short procedenciaOv, boolean requiereFactura) {
+    public OrdenVenta(Long idOv, float subtotalOv, float ivaOv, int usuarioOv, long idPacienteOv, Date fechaVentaOv, short pDescCta, float descDCta, float tDescCta, short pDescImg, float descDImg, float tDescImg, short pDescLab, float descDLab, float tDescLab, short pDescServ, float descDServ, float tDescServ, short pDescPro, float descDPro, float tDescPro, int contadorOv, short facturadaOv, short estatusOv, short procedenciaOv, boolean requiereFactura, boolean pagado) {
         this.idOv = idOv;
         this.subtotalOv = subtotalOv;
         this.ivaOv = ivaOv;
@@ -328,6 +329,7 @@ public class OrdenVenta implements Serializable {
         this.estatusOv = estatusOv;
         this.procedenciaOv = procedenciaOv;
         this.requiereFactura = requiereFactura;
+        this.pagado = pagado;
     }
 
     public Long getIdOv() {
@@ -800,6 +802,14 @@ public class OrdenVenta implements Serializable {
 
     public void setRequiereFactura(boolean requiereFactura) {
         this.requiereFactura = requiereFactura;
+    }
+
+    public boolean getPagado() {
+        return pagado;
+    }
+
+    public void setPagado(boolean pagado) {
+        this.pagado = pagado;
     }
 
     @XmlTransient

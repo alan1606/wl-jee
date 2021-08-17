@@ -62,6 +62,11 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.actualizarIdOrdenVenta();
     }
 
+    @Override
+    public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta) {
+        return ventaConceptosDao.findByIdOrdenVenta(idOrdenVenta);
+    }
+
     
     
 }

@@ -25,7 +25,19 @@ public interface PacienteServiceWs {
 
     @WebMethod
     public Pacientes encontrarPacientePorCurp(Pacientes paciente);
-    
+
     @WebMethod
     public List<Pacientes> encontrarEnVentaConceptos(String fecha);
+
+    @WebMethod
+    public List<Pacientes> encontrarPacienteLikeNombre(String nombre);
+
+    @WebMethod
+    public List<Pacientes> encontrarPacienteLikeCurp(String curp);
+
+    @WebMethod
+    public void registrarPaciente(Pacientes paciente);
+
+    @WebMethod
+    public void actualizarPaciente(Pacientes paciente);
 }

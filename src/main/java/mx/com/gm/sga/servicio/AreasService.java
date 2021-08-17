@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Local;
 import mx.com.gm.sga.domain.Areas;
 
@@ -16,4 +17,6 @@ import mx.com.gm.sga.domain.Areas;
 public interface AreasService {
      public Areas listarPorId(Areas area);
     
+     public List<Areas> listarTodo();
+     
 }

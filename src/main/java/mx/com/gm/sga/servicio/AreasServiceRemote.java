@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Remote;
 import mx.com.gm.sga.domain.Areas;
 
@@ -15,4 +16,5 @@ import mx.com.gm.sga.domain.Areas;
 @Remote
 public interface AreasServiceRemote {
          public Areas listarPorId(Areas area);
+          public List<Areas> listarTodo();
 }

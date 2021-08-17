@@ -6,7 +6,6 @@
 package mx.com.gm.sga.datos;
 
 
-import java.util.Date;
 import java.util.List;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.Pacientes;
@@ -26,5 +25,11 @@ public interface VentaConceptosDao {
 
     public VentaConceptos findByIdPacs(String idPacs);
 
+    public void registrarVentaConceptos(VentaConceptos ventaConceptos);
+    
+    public void registrarVentaConceptos(List<VentaConceptos> ventaConceptos);
+    
     public boolean actualizarIdOrdenVenta();
+    
+    public List<VentaConceptos> findByIdOrdenVenta(Long idOrdenVenta);
 }

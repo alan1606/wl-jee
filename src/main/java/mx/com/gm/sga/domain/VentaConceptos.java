@@ -24,8 +24,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -73,8 +71,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "VentaConceptos.findBySalvadoVc", query = "SELECT v FROM VentaConceptos v WHERE v.salvadoVc = :salvadoVc"),
     @NamedQuery(name = "VentaConceptos.findByFechaAsignado", query = "SELECT v FROM VentaConceptos v WHERE v.fechaAsignado = :fechaAsignado"),
     @NamedQuery(name = "VentaConceptos.findByHoraAsignado", query = "SELECT v FROM VentaConceptos v WHERE v.horaAsignado = :horaAsignado"),
-    @NamedQuery(name = "VentaConceptos.findByEnWorklist", query = "SELECT v FROM VentaConceptos v WHERE v.enWorklist = :enWorklist")})
-@XmlAccessorType(XmlAccessType.FIELD)
+    @NamedQuery(name = "VentaConceptos.findByEnWorklist", query = "SELECT v FROM VentaConceptos v WHERE v.enWorklist = :enWorklist"),
+    @NamedQuery(name = "VentaConceptos.findByEstado", query = "SELECT v FROM VentaConceptos v WHERE v.estado = :estado")})
 public class VentaConceptos implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -225,6 +223,10 @@ public class VentaConceptos implements Serializable {
     @NotNull
     @Column(name = "en_worklist")
     private boolean enWorklist;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 10)
+    private String estado;
     @JoinColumn(name = "id_concepto_es", referencedColumnName = "id_to")
     @ManyToOne(optional = false)
     private Conceptos idConceptoEs;
@@ -248,7 +250,7 @@ public class VentaConceptos implements Serializable {
         this.idVc = idVc;
     }
 
-    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, Date fechaAsignado, Date horaAsignado, boolean enWorklist) {
+    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, Date fechaAsignado, Date horaAsignado, boolean enWorklist, String estado) {
         this.idVc = idVc;
         this.idPersonalMedicoVc = idPersonalMedicoVc;
         this.precioVc = precioVc;
@@ -264,6 +266,7 @@ public class VentaConceptos implements Serializable {
         this.fechaAsignado = fechaAsignado;
         this.horaAsignado = horaAsignado;
         this.enWorklist = enWorklist;
+        this.estado = estado;
     }
 
     public Long getIdVc() {
@@ -616,6 +619,14 @@ public class VentaConceptos implements Serializable {
 
     public void setEnWorklist(boolean enWorklist) {
         this.enWorklist = enWorklist;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public Conceptos getIdConceptoEs() {

@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -29,6 +30,12 @@ public class AreasServiceRS {
     @Path("{id}")//hace referencia a /personas/{id}
     public Areas encontrarAreaPorId(@PathParam("id") int id) {
         return areasService.listarPorId(new Areas(id));
+    }
+    
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public List<Areas> listarAreas() {
+        return areasService.listarTodo();
     }
     
 }
