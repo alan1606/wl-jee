@@ -32,7 +32,7 @@ public class InstitucionServiceRS {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Institucion> listarInstituciones() {
-        return institucioService.listarTodo();
+        return institucioService.listarTodasInstituciones();
     }
     
     @GET

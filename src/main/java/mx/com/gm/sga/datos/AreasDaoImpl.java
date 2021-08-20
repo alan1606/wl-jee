@@ -8,6 +8,7 @@ package mx.com.gm.sga.datos;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import mx.com.gm.sga.domain.Areas;
 
 /**
@@ -27,6 +28,13 @@ public class AreasDaoImpl implements AreasDao{
     @Override
     public List<Areas> findAllAreas() {
         return em.createNamedQuery("Areas.findAll").getResultList();
+    }
+
+    @Override
+    public Areas findAreaByNombre(String nombre) {
+        Query query = em.createQuery("from Areas a where a.nombreA = :nombre");
+        query.setParameter("nombre", nombre);
+        return (Areas) query.getSingleResult();
     }
     
 }

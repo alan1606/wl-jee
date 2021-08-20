@@ -35,7 +35,7 @@ public class AreasServiceRS {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Areas> listarAreas() {
-        return areasService.listarTodo();
+        return areasService.listarTodasAreas();
     }
     
 }

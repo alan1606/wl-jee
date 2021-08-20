@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.util.List;
 import mx.com.gm.sga.domain.OrdenVenta;
 
 /**
@@ -12,6 +13,13 @@ import mx.com.gm.sga.domain.OrdenVenta;
  * @author alanm
  */
 public interface OrdenVentaDao {
+
     public void registrarOrdenVenta(OrdenVenta orden);
+
+    public List<OrdenVenta> obtenerNoPagadosEnFecha(String date);
+
+    public List<OrdenVenta> obtenerNoPagadosFechaPaciente(String date, Long idPaciente);
+
+    public List<OrdenVenta> obtenerNoPagadosPaciente(String idPaciente);
 
 }

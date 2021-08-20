@@ -38,8 +38,14 @@ public class AreasServiceImpl implements AreasService, AreasServiceWs, AreasServ
         return areasDao.findAreaById(area);
     }
 
+
     @Override
-    public List<Areas> listarTodo() {
+    public Areas obtenerAreaPorNombre(String nombre) {
+        return areasDao.findAreaByNombre(nombre);
+    }
+
+    @Override
+    public List<Areas> listarTodasAreas() {
         return areasDao.findAllAreas();
     }
     

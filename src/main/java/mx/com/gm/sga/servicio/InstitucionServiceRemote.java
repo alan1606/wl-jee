@@ -15,7 +15,8 @@ import mx.com.gm.sga.domain.Institucion;
  */
 @Remote
 public interface InstitucionServiceRemote {
-     public List<Institucion> listarTodo();
+    
+    public List<Institucion> listarTodasInstituciones();
 
     public Institucion encontrarInstitucionPorId(Institucion institucion);
 

@@ -18,7 +18,7 @@ import mx.com.gm.sga.domain.Institucion;
 public interface InstitucionServiceWs {
 
     @WebMethod
-    public List<Institucion> listarTodo();
+    public List<Institucion> listarTodasInstituciones();
 
     @WebMethod
     public Institucion encontrarInstitucionPorId(Institucion institucion);

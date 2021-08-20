@@ -33,10 +33,6 @@ public class InstitucionServiceImpl implements InstitucionService, InstitucionSe
     @Resource
     private SessionContext contexto;
 
-    @Override
-    public List<Institucion> listarTodo() {
-        return institucionDao.findAllInstituciones();
-    }
 
     @Override
     public Institucion encontrarInstitucionPorId(Institucion institucion) {
@@ -46,6 +42,11 @@ public class InstitucionServiceImpl implements InstitucionService, InstitucionSe
     @Override
     public Institucion encontrarInstitucionPorNombre(Institucion institucion) {
         return institucionDao.findInstitucionByNombre(institucion);
+    }
+
+    @Override
+    public List<Institucion> listarTodasInstituciones() {
+        return institucionDao.findAllInstituciones();
     }
     
 }

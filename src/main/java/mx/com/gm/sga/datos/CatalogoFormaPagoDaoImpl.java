@@ -14,7 +14,7 @@ import mx.com.gm.sga.domain.CatalogoFormaPago;
  *
  * @author alanm
  */
-public class FormasPagoDaoImpl implements FormasPagoDao {
+public class CatalogoFormaPagoDaoImpl implements CatalogoFormaPagoDao {
 
     @PersistenceContext(unitName = "SgaPU")
     EntityManager em;

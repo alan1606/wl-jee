@@ -16,9 +16,13 @@ import mx.com.gm.sga.domain.Areas;
  */
 @WebService
 public interface AreasServiceWs {
+
     @WebMethod
     public Areas listarPorId(Areas area);
-    
-        @WebMethod
-     public List<Areas> listarTodo();
+
+    @WebMethod
+    public List<Areas> listarTodasAreas();
+
+    @WebMethod
+    public Areas obtenerAreaPorNombre(String nombre);
 }

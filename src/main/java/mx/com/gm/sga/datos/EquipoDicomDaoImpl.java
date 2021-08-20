@@ -28,7 +28,7 @@ public class EquipoDicomDaoImpl implements EquipoDicomDao {
 
     @Override
     public List<EquipoDicom> findEquipoDicomByArea(Areas area) {
-        Query query = em.createQuery("from EquipoDicom e where e.areas.idA = :idA");
+        Query query = em.createQuery("from EquipoDicom e where e.idArea.idA = :idA");
         query.setParameter("idA", area.getIdA());
         return query.getResultList();
     }

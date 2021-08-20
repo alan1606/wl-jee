@@ -16,4 +16,6 @@ public interface AreasDao {
      public Areas findAreaById(Areas area);
      
      public List<Areas> findAllAreas();
+     
+     public Areas findAreaByNombre(String nombre);
 }

@@ -17,6 +17,8 @@ import mx.com.gm.sga.domain.Areas;
 public interface AreasService {
      public Areas listarPorId(Areas area);
     
-     public List<Areas> listarTodo();
+     public List<Areas> listarTodasAreas();
+     
+     public Areas obtenerAreaPorNombre(String nombre);
      
 }

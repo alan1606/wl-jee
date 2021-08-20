@@ -29,7 +29,7 @@ import org.apache.logging.log4j.Logger;
 
 public class VentaConceptosServiceRS {
 
-        static Logger log = LogManager.getRootLogger();
+     static Logger log = LogManager.getRootLogger();
 
     
     @Inject

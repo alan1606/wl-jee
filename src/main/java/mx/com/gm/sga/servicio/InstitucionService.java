@@ -15,7 +15,7 @@ import mx.com.gm.sga.domain.Institucion;
  */
 @Local
 public interface InstitucionService {
-     public List<Institucion> listarTodo();
+    public List<Institucion> listarTodasInstituciones();
 
     public Institucion encontrarInstitucionPorId(Institucion institucion);
 

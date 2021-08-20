@@ -13,8 +13,8 @@ import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jws.WebService;
-import mx.com.gm.sga.datos.FormasPagoDao;
 import mx.com.gm.sga.domain.CatalogoFormaPago;
+import mx.com.gm.sga.datos.CatalogoFormaPagoDao;
 
 /**
  *
@@ -25,10 +25,10 @@ import mx.com.gm.sga.domain.CatalogoFormaPago;
 @DeclareRoles({"ROLE_ADMIN","ROLE_USER"})
 @RolesAllowed({"ROLE_ADMIN","ROLE_USER"})
 
-public class CatalgoFormaPagoServiceImpl implements CatalogoFormaPagoService, CatalogoFormaPagoServiceRemote, CatalogoFormaPagoServiceWs{
+public class CatalogoFormaPagoServiceImpl implements CatalogoFormaPagoService, CatalogoFormaPagoServiceRemote, CatalogoFormaPagoServiceWs{
 
     @Inject
-    private FormasPagoDao formasPagoDao;
+    private CatalogoFormaPagoDao formasPagoDao;
 
     @Resource
     private SessionContext contexto;

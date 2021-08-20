@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.com.gm.sga.datos;
-
-import java.util.List;
-import mx.com.gm.sga.domain.CatalogoFormaPago;
+package mx.com.gm.sga.servicio;
 
 /**
  *
  * @author alanm
  */
-public interface FormasPagoDao {
-    public List<CatalogoFormaPago> findAll();
+public class ConceptosInstitucionServiceWs {
+    
 }
