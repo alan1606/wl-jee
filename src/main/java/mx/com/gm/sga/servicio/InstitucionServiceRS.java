@@ -46,7 +46,9 @@ public class InstitucionServiceRS {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("nombre/{nombre}")//hace referencia a /personas/{id}
     public Institucion encontrarInstitucionPorNombre(@PathParam("nombre") String nombre) {
-        return institucioService.encontrarInstitucionPorNombre(new Institucion(Long.parseLong("1"), nombre));
+        Institucion institucion = new Institucion();
+        institucion.setNombreInstitucion(nombre);
+        return institucioService.encontrarInstitucionPorNombre(institucion);
     }
     
 }

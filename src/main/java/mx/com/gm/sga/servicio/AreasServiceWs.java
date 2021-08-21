@@ -25,4 +25,7 @@ public interface AreasServiceWs {
 
     @WebMethod
     public Areas obtenerAreaPorNombre(String nombre);
+    
+    @WebMethod
+    public List<Areas> obtenerAreasPorInstitucion(Long idInstitucion);
 }

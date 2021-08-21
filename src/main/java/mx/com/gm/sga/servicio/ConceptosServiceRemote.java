@@ -22,4 +22,6 @@ public interface ConceptosServiceRemote {
 
     public List<Conceptos> encontrarConceptosPorIdArea(Integer idArea);
 
+    public List<Conceptos> encontrarConceptosPorInstitucionArea(Long idInstitucion, Integer idArea);
+
 }

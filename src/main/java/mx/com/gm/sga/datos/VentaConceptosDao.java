@@ -32,4 +32,8 @@ public interface VentaConceptosDao {
     public boolean actualizarIdOrdenVenta();
     
     public List<VentaConceptos> findByIdOrdenVenta(Long idOrdenVenta);
+    
+    public List<VentaConceptos> findAgendadosByAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
+    
+    public List<VentaConceptos> findAgendadosByAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
 }

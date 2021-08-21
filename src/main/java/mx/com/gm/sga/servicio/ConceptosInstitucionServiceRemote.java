@@ -5,10 +5,17 @@
  */
 package mx.com.gm.sga.servicio;
 
+import javax.ejb.Remote;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
+
 /**
  *
  * @author alanm
  */
-public class ConceptosInstitucionServiceRemote {
+@Remote
+public interface ConceptosInstitucionServiceRemote {
+        
+    public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
     
+    public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion); 
 }

@@ -38,7 +38,6 @@ public class AreasServiceImpl implements AreasService, AreasServiceWs, AreasServ
         return areasDao.findAreaById(area);
     }
 
-
     @Override
     public Areas obtenerAreaPorNombre(String nombre) {
         return areasDao.findAreaByNombre(nombre);
@@ -47,6 +46,11 @@ public class AreasServiceImpl implements AreasService, AreasServiceWs, AreasServ
     @Override
     public List<Areas> listarTodasAreas() {
         return areasDao.findAllAreas();
+    }
+
+    @Override
+    public List<Areas> obtenerAreasPorInstitucion(Long idInstitucion) {
+        return areasDao.findAreasByInstitucion(idInstitucion);
     }
     
 }

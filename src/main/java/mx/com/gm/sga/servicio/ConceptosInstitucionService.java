@@ -5,10 +5,17 @@
  */
 package mx.com.gm.sga.servicio;
 
+import javax.ejb.Local;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
+
 /**
  *
  * @author alanm
  */
-public class ConceptosInstitucionService {
-    
+@Local
+public interface ConceptosInstitucionService {
+
+    public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
+
+    public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
 }

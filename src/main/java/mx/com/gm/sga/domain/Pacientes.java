@@ -253,12 +253,6 @@ public class Pacientes implements Serializable {
         this.idP = idP;
     }
 
-    public Pacientes(String curpP) {
-        this.curpP = curpP;
-    }
-
-    
-    
     public Pacientes(Long idP, String nombreP, String apaternoP, short idSucursalp, short activoP, int idUsuarioRp, short nacionalidadP) {
         this.idP = idP;
         this.nombreP = nombreP;

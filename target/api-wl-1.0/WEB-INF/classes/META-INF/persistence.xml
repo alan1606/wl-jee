@@ -11,6 +11,9 @@
     <class>mx.com.gm.sga.domain.CatalogoFormaPago</class>
     <class>mx.com.gm.sga.domain.OrdenVenta</class>
     <class>mx.com.gm.sga.domain.ConceptosInstitucion</class>
+    <class>mx.com.gm.sga.domain.Conceptos_1</class>
+    <class>mx.com.gm.sga.domain.Institucion_1</class>
+    <class>mx.com.gm.sga.domain.Areas_1</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>

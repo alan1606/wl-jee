@@ -15,11 +15,11 @@ import mx.com.gm.sga.domain.Areas;
  *
  * @author alanm
  */
-public class AreasDaoImpl implements AreasDao{
+public class AreasDaoImpl implements AreasDao {
 
     @PersistenceContext(unitName = "SgaPU")
     EntityManager em;
-    
+
     @Override
     public Areas findAreaById(Areas area) {
         return em.find(Areas.class, area.getIdA());
@@ -36,5 +36,12 @@ public class AreasDaoImpl implements AreasDao{
         query.setParameter("nombre", nombre);
         return (Areas) query.getSingleResult();
     }
-    
+
+    @Override
+    public List<Areas> findAreasByInstitucion(Long idInstitucion) {
+        Query query = em.createQuery("select a from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion=:idInstitucion");
+        query.setParameter("idInstitucion", idInstitucion);
+        return query.getResultList();
+    }
+
 }

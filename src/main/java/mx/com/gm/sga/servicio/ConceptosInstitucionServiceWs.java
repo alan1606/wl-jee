@@ -5,10 +5,21 @@
  */
 package mx.com.gm.sga.servicio;
 
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
+
 /**
  *
  * @author alanm
  */
-public class ConceptosInstitucionServiceWs {
+@WebService
+public interface ConceptosInstitucionServiceWs {
+    
+    @WebMethod
+    public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
+    
+    @WebMethod
+    public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion); 
     
 }

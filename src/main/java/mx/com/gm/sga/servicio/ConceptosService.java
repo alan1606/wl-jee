@@ -17,9 +17,11 @@ import mx.com.gm.sga.domain.Conceptos;
 public interface ConceptosService {
 
     public Conceptos encontrarConceptoPorId(Conceptos conceptos);
-    
+
     public List<Conceptos> encontrarConceptosPorIdVentaConceptos(Long idVentaConceptos);
-    
-        public List<Conceptos> encontrarConceptosPorIdArea(Integer idArea);
+
+    public List<Conceptos> encontrarConceptosPorIdArea(Integer idArea);
+
+    public List<Conceptos> encontrarConceptosPorInstitucionArea(Long idInstitucion, Integer idArea);
 
 }

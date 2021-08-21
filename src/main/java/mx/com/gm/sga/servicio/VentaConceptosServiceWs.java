@@ -5,7 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
-import java.util.Date;
+
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -37,5 +37,11 @@ public interface VentaConceptosServiceWs {
 
     @WebMethod
     public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+
+    @WebMethod
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
+
+    @WebMethod
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
 
 }

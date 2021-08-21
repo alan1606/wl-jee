@@ -64,26 +64,23 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         String jpql = null;
         Iterator iter = null;
         Object[] tupla = null;
-        boolean cambiosHechos=false;
-        
+        boolean cambiosHechos = false;
+
         //Se obtiene el máximo id de orden de venta
         jpql = "select max(o.idOv) from OrdenVenta o";
         Long encontrada = (Long) em.createQuery(jpql).getSingleResult();
 
-        
         ///Obtiene la lista de ventasConceptos a actualizar
         Query query = em.createQuery("from VentaConceptos v where v.idOrdenVenta.idOv = 1");
         List<VentaConceptos> insertadosPeroNoActualizados = query.getResultList();
-        
-        
+
         //Recorre la lista y setea la orden de venta con el id de la última orden de venta
-        for(VentaConceptos venta : insertadosPeroNoActualizados){
+        for (VentaConceptos venta : insertadosPeroNoActualizados) {
             venta.setIdOrdenVenta(new OrdenVenta(encontrada));
             em.merge(venta);
-            cambiosHechos=true;
+            cambiosHechos = true;
         }
-       
-        
+
         return cambiosHechos;
     }
 
@@ -94,7 +91,7 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     @Override
     public void registrarVentaConceptos(List<VentaConceptos> ventaConceptos) {
-        for(VentaConceptos venta : ventaConceptos){
+        for (VentaConceptos venta : ventaConceptos) {
             em.persist(venta);
         }
     }
@@ -103,6 +100,29 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
     public List<VentaConceptos> findByIdOrdenVenta(Long idOrdenVenta) {
         Query query = em.createQuery("from VentaConceptos v where v.idOrdenVenta.idOv = :idOrdenVenta");
         query.setParameter("idOrdenVenta", idOrdenVenta);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<VentaConceptos> findAgendadosByAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha) {
+        Query query = em.createQuery("select v from VentaConceptos v join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaVentaVc like :fecha and v.estado = :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom");
+        query.setParameter("idArea", idArea);
+        fecha += "%";
+        query.setParameter("fecha", fecha);
+        query.setParameter("idEquipoDicom", idEquipoDicom);
+        query.setParameter("estado", "AGENDADO");
+        return query.getResultList();
+    }
+
+    @Override
+    public List<VentaConceptos> findAgendadosByAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion) {
+        Query query = em.createQuery("select v from VentaConceptos v join v.idInstitucion i join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaVentaVc like :fecha and v.estado = :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom and i.idInstitucion=:idInstitucion");
+        query.setParameter("idArea", idArea);
+        fecha += "%";
+        query.setParameter("fecha", fecha);
+        query.setParameter("idEquipoDicom", idEquipoDicom);
+        query.setParameter("estado", "AGENDADO");
+        query.setParameter("idInstitucion", idInstitucion);
         return query.getResultList();
     }
 

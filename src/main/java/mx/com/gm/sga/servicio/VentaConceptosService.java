@@ -29,5 +29,9 @@ public interface VentaConceptosService {
     public boolean actualizarIdOrdenVenta();
 
     public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+    
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
+    
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
 
 }

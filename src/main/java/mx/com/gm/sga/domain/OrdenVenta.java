@@ -143,7 +143,8 @@ public class OrdenVenta implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha_venta_ov")
-    private String fechaVentaOv;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaVentaOv;
     @Column(name = "adicionales_c_ov")
     private Float adicionalesCOv;
     @Column(name = "adicionales_p_ov")
@@ -301,7 +302,7 @@ public class OrdenVenta implements Serializable {
         this.idOv = idOv;
     }
 
-    public OrdenVenta(Long idOv, float subtotalOv, float ivaOv, int usuarioOv, long idPacienteOv, String fechaVentaOv, short pDescCta, float descDCta, float tDescCta, short pDescImg, float descDImg, float tDescImg, short pDescLab, float descDLab, float tDescLab, short pDescServ, float descDServ, float tDescServ, short pDescPro, float descDPro, float tDescPro, int contadorOv, short facturadaOv, short estatusOv, short procedenciaOv, boolean requiereFactura, boolean pagado) {
+    public OrdenVenta(Long idOv, float subtotalOv, float ivaOv, int usuarioOv, long idPacienteOv, Date fechaVentaOv, short pDescCta, float descDCta, float tDescCta, short pDescImg, float descDImg, float tDescImg, short pDescLab, float descDLab, float tDescLab, short pDescServ, float descDServ, float tDescServ, short pDescPro, float descDPro, float tDescPro, int contadorOv, short facturadaOv, short estatusOv, short procedenciaOv, boolean requiereFactura, boolean pagado) {
         this.idOv = idOv;
         this.subtotalOv = subtotalOv;
         this.ivaOv = ivaOv;
@@ -459,11 +460,11 @@ public class OrdenVenta implements Serializable {
         this.idPacienteOv = idPacienteOv;
     }
 
-    public String getFechaVentaOv() {
+    public Date getFechaVentaOv() {
         return fechaVentaOv;
     }
 
-    public void setFechaVentaOv(String fechaVentaOv) {
+    public void setFechaVentaOv(Date fechaVentaOv) {
         this.fechaVentaOv = fechaVentaOv;
     }
 

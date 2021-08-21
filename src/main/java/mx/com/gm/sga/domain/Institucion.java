@@ -47,6 +47,8 @@ public class Institucion implements Serializable {
     private String nombreInstitucion;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idInstitucion")
     private List<VentaConceptos> ventaConceptosList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idInstitucion")
+    private List<ConceptosInstitucion> conceptosInstitucionList;
 
     public Institucion() {
     }
@@ -83,6 +85,15 @@ public class Institucion implements Serializable {
 
     public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
         this.ventaConceptosList = ventaConceptosList;
+    }
+
+    @XmlTransient
+    public List<ConceptosInstitucion> getConceptosInstitucionList() {
+        return conceptosInstitucionList;
+    }
+
+    public void setConceptosInstitucionList(List<ConceptosInstitucion> conceptosInstitucionList) {
+        this.conceptosInstitucionList = conceptosInstitucionList;
     }
 
     @Override

@@ -50,4 +50,6 @@ public class ConceptosServiceRS {
     public List<Conceptos> encontrarConceptosPorIdArea(@PathParam("idArea") Integer idArea) {
         return conceptosService.encontrarConceptosPorIdArea(idArea);
     }
+    
+ 
 }

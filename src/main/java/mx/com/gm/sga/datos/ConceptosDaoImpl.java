@@ -45,9 +45,20 @@ public class ConceptosDaoImpl implements ConceptosDao {
     public List<Conceptos> findByIdArea(Integer idArea) {
         String jpql = null;
         Query q = null;
-        
+
         jpql = "select c from Conceptos c where c.idAreaTo.idA = :idArea ";
         q = em.createQuery(jpql);
+        q.setParameter("idArea", idArea);
+        return q.getResultList();
+    }
+
+    @Override
+    public List<Conceptos> findByInstitucionArea(Long idInstitucion, Integer idArea) {
+        String jpql = null;
+        Query q = null;
+        jpql = "select o from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion = :idInstitucion and a.idA = :idArea";
+        q = em.createQuery(jpql);
+        q.setParameter("idInstitucion", idInstitucion);
         q.setParameter("idArea", idArea);
         return q.getResultList();
     }

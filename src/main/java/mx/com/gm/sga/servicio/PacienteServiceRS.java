@@ -42,7 +42,9 @@ public class PacienteServiceRS {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("curp/{curp}")//hace referencia a /personas/{id}
     public Pacientes encontrarPacientePorCurp(@PathParam("curp") String curp) {
-        return pacienteService.encontrarPacientePorCurp(new Pacientes(curp));
+        Pacientes paciente = new Pacientes();
+        paciente.setCurpP(curp);
+        return pacienteService.encontrarPacientePorCurp(paciente);
     }
 
     @GET

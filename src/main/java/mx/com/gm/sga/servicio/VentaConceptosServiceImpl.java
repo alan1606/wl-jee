@@ -67,6 +67,16 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.findByIdOrdenVenta(idOrdenVenta);
     }
 
+    @Override
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha) {
+        return ventaConceptosDao.findAgendadosByAreaEquipoDicomFecha(idArea, idEquipoDicom, fecha);
+    }
+
+    @Override
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion) {
+        return ventaConceptosDao.findAgendadosByAreaEquipoDicomFechaInstitucion(idArea, idEquipoDicom, fecha, idInstitucion);
+    }
+
     
     
 }

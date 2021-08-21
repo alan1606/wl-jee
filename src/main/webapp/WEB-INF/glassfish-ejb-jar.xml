@@ -81,6 +81,16 @@
             </webservice-endpoint>
         </ejb>
         
+        <ejb>
+            <ejb-name>ConceptosInstitucionServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>ConceptosInstitucionServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        
         
     </enterprise-beans>
 </glassfish-ejb-jar>
