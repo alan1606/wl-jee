@@ -16,7 +16,7 @@ import mx.com.gm.sga.domain.Pacientes;
 @Remote
 public interface PacienteServiceRemote {
     
-     public List<Pacientes> listarTodo();
+    public List<Pacientes> listarTodosPacientes();
     
     public Pacientes encontrarPacientePorId(Pacientes paciente);
     

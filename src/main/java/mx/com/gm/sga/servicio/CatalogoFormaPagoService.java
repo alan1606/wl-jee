@@ -15,5 +15,6 @@ import mx.com.gm.sga.domain.CatalogoFormaPago;
  */
 @Local
 public interface CatalogoFormaPagoService {
-    public List<CatalogoFormaPago> listarTodo();
+
+    public List<CatalogoFormaPago> listarTodasFormasPago();
 }

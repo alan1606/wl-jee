@@ -40,4 +40,11 @@ public class EquipoDicomDaoImpl implements EquipoDicomDao {
         return query.getResultList();
     }
 
+    @Override
+    public EquipoDicom findEquipoDicomByNombre(String nombre) {
+        Query query = em.createQuery("from EquipoDicom e where e.nombre = :nombre");
+        query.setParameter("nombre", nombre);
+        return (EquipoDicom) query.getSingleResult();
+    }
+
 }

@@ -34,7 +34,7 @@ public class PacienteServiceImpl implements PacienteService, PacienteServiceRemo
     private SessionContext contexto;
 
     @Override
-    public List<Pacientes> listarTodo() {
+    public List<Pacientes> listarTodosPacientes() {
         return pacienteDao.findAllPacientes();
     }
 

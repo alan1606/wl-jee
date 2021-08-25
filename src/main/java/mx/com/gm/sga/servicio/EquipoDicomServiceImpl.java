@@ -54,5 +54,10 @@ public class EquipoDicomServiceImpl implements EquipoDicomService, EquipoDicomSe
     public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea) {
         return equipoDicomDao.findEquipoDicomByArea(new Areas(idArea));
     }
+
+    @Override
+    public EquipoDicom encontrarEquipoDicomPorNombre(String nombre) {
+        return equipoDicomDao.findEquipoDicomByNombre(nombre);
+    }
     
 }

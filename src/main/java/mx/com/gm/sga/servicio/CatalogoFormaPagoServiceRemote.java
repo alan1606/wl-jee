@@ -15,5 +15,5 @@ import mx.com.gm.sga.domain.CatalogoFormaPago;
  */
 @Remote
 public interface CatalogoFormaPagoServiceRemote {
-        public List<CatalogoFormaPago> listarTodo();
+    public List<CatalogoFormaPago> listarTodasFormasPago();
 }

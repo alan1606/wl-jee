@@ -29,7 +29,7 @@ public class CatalogoFormaPagoServiceRs {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<CatalogoFormaPago> listarFormasPago() {
-        return formaPagoService.listarTodo();
+        return formaPagoService.listarTodasFormasPago();
     }
     
 }

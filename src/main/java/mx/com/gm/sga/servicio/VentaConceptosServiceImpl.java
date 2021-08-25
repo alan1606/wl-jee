@@ -38,7 +38,7 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
     private SessionContext contexto;
 
     @Override
-    public List<VentaConceptos> listarTodo() {
+    public List<VentaConceptos> listarTodosVentaConceptos() {
         return ventaConceptosDao.findAllVentaConceptos();
     }
 

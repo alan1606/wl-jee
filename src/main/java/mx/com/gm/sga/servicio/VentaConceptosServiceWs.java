@@ -21,7 +21,7 @@ import mx.com.gm.sga.domain.VentaConceptos;
 public interface VentaConceptosServiceWs {
 
     @WebMethod
-    public List<VentaConceptos> listarTodo();
+    public List<VentaConceptos> listarTodosVentaConceptos();
 
     @WebMethod
     public List<VentaConceptos> encontrarVentaConceptosPorPacienteFechaEnWorklist(Pacientes paciente, String fecha, boolean enWorklist);

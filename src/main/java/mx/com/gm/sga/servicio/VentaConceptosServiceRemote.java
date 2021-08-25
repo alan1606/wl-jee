@@ -18,22 +18,21 @@ import mx.com.gm.sga.domain.VentaConceptos;
  */
 @Remote
 public interface VentaConceptosServiceRemote {
-    
-    public List<VentaConceptos> listarTodo();
+
+    public List<VentaConceptos> listarTodosVentaConceptos();
 
     public List<VentaConceptos> encontrarVentaConceptosPorPacienteFechaEnWorklist(Pacientes paciente, String fecha, boolean enWorklist);
 
     public List<VentaConceptos> encontrarVentaConceptosPorInstitucionFechas(Institucion institucion, String fechaInicio, String fechaFin);
-    
-        
+
     public VentaConceptos encontrarVentaConceptosPorIdPacs(String idPacs);
-    
+
     public boolean actualizarIdOrdenVenta();
-    
-        public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
-        
-            public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
-    
+
+    public List<VentaConceptos> encontarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+
+    public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
+
     public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
 
 }

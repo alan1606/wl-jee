@@ -16,10 +16,15 @@ import mx.com.gm.sga.domain.EquipoDicom;
  */
 @Local
 public interface EquipoDicomService {
-    public EquipoDicom encontrarEquipoDicomPorId(EquipoDicom equipo);
-    public List<EquipoDicom> encontrarEquipoDicomPorArea(Areas area);
-    public List<EquipoDicom> encontrarEquipoDicomPorModalidad(String modalidad);
-        public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea);
 
-    
+    public EquipoDicom encontrarEquipoDicomPorId(EquipoDicom equipo);
+
+    public List<EquipoDicom> encontrarEquipoDicomPorArea(Areas area);
+
+    public List<EquipoDicom> encontrarEquipoDicomPorModalidad(String modalidad);
+
+    public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea);
+
+    public EquipoDicom encontrarEquipoDicomPorNombre(String nombre);
+
 }

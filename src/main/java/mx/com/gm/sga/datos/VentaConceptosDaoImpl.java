@@ -105,23 +105,22 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     @Override
     public List<VentaConceptos> findAgendadosByAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha) {
-        Query query = em.createQuery("select v from VentaConceptos v join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaVentaVc like :fecha and v.estado = :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom");
-        query.setParameter("idArea", idArea);
-        fecha += "%";
+        //Query query = em.createQuery("from VentaConceptos v join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaAsignado like :fecha and v.estado != :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom");
+        Query query = em.createQuery("select v from VentaConceptos v join v.idConceptoEs c join v.idEquipoDicom e join c.idAreaTo a where v.fechaAsignado = :fecha");
+        //query.setParameter("idArea", idArea);
         query.setParameter("fecha", fecha);
-        query.setParameter("idEquipoDicom", idEquipoDicom);
-        query.setParameter("estado", "AGENDADO");
+        //query.setParameter("idEquipoDicom", idEquipoDicom);
         return query.getResultList();
+
     }
 
     @Override
     public List<VentaConceptos> findAgendadosByAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion) {
-        Query query = em.createQuery("select v from VentaConceptos v join v.idInstitucion i join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaVentaVc like :fecha and v.estado = :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom and i.idInstitucion=:idInstitucion");
+        Query query = em.createQuery("select v from VentaConceptos v join v.idInstitucion i join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaAsignado = :fecha and v.estado != :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom and i.idInstitucion=:idInstitucion");
         query.setParameter("idArea", idArea);
-        fecha += "%";
         query.setParameter("fecha", fecha);
         query.setParameter("idEquipoDicom", idEquipoDicom);
-        query.setParameter("estado", "AGENDADO");
+        query.setParameter("estado", "NO AGENDADO");
         query.setParameter("idInstitucion", idInstitucion);
         return query.getResultList();
     }

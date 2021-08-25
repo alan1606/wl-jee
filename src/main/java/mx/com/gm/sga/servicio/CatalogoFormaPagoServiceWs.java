@@ -18,6 +18,6 @@ import mx.com.gm.sga.domain.CatalogoFormaPago;
 public interface CatalogoFormaPagoServiceWs {
 
     @WebMethod
-    public List<CatalogoFormaPago> listarTodo();
+    public List<CatalogoFormaPago> listarTodasFormasPago();
 
 }

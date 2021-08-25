@@ -38,7 +38,7 @@ public class VentaConceptosServiceRS {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<VentaConceptos> listarTodo() {
-        return ventaConceptosService.listarTodo();
+        return ventaConceptosService.listarTodosVentaConceptos();
     }
 
     @GET

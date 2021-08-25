@@ -18,7 +18,7 @@ import mx.com.gm.sga.domain.VentaConceptos;
 @Local
 public interface VentaConceptosService {
 
-    public List<VentaConceptos> listarTodo();
+    public List<VentaConceptos> listarTodosVentaConceptos();
 
     public List<VentaConceptos> encontrarVentaConceptosPorPacienteFechaEnWorklist(Pacientes paciente, String fecha, boolean enWorklist);
 

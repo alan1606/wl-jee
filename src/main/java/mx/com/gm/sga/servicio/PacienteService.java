@@ -16,7 +16,7 @@ import mx.com.gm.sga.domain.Pacientes;
 @Local
 public interface PacienteService {
     
-    public List<Pacientes> listarTodo();
+    public List<Pacientes> listarTodosPacientes();
     
     public Pacientes encontrarPacientePorId(Pacientes paciente);
     

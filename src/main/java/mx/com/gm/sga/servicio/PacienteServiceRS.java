@@ -28,7 +28,7 @@ public class PacienteServiceRS {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Pacientes> listarPacientes() {
-        return pacienteService.listarTodo();
+        return pacienteService.listarTodosPacientes();
     }
 
     @GET

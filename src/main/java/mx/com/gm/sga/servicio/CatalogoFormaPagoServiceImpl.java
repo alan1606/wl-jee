@@ -22,20 +22,22 @@ import mx.com.gm.sga.datos.CatalogoFormaPagoDao;
  */
 @Stateless
 @WebService(endpointInterface = "mx.com.gm.sga.servicio.CatalogoFormaPagoServiceWs")
-@DeclareRoles({"ROLE_ADMIN","ROLE_USER"})
-@RolesAllowed({"ROLE_ADMIN","ROLE_USER"})
+@DeclareRoles({"ROLE_ADMIN", "ROLE_USER"})
+@RolesAllowed({"ROLE_ADMIN", "ROLE_USER"})
 
-public class CatalogoFormaPagoServiceImpl implements CatalogoFormaPagoService, CatalogoFormaPagoServiceRemote, CatalogoFormaPagoServiceWs{
+public class CatalogoFormaPagoServiceImpl implements CatalogoFormaPagoService, CatalogoFormaPagoServiceRemote, CatalogoFormaPagoServiceWs {
 
     @Inject
     private CatalogoFormaPagoDao formasPagoDao;
 
     @Resource
     private SessionContext contexto;
+
     
+
     @Override
-    public List<CatalogoFormaPago> listarTodo() {
+    public List<CatalogoFormaPago> listarTodasFormasPago() {
         return formasPagoDao.findAll();
     }
-    
+
 }

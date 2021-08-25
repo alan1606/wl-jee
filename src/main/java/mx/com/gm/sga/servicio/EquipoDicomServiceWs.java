@@ -28,6 +28,9 @@ public interface EquipoDicomServiceWs {
     public List<EquipoDicom> encontrarEquipoDicomPorModalidad(String modalidad);
 
     @WebMethod
-        public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea);
+    public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea);
+
+    @WebMethod
+    public EquipoDicom encontrarEquipoDicomPorNombre(String nombre);
 
 }

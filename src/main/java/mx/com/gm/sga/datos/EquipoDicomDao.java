@@ -18,5 +18,5 @@ public interface EquipoDicomDao {
     public EquipoDicom findEquipoDicomById(EquipoDicom equipo);
     public List<EquipoDicom> findEquipoDicomByArea(Areas area);
     public List<EquipoDicom> findEquipoDicomByModalidad(String modalidad);
-    
+    public EquipoDicom findEquipoDicomByNombre(String nombre);
 }

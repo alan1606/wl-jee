@@ -18,7 +18,7 @@ import mx.com.gm.sga.domain.Pacientes;
 public interface PacienteServiceWs {
 
     @WebMethod
-    public List<Pacientes> listarTodo();
+    public List<Pacientes> listarTodosPacientes();
 
     @WebMethod
     public Pacientes encontrarPacientePorId(Pacientes paciente);
