@@ -24,4 +24,6 @@ public interface ConceptosService {
 
     public List<Conceptos> encontrarConceptosPorInstitucionArea(Long idInstitucion, Integer idArea);
 
+    public Conceptos encontrarConceptoPorNombre(String nombre);
+
 }

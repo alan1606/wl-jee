@@ -28,4 +28,8 @@ public interface OrdenVentaServiceWs {
 
     @WebMethod
     public List<OrdenVenta> obtenerOrdenVentaNoPagadosPaciente(String idPaciente);
+
+    @WebMethod
+    public OrdenVenta obtenerUltimaOrdenVentaRegistrada();
+
 }

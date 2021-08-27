@@ -6,8 +6,11 @@
 package mx.com.gm.sga.datos;
 
 
+import java.util.Date;
 import java.util.List;
+import mx.com.gm.sga.domain.Conceptos;
 import mx.com.gm.sga.domain.Institucion;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
 import mx.com.gm.sga.domain.VentaConceptos;
 
@@ -27,7 +30,7 @@ public interface VentaConceptosDao {
 
     public void registrarVentaConceptos(VentaConceptos ventaConceptos);
     
-    public void registrarVentaConceptos(List<VentaConceptos> ventaConceptos);
+    public void registrarVentaConceptosList(List<VentaConceptos> ventaConceptos);
     
     public boolean actualizarIdOrdenVenta();
     
@@ -36,4 +39,6 @@ public interface VentaConceptosDao {
     public List<VentaConceptos> findAgendadosByAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
     
     public List<VentaConceptos> findAgendadosByAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
+    
+    public VentaConceptos findByOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
 }

@@ -63,4 +63,11 @@ public class ConceptosDaoImpl implements ConceptosDao {
         return q.getResultList();
     }
 
+    @Override
+    public Conceptos findByName(String nombre) {
+        Query q = em.createNamedQuery("Conceptos.findByConceptoTo");
+        q.setParameter("conceptoTo", nombre);
+        return (Conceptos) q.getSingleResult();
+    }
+
 }

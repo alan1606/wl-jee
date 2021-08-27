@@ -22,4 +22,6 @@ public interface OrdenVentaDao {
 
     public List<OrdenVenta> obtenerNoPagadosPaciente(String idPaciente);
 
+    public OrdenVenta obtenerUltimoRegistro();
+    
 }

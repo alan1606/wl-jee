@@ -53,4 +53,11 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
         return query.getResultList();
     }
 
+    @Override
+    public OrdenVenta obtenerUltimoRegistro() {
+        Query query = em.createQuery("select max(o.idOv) from OrdenVenta o");
+        Long maximoId = (Long) query.getSingleResult();
+        return em.find(OrdenVenta.class, maximoId);
+    }
+
 }

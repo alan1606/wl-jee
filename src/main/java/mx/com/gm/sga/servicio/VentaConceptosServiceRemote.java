@@ -8,7 +8,9 @@ package mx.com.gm.sga.servicio;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.Remote;
+import mx.com.gm.sga.domain.Conceptos;
 import mx.com.gm.sga.domain.Institucion;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
 import mx.com.gm.sga.domain.VentaConceptos;
 
@@ -34,5 +36,11 @@ public interface VentaConceptosServiceRemote {
     public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha);
 
     public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
+
+    public void registrarVentaConceptos(VentaConceptos ventaConceptos);
+
+    public void registrarVentaConceptosList(List<VentaConceptos> ventaConceptos);
+
+    public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
 
 }

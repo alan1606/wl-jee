@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.Date;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
@@ -14,7 +15,9 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jws.WebService;
 import mx.com.gm.sga.datos.VentaConceptosDao;
+import mx.com.gm.sga.domain.Conceptos;
 import mx.com.gm.sga.domain.Institucion;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
 import mx.com.gm.sga.domain.VentaConceptos;
 
@@ -75,6 +78,21 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
     @Override
     public List<VentaConceptos> encontrarAgendadosPorAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion) {
         return ventaConceptosDao.findAgendadosByAreaEquipoDicomFechaInstitucion(idArea, idEquipoDicom, fecha, idInstitucion);
+    }
+
+    @Override
+    public void registrarVentaConceptos(VentaConceptos ventaConceptos) {
+        ventaConceptosDao.registrarVentaConceptos(ventaConceptos);
+    }
+
+    @Override
+    public void registrarVentaConceptosList(List<VentaConceptos> ventaConceptos) {
+        ventaConceptosDao.registrarVentaConceptosList(ventaConceptos);
+    }
+
+    @Override
+    public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado) {
+        return ventaConceptosDao.findByOrdenVentaConceptoHoraAsignado(ordenVenta, conceptos, horaAsingnado);
     }
 
     

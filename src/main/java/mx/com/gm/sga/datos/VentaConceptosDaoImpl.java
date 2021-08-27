@@ -11,6 +11,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import mx.com.gm.sga.domain.Conceptos;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
@@ -90,7 +91,7 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
     }
 
     @Override
-    public void registrarVentaConceptos(List<VentaConceptos> ventaConceptos) {
+    public void registrarVentaConceptosList(List<VentaConceptos> ventaConceptos) {
         for (VentaConceptos venta : ventaConceptos) {
             em.persist(venta);
         }
@@ -106,10 +107,11 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
     @Override
     public List<VentaConceptos> findAgendadosByAreaEquipoDicomFecha(Integer idArea, Long idEquipoDicom, String fecha) {
         //Query query = em.createQuery("from VentaConceptos v join v.idConceptoEs c join c.idAreaTo a join v.idEquipoDicom e where v.fechaAsignado like :fecha and v.estado != :estado and a.idA=:idArea and e.idEquipo=:idEquipoDicom");
-        Query query = em.createQuery("select v from VentaConceptos v join v.idConceptoEs c join v.idEquipoDicom e join c.idAreaTo a where v.fechaAsignado = :fecha");
-        //query.setParameter("idArea", idArea);
+        Query query = em.createQuery("select v from VentaConceptos v join v.idConceptoEs c join v.idEquipoDicom e where v.fechaAsignado = :fecha and v.idEquipoDicom.idEquipo = :idEquipoDicom and v.estado != :estado and c.idAreaTo.idA = :idArea ORDER BY v.horaAsignado DESC");
         query.setParameter("fecha", fecha);
-        //query.setParameter("idEquipoDicom", idEquipoDicom);
+        query.setParameter("idEquipoDicom", idEquipoDicom);
+        query.setParameter("estado", "NO AGENDADO");
+        query.setParameter("idArea", idArea);
         return query.getResultList();
 
     }
@@ -123,6 +125,17 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         query.setParameter("estado", "NO AGENDADO");
         query.setParameter("idInstitucion", idInstitucion);
         return query.getResultList();
+    }
+
+    @Override
+    public VentaConceptos findByOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado) {
+        Query query = em.createQuery("select v from VentaConceptos v where v.idOrdenVenta = :ordenVenta and v.idConceptoEs != :concepto and v.horaAsignado like :horaAsignado");
+        query.setParameter("ordenVenta", ordenVenta);
+        query.setParameter("concepto", conceptos);
+        horaAsingnado += "%";
+        query.setParameter("horaAsignado", horaAsingnado);
+        
+        return (VentaConceptos) query.getSingleResult();
     }
 
 }

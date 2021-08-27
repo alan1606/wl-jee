@@ -53,4 +53,9 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         return ordenVentaDao.obtenerNoPagadosPaciente(idPaciente);
     }
 
+    @Override
+    public OrdenVenta obtenerUltimaOrdenVentaRegistrada() {
+        return ordenVentaDao.obtenerUltimoRegistro();
+    }
+
 }

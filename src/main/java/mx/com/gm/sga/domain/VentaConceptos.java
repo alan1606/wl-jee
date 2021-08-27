@@ -216,8 +216,7 @@ public class VentaConceptos implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "hora_asignado")
-    @Temporal(TemporalType.TIME)
-    private Date horaAsignado;
+    private String horaAsignado;
     @Basic(optional = false)
     @NotNull
     @Column(name = "en_worklist")
@@ -249,7 +248,7 @@ public class VentaConceptos implements Serializable {
         this.idVc = idVc;
     }
 
-    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, String fechaAsignado, Date horaAsignado, boolean enWorklist, String estado) {
+    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, String fechaAsignado, String horaAsignado, boolean enWorklist, String estado) {
         this.idVc = idVc;
         this.idPersonalMedicoVc = idPersonalMedicoVc;
         this.precioVc = precioVc;
@@ -604,11 +603,11 @@ public class VentaConceptos implements Serializable {
         this.fechaAsignado = fechaAsignado;
     }
 
-    public Date getHoraAsignado() {
+    public String getHoraAsignado() {
         return horaAsignado;
     }
 
-    public void setHoraAsignado(Date horaAsignado) {
+    public void setHoraAsignado(String horaAsignado) {
         this.horaAsignado = horaAsignado;
     }
 
