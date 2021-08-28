@@ -55,4 +55,10 @@ public interface VentaConceptosServiceWs {
     @WebMethod
     public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
 
+        @WebMethod
+        public VentaConceptos encontrarVentaConceptosPorId(Long id);
+
+        @WebMethod
+            public void eliminarVentaConceptos(VentaConceptos venta);
+
 }

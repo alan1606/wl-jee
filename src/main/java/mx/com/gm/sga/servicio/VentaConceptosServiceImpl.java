@@ -95,6 +95,16 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.findByOrdenVentaConceptoHoraAsignado(ordenVenta, conceptos, horaAsingnado);
     }
 
+    @Override
+    public VentaConceptos encontrarVentaConceptosPorId(Long id) {
+        return ventaConceptosDao.findById(id);
+    }
+
+    @Override
+    public void eliminarVentaConceptos(VentaConceptos venta) {
+        ventaConceptosDao.eliminarVentaConceptos(venta);
+    }
+
     
     
 }

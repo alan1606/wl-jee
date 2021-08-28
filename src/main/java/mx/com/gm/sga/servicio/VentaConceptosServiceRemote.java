@@ -42,5 +42,9 @@ public interface VentaConceptosServiceRemote {
     public void registrarVentaConceptosList(List<VentaConceptos> ventaConceptos);
 
     public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
+    
+        public VentaConceptos encontrarVentaConceptosPorId(Long id);
+    public void eliminarVentaConceptos(VentaConceptos venta);
+
 
 }

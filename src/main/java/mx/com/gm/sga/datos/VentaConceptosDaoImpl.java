@@ -129,13 +129,23 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     @Override
     public VentaConceptos findByOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado) {
-        Query query = em.createQuery("select v from VentaConceptos v where v.idOrdenVenta = :ordenVenta and v.idConceptoEs != :concepto and v.horaAsignado like :horaAsignado");
-        query.setParameter("ordenVenta", ordenVenta);
-        query.setParameter("concepto", conceptos);
+        Query query = em.createQuery("select v from VentaConceptos v where v.idOrdenVenta.idOv = :ordenVenta and v.idConceptoEs.idTo = :concepto and v.horaAsignado like :horaAsignado");
+        query.setParameter("ordenVenta", ordenVenta.getIdOv());
+        query.setParameter("concepto", conceptos.getIdTo());
         horaAsingnado += "%";
         query.setParameter("horaAsignado", horaAsingnado);
         
         return (VentaConceptos) query.getSingleResult();
+    }
+
+    @Override
+    public VentaConceptos findById(Long id) {
+        return em.find(VentaConceptos.class, id);
+    }
+
+    @Override
+    public void eliminarVentaConceptos(VentaConceptos venta) {
+        em.remove(em.merge(venta));
     }
 
 }

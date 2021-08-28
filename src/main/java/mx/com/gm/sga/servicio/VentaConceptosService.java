@@ -21,6 +21,8 @@ import mx.com.gm.sga.domain.VentaConceptos;
 @Local
 public interface VentaConceptosService {
 
+    public VentaConceptos encontrarVentaConceptosPorId(Long id);
+    
     public List<VentaConceptos> listarTodosVentaConceptos();
 
     public List<VentaConceptos> encontrarVentaConceptosPorPacienteFechaEnWorklist(Pacientes paciente, String fecha, boolean enWorklist);
@@ -42,5 +44,7 @@ public interface VentaConceptosService {
     public void registrarVentaConceptosList(List<VentaConceptos> ventaConceptos);
 
     public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
+    
+    public void eliminarVentaConceptos(VentaConceptos venta);
 
 }

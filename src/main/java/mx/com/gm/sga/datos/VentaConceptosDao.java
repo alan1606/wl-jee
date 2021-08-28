@@ -20,6 +20,8 @@ import mx.com.gm.sga.domain.VentaConceptos;
  */
 public interface VentaConceptosDao {
     
+    public VentaConceptos findById(Long id);
+    
     public List<VentaConceptos> findAllVentaConceptos();
     
     public List<VentaConceptos> findVentaConceptosByPacienteFechaEnWorklist(Pacientes paciente, String fecha, boolean enWorklist);
@@ -41,4 +43,6 @@ public interface VentaConceptosDao {
     public List<VentaConceptos> findAgendadosByAreaEquipoDicomFechaInstitucion(Integer idArea, Long idEquipoDicom, String fecha, Long idInstitucion);
     
     public VentaConceptos findByOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
+    
+    public void eliminarVentaConceptos(VentaConceptos venta);
 }
