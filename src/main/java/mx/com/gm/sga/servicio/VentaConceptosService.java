@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import javax.ejb.Local;
 import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.EquipoDicom;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
@@ -46,5 +47,8 @@ public interface VentaConceptosService {
     public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
     
     public void eliminarVentaConceptos(VentaConceptos venta);
+
+    
+        public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
 
 }

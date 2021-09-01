@@ -16,6 +16,7 @@ import javax.inject.Inject;
 import javax.jws.WebService;
 import mx.com.gm.sga.datos.VentaConceptosDao;
 import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.EquipoDicom;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
@@ -103,6 +104,11 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
     @Override
     public void eliminarVentaConceptos(VentaConceptos venta) {
         ventaConceptosDao.eliminarVentaConceptos(venta);
+    }
+
+    @Override
+    public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado) {
+        return ventaConceptosDao.findCountByEquipoFechaHora(equipo, fecha, horaAsingnado);
     }
 
     

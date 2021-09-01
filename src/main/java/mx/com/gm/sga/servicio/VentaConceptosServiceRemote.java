@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import javax.ejb.Remote;
 import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.EquipoDicom;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
@@ -45,6 +46,8 @@ public interface VentaConceptosServiceRemote {
     
         public VentaConceptos encontrarVentaConceptosPorId(Long id);
     public void eliminarVentaConceptos(VentaConceptos venta);
+
+            public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
 
 
 }

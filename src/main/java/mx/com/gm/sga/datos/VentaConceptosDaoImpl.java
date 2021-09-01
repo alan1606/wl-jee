@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.EquipoDicom;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
@@ -134,7 +135,7 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         query.setParameter("concepto", conceptos.getIdTo());
         horaAsingnado += "%";
         query.setParameter("horaAsignado", horaAsingnado);
-        
+
         return (VentaConceptos) query.getSingleResult();
     }
 
@@ -146,6 +147,17 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
     @Override
     public void eliminarVentaConceptos(VentaConceptos venta) {
         em.remove(em.merge(venta));
+    }
+
+    @Override
+    public Long findCountByEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado) {
+        Query query = em.createQuery("select count(v) from VentaConceptos v join v.idEquipoDicom e where v.horaAsignado like :horaAsignado and v.fechaAsignado = :fecha and e.idEquipo = :idEquipo");
+        horaAsingnado += "%";
+        query.setParameter("horaAsignado", horaAsingnado);
+        query.setParameter("fecha", fecha);
+        query.setParameter("idEquipo", equipo.getIdEquipo());
+        Long total = (Long) query.getSingleResult();
+        return total;
     }
 
 }

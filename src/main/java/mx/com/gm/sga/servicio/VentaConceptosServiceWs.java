@@ -10,6 +10,7 @@ import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.EquipoDicom;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
@@ -55,10 +56,13 @@ public interface VentaConceptosServiceWs {
     @WebMethod
     public VentaConceptos encontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado(OrdenVenta ordenVenta, Conceptos conceptos, String horaAsingnado);
 
-        @WebMethod
-        public VentaConceptos encontrarVentaConceptosPorId(Long id);
+    @WebMethod
+    public VentaConceptos encontrarVentaConceptosPorId(Long id);
 
-        @WebMethod
-            public void eliminarVentaConceptos(VentaConceptos venta);
+    @WebMethod
+    public void eliminarVentaConceptos(VentaConceptos venta);
+
+    @WebMethod
+    public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
 
 }
