@@ -91,6 +91,15 @@
             </webservice-endpoint>
         </ejb>
         
+        <ejb>
+            <ejb-name>MexicoServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>MexicoServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
         
     </enterprise-beans>
 </glassfish-ejb-jar>

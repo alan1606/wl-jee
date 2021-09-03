@@ -8,11 +8,14 @@ mx\com\gm\sga\servicio\AreasServiceRS.class
 mx\com\gm\sga\servicio\InstitucionServiceRS.class
 mx\com\gm\sga\datos\OrdenVentaDaoImpl.class
 mx\com\gm\sga\domain\Institucion.class
+mx\com\gm\sga\domain\Mexico.class
 mx\com\gm\sga\datos\ConceptosDaoImpl.class
 mx\com\gm\sga\servicio\InstitucionServiceRemote.class
+mx\com\gm\sga\datos\MexicoDao.class
 mx\com\gm\sga\domain\Pacientes.class
 mx\com\gm\sga\servicio\EquipoDicomService.class
 mx\com\gm\sga\datos\ConceptosInstitucionDao.class
+mx\com\gm\sga\servicio\MexicoServiceImpl.class
 mx\com\gm\sga\servicio\VentaConceptosServiceWs.class
 mx\com\gm\sga\datos\CatalogoFormaPagoDao.class
 mx\com\gm\sga\servicio\PacienteServiceRemote.class
@@ -25,6 +28,7 @@ mx\com\gm\sga\datos\AreasDaoImpl.class
 mx\com\gm\sga\domain\Areas.class
 mx\com\gm\sga\datos\VentaConceptosDaoImpl.class
 mx\com\gm\sga\datos\ConceptosDao.class
+mx\com\gm\sga\servicio\MexicoServiceWs.class
 mx\com\gm\sga\servicio\OrdenVentaServiceRS.class
 mx\com\gm\sga\datos\InstitucionDao.class
 mx\com\gm\sga\datos\PacienteDaoImpl.class
@@ -52,12 +56,14 @@ mx\com\gm\sga\servicio\ConceptosServiceRS.class
 mx\com\gm\sga\servicio\EquipoDicomServiceImpl.class
 mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.class
 com\mycompany\hapi\prueba.class
+mx\com\gm\sga\servicio\MexicoServiceRS.class
 mx\com\gm\sga\servicio\OrdenVentaService.class
 mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.class
 mx\com\gm\sga\servicio\OrdenVentaServiceImpl.class
 mx\com\gm\sga\datos\PacienteDao.class
 mx\com\gm\sga\datos\VentaConceptosDao.class
 mx\com\gm\sga\domain\OrdenVenta.class
+mx\com\gm\sga\datos\MexicoDaoImpl.class
 mx\com\gm\sga\domain\EquipoDicom.class
 mx\com\gm\sga\domain\VentaConceptos.class
 mx\com\gm\sga\servicio\ConceptosServiceImpl.class
@@ -68,6 +74,8 @@ mx\com\gm\sga\servicio\ConceptosService.class
 mx\com\gm\sga\domain\ConceptosInstitucion.class
 mx\com\gm\sga\servicio\AreasServiceImpl.class
 mx\com\gm\sga\servicio\ConceptosServiceWs.class
+mx\com\gm\sga\servicio\MexicoServiceRemote.class
+mx\com\gm\sga\servicio\MexicoService.class
 mx\com\gm\sga\servicio\ConceptosServiceRemote.class
 mx\com\gm\sga\servicio\PacienteServiceRS.class
 mx\com\gm\sga\datos\EquipoDicomDao.class
