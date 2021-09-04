@@ -20,4 +20,5 @@ public interface AreasDao {
      public Areas findAreaByNombre(String nombre);
      
      public List<Areas> findAreasByInstitucion(Long idInstitucion);
+     
 }

@@ -111,6 +111,11 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.findCountByEquipoFechaHora(equipo, fecha, horaAsingnado);
     }
 
+    @Override
+    public List<VentaConceptos> findAgendadosByFecha(String fecha) {
+        return ventaConceptosDao.findAgendadosByFecha(fecha);
+    }
+
     
     
 }

@@ -50,5 +50,8 @@ public interface VentaConceptosService {
 
     
         public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
+        
+                public List<VentaConceptos> findAgendadosByFecha( String fecha);
+
 
 }

@@ -65,4 +65,8 @@ public interface VentaConceptosServiceWs {
     @WebMethod
     public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
 
+        @WebMethod
+            public List<VentaConceptos> findAgendadosByFecha( String fecha);
+
+    
 }

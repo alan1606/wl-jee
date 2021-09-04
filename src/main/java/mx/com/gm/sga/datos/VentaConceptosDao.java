@@ -47,4 +47,7 @@ public interface VentaConceptosDao {
     public void eliminarVentaConceptos(VentaConceptos venta);
 
     public Long findCountByEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
+    
+        public List<VentaConceptos> findAgendadosByFecha( String fecha);
+
 }

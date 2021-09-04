@@ -5,6 +5,8 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -159,5 +161,15 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         Long total = (Long) query.getSingleResult();
         return total;
     }
+
+    @Override
+    public List<VentaConceptos> findAgendadosByFecha(String fecha) {
+        Query query = em.createQuery("select v from VentaConceptos v where v.fechaAsignado = :fecha and v.estado = 'AGENDADO'");
+        query.setParameter("fecha", fecha);
+        return query.getResultList();
+    }
+    
+    
+    
 
 }

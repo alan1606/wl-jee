@@ -49,5 +49,7 @@ public interface VentaConceptosServiceRemote {
 
             public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
 
+                    public List<VentaConceptos> findAgendadosByFecha( String fecha);
+
 
 }
