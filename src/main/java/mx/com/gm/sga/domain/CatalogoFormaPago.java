@@ -48,6 +48,8 @@ public class CatalogoFormaPago implements Serializable {
     @Column(name = "forma_pago_fp")
     private String formaPagoFp;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idFormaPago")
+    private List<PagoOrdenVenta> pagoOrdenVentaList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idFormaPago")
     private List<OrdenVenta> ordenVentaList;
 
     public CatalogoFormaPago() {
@@ -76,6 +78,15 @@ public class CatalogoFormaPago implements Serializable {
 
     public void setFormaPagoFp(String formaPagoFp) {
         this.formaPagoFp = formaPagoFp;
+    }
+
+    @XmlTransient
+    public List<PagoOrdenVenta> getPagoOrdenVentaList() {
+        return pagoOrdenVentaList;
+    }
+
+    public void setPagoOrdenVentaList(List<PagoOrdenVenta> pagoOrdenVentaList) {
+        this.pagoOrdenVentaList = pagoOrdenVentaList;
     }
 
     @XmlTransient

@@ -48,6 +48,8 @@ public interface VentaConceptosDao {
 
     public Long findCountByEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
     
-        public List<VentaConceptos> findAgendadosByFecha( String fecha);
+    public List<VentaConceptos> findAgendadosByFecha( String fecha);
+    
+    public void actualizarVentaConceptos(VentaConceptos venta);
 
 }

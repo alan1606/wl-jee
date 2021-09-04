@@ -53,7 +53,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "OrdenVenta.findBySubTotalP", query = "SELECT o FROM OrdenVenta o WHERE o.subTotalP = :subTotalP"),
     @NamedQuery(name = "OrdenVenta.findBySubTotalS", query = "SELECT o FROM OrdenVenta o WHERE o.subTotalS = :subTotalS"),
     @NamedQuery(name = "OrdenVenta.findByUsuarioOv", query = "SELECT o FROM OrdenVenta o WHERE o.usuarioOv = :usuarioOv"),
-    @NamedQuery(name = "OrdenVenta.findByIdPacienteOv", query = "SELECT o FROM OrdenVenta o WHERE o.idPacienteOv = :idPacienteOv"),
     @NamedQuery(name = "OrdenVenta.findByFechaVentaOv", query = "SELECT o FROM OrdenVenta o WHERE o.fechaVentaOv = :fechaVentaOv"),
     @NamedQuery(name = "OrdenVenta.findByAdicionalesCOv", query = "SELECT o FROM OrdenVenta o WHERE o.adicionalesCOv = :adicionalesCOv"),
     @NamedQuery(name = "OrdenVenta.findByAdicionalesPOv", query = "SELECT o FROM OrdenVenta o WHERE o.adicionalesPOv = :adicionalesPOv"),
@@ -138,13 +137,8 @@ public class OrdenVenta implements Serializable {
     private int usuarioOv;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "id_paciente_ov")
-    private long idPacienteOv;
-    @Basic(optional = false)
-    @NotNull
     @Column(name = "fecha_venta_ov")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date fechaVentaOv;
+    private String fechaVentaOv;
     @Column(name = "adicionales_c_ov")
     private Float adicionalesCOv;
     @Column(name = "adicionales_p_ov")
@@ -290,10 +284,15 @@ public class OrdenVenta implements Serializable {
     @NotNull
     private boolean pagado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
+    private List<PagoOrdenVenta> pagoOrdenVentaList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
     private List<VentaConceptos> ventaConceptosList;
     @JoinColumn(name = "id_forma_pago", referencedColumnName = "id_fp")
     @ManyToOne(optional = false)
     private CatalogoFormaPago idFormaPago;
+    @JoinColumn(name = "id_paciente_ov", referencedColumnName = "id_p")
+    @ManyToOne(optional = false)
+    private Pacientes idPacienteOv;
 
     public OrdenVenta() {
     }
@@ -302,12 +301,11 @@ public class OrdenVenta implements Serializable {
         this.idOv = idOv;
     }
 
-    public OrdenVenta(Long idOv, float subtotalOv, float ivaOv, int usuarioOv, long idPacienteOv, Date fechaVentaOv, short pDescCta, float descDCta, float tDescCta, short pDescImg, float descDImg, float tDescImg, short pDescLab, float descDLab, float tDescLab, short pDescServ, float descDServ, float tDescServ, short pDescPro, float descDPro, float tDescPro, int contadorOv, short facturadaOv, short estatusOv, short procedenciaOv, boolean requiereFactura, boolean pagado) {
+    public OrdenVenta(Long idOv, float subtotalOv, float ivaOv, int usuarioOv, String fechaVentaOv, short pDescCta, float descDCta, float tDescCta, short pDescImg, float descDImg, float tDescImg, short pDescLab, float descDLab, float tDescLab, short pDescServ, float descDServ, float tDescServ, short pDescPro, float descDPro, float tDescPro, int contadorOv, short facturadaOv, short estatusOv, short procedenciaOv, boolean requiereFactura, boolean pagado) {
         this.idOv = idOv;
         this.subtotalOv = subtotalOv;
         this.ivaOv = ivaOv;
         this.usuarioOv = usuarioOv;
-        this.idPacienteOv = idPacienteOv;
         this.fechaVentaOv = fechaVentaOv;
         this.pDescCta = pDescCta;
         this.descDCta = descDCta;
@@ -452,19 +450,11 @@ public class OrdenVenta implements Serializable {
         this.usuarioOv = usuarioOv;
     }
 
-    public long getIdPacienteOv() {
-        return idPacienteOv;
-    }
-
-    public void setIdPacienteOv(long idPacienteOv) {
-        this.idPacienteOv = idPacienteOv;
-    }
-
-    public Date getFechaVentaOv() {
+    public String getFechaVentaOv() {
         return fechaVentaOv;
     }
 
-    public void setFechaVentaOv(Date fechaVentaOv) {
+    public void setFechaVentaOv(String fechaVentaOv) {
         this.fechaVentaOv = fechaVentaOv;
     }
 
@@ -813,6 +803,15 @@ public class OrdenVenta implements Serializable {
     }
 
     @XmlTransient
+    public List<PagoOrdenVenta> getPagoOrdenVentaList() {
+        return pagoOrdenVentaList;
+    }
+
+    public void setPagoOrdenVentaList(List<PagoOrdenVenta> pagoOrdenVentaList) {
+        this.pagoOrdenVentaList = pagoOrdenVentaList;
+    }
+
+    @XmlTransient
     public List<VentaConceptos> getVentaConceptosList() {
         return ventaConceptosList;
     }
@@ -827,6 +826,14 @@ public class OrdenVenta implements Serializable {
 
     public void setIdFormaPago(CatalogoFormaPago idFormaPago) {
         this.idFormaPago = idFormaPago;
+    }
+
+    public Pacientes getIdPacienteOv() {
+        return idPacienteOv;
+    }
+
+    public void setIdPacienteOv(Pacientes idPacienteOv) {
+        this.idPacienteOv = idPacienteOv;
     }
 
     @Override

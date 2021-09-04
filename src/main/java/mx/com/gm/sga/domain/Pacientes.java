@@ -245,6 +245,8 @@ public class Pacientes implements Serializable {
     private String alergiasP;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPacienteVc")
     private List<VentaConceptos> ventaConceptosList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPacienteOv")
+    private List<OrdenVenta> ordenVentaList;
 
     public Pacientes() {
     }
@@ -702,6 +704,15 @@ public class Pacientes implements Serializable {
 
     public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
         this.ventaConceptosList = ventaConceptosList;
+    }
+
+    @XmlTransient
+    public List<OrdenVenta> getOrdenVentaList() {
+        return ordenVentaList;
+    }
+
+    public void setOrdenVentaList(List<OrdenVenta> ordenVentaList) {
+        this.ordenVentaList = ordenVentaList;
     }
 
     @Override

@@ -168,6 +168,11 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         query.setParameter("fecha", fecha);
         return query.getResultList();
     }
+
+    @Override
+    public void actualizarVentaConceptos(VentaConceptos venta) {
+        em.merge(venta);
+    }
     
     
     

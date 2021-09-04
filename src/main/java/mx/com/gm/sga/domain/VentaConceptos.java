@@ -223,7 +223,7 @@ public class VentaConceptos implements Serializable {
     private boolean enWorklist;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 10)
+    @Size(min = 1, max = 22)
     private String estado;
     @JoinColumn(name = "id_concepto_es", referencedColumnName = "id_to")
     @ManyToOne(optional = false)
@@ -248,7 +248,7 @@ public class VentaConceptos implements Serializable {
         this.idVc = idVc;
     }
 
-    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, String fechaAsignado, String horaAsignado, boolean enWorklist, String estado) {
+    public VentaConceptos(Long idVc, int idPersonalMedicoVc, float precioVc, int idConvenioVc, int idUsuarioVc, String fechaVentaVc, short estatusVc, short temporalVc, long idConceptosBeneficios, short esBeneficioVc, int idRadiologoExterno, short salvadoVc, String fechaAsignado,  String horaAsignado, boolean enWorklist, String estado) {
         this.idVc = idVc;
         this.idPersonalMedicoVc = idPersonalMedicoVc;
         this.precioVc = precioVc;

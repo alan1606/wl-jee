@@ -116,6 +116,11 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.findAgendadosByFecha(fecha);
     }
 
+    @Override
+    public void actualizarVentaConceptos(VentaConceptos venta) {
+       ventaConceptosDao.actualizarVentaConceptos(venta);
+    }
+
     
     
 }

@@ -101,5 +101,15 @@
             </webservice-endpoint>
         </ejb>
         
+         <ejb>
+            <ejb-name>PagoOrdenVentaServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>PagoOrdenVentaServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        
     </enterprise-beans>
 </glassfish-ejb-jar>

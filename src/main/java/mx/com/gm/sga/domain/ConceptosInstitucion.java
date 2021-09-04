@@ -18,6 +18,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -31,8 +32,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "ConceptosInstitucion.findAll", query = "SELECT c FROM ConceptosInstitucion c"),
     @NamedQuery(name = "ConceptosInstitucion.findById", query = "SELECT c FROM ConceptosInstitucion c WHERE c.id = :id"),
     @NamedQuery(name = "ConceptosInstitucion.findByLimiteDiario", query = "SELECT c FROM ConceptosInstitucion c WHERE c.limiteDiario = :limiteDiario"),
-    @NamedQuery(name = "ConceptosInstitucion.findByCosto", query = "SELECT c FROM ConceptosInstitucion c WHERE c.costo = :costo"),
-    @NamedQuery(name = "ConceptosInstitucion.findByPrecio", query = "SELECT c FROM ConceptosInstitucion c WHERE c.precio = :precio")})
+    @NamedQuery(name = "ConceptosInstitucion.findByPrecio", query = "SELECT c FROM ConceptosInstitucion c WHERE c.precio = :precio"),
+    @NamedQuery(name = "ConceptosInstitucion.findByPrecioPublico", query = "SELECT c FROM ConceptosInstitucion c WHERE c.precioPublico = :precioPublico"),
+    @NamedQuery(name = "ConceptosInstitucion.findByActivo", query = "SELECT c FROM ConceptosInstitucion c WHERE c.activo = :activo"),
+    @NamedQuery(name = "ConceptosInstitucion.findByIdInternoInstitucion", query = "SELECT c FROM ConceptosInstitucion c WHERE c.idInternoInstitucion = :idInternoInstitucion"),
+    @NamedQuery(name = "ConceptosInstitucion.findByPensionesClaveAnterior", query = "SELECT c FROM ConceptosInstitucion c WHERE c.pensionesClaveAnterior = :pensionesClaveAnterior")})
 public class ConceptosInstitucion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -46,10 +50,22 @@ public class ConceptosInstitucion implements Serializable {
     private int limiteDiario;
     @Basic(optional = false)
     @NotNull
-    private double costo;
+    private double precio;
     @Basic(optional = false)
     @NotNull
-    private double precio;
+    @Column(name = "precio_publico")
+    private double precioPublico;
+    @Basic(optional = false)
+    @NotNull
+    private boolean activo;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
+    @Column(name = "id_interno_institucion")
+    private String idInternoInstitucion;
+    @Size(max = 10)
+    @Column(name = "pensiones_clave_anterior")
+    private String pensionesClaveAnterior;
     @JoinColumn(name = "id_concepto", referencedColumnName = "id_to")
     @ManyToOne(optional = false)
     private Conceptos idConcepto;
@@ -64,11 +80,13 @@ public class ConceptosInstitucion implements Serializable {
         this.id = id;
     }
 
-    public ConceptosInstitucion(Long id, int limiteDiario, double costo, double precio) {
+    public ConceptosInstitucion(Long id, int limiteDiario, double precio, double precioPublico, boolean activo, String idInternoInstitucion) {
         this.id = id;
         this.limiteDiario = limiteDiario;
-        this.costo = costo;
         this.precio = precio;
+        this.precioPublico = precioPublico;
+        this.activo = activo;
+        this.idInternoInstitucion = idInternoInstitucion;
     }
 
     public Long getId() {
@@ -87,20 +105,44 @@ public class ConceptosInstitucion implements Serializable {
         this.limiteDiario = limiteDiario;
     }
 
-    public double getCosto() {
-        return costo;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
     public double getPrecio() {
         return precio;
     }
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public double getPrecioPublico() {
+        return precioPublico;
+    }
+
+    public void setPrecioPublico(double precioPublico) {
+        this.precioPublico = precioPublico;
+    }
+
+    public boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public String getIdInternoInstitucion() {
+        return idInternoInstitucion;
+    }
+
+    public void setIdInternoInstitucion(String idInternoInstitucion) {
+        this.idInternoInstitucion = idInternoInstitucion;
+    }
+
+    public String getPensionesClaveAnterior() {
+        return pensionesClaveAnterior;
+    }
+
+    public void setPensionesClaveAnterior(String pensionesClaveAnterior) {
+        this.pensionesClaveAnterior = pensionesClaveAnterior;
     }
 
     public Conceptos getIdConcepto() {

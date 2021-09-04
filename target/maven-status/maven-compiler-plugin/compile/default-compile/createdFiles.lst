@@ -22,13 +22,16 @@ mx\com\gm\sga\servicio\PacienteServiceRemote.class
 mx\com\gm\sga\datos\AreasDao.class
 mx\com\gm\sga\servicio\AreasServiceRemote.class
 mx\com\gm\sga\servicio\CatalogoFormaPagoServiceWs.class
+mx\com\gm\sga\servicio\PagoOrdenVentaServiceRS.class
 mx\com\gm\sga\servicio\InstitucionService.class
 mx\com\gm\sga\datos\OrdenVentaDao.class
 mx\com\gm\sga\datos\AreasDaoImpl.class
 mx\com\gm\sga\domain\Areas.class
 mx\com\gm\sga\datos\VentaConceptosDaoImpl.class
 mx\com\gm\sga\datos\ConceptosDao.class
+mx\com\gm\sga\domain\PagoOrdenVenta.class
 mx\com\gm\sga\servicio\MexicoServiceWs.class
+mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.class
 mx\com\gm\sga\servicio\OrdenVentaServiceRS.class
 mx\com\gm\sga\datos\InstitucionDao.class
 mx\com\gm\sga\datos\PacienteDaoImpl.class
@@ -40,10 +43,13 @@ mx\com\gm\sga\servicio\ConceptosInstitucionServiceWs.class
 mx\com\gm\sga\servicio\PacienteServiceImpl.class
 mx\com\gm\sga\servicio\CatalogoFormaPagoService.class
 mx\com\gm\sga\servicio\ConceptosInstitucionServiceImpl.class
+mx\com\gm\sga\datos\PagoOrdenVentaDao.class
 mx\com\gm\sga\servicio\InstitucionServiceWs.class
+mx\com\gm\sga\servicio\PagoOrdenVentaService.class
 mx\com\gm\sga\servicio\ConceptosInstitucionService.class
 mx\com\gm\sga\servicio\VentaConceptosServiceImpl.class
 mx\com\gm\sga\datos\InstitucionDaoImpl.class
+mx\com\gm\sga\servicio\PagoOrdenVentaServiceRemote.class
 mx\com\gm\sga\servicio\VentaConceptosServiceRemote.class
 mx\com\gm\sga\servicio\VentaConceptosServiceRS.class
 mx\com\gm\sga\domain\Worklist.class
@@ -70,6 +76,7 @@ mx\com\gm\sga\servicio\ConceptosServiceImpl.class
 mx\com\gm\sga\servicio\InstitucionServiceImpl.class
 mx\com\gm\sga\servicio\EquipoDicomServiceWs.class
 mx\com\gm\sga\datos\EquipoDicomDaoImpl.class
+mx\com\gm\sga\servicio\PagoOrdenVentaServiceImpl.class
 mx\com\gm\sga\servicio\ConceptosService.class
 mx\com\gm\sga\domain\ConceptosInstitucion.class
 mx\com\gm\sga\servicio\AreasServiceImpl.class
@@ -79,3 +86,4 @@ mx\com\gm\sga\servicio\MexicoService.class
 mx\com\gm\sga\servicio\ConceptosServiceRemote.class
 mx\com\gm\sga\servicio\PacienteServiceRS.class
 mx\com\gm\sga\datos\EquipoDicomDao.class
+mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.class

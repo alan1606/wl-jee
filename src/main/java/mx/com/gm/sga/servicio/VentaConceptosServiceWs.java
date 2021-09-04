@@ -68,5 +68,8 @@ public interface VentaConceptosServiceWs {
         @WebMethod
             public List<VentaConceptos> findAgendadosByFecha( String fecha);
 
-    
+                    @WebMethod
+
+        public void actualizarVentaConceptos(VentaConceptos venta);
+
 }
