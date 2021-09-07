@@ -39,7 +39,7 @@ public class AreasDaoImpl implements AreasDao {
 
     @Override
     public List<Areas> findAreasByInstitucion(Long idInstitucion) {
-        Query query = em.createQuery("select a from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion=:idInstitucion");
+        Query query = em.createQuery("select distinct(a) from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion=:idInstitucion");
         query.setParameter("idInstitucion", idInstitucion);
         return query.getResultList();
     }

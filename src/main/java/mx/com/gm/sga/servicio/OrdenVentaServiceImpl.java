@@ -58,4 +58,19 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         return ordenVentaDao.obtenerUltimoRegistro();
     }
 
+    @Override
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasEnFecha(String date) {
+        return ordenVentaDao.obtenerConfirmadosEnFecha(date);
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasFechaPaciente(String date, Long idPaciente) {
+        return ordenVentaDao.obtenerConfirmadosFechaPaciente(date, idPaciente);
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(String idPaciente) {
+        return ordenVentaDao.obtenerConfirmadosEnFecha(idPaciente);
+    }
+
 }

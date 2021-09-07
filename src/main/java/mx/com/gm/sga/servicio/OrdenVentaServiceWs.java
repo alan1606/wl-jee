@@ -32,4 +32,13 @@ public interface OrdenVentaServiceWs {
     @WebMethod
     public OrdenVenta obtenerUltimaOrdenVentaRegistrada();
 
+    @WebMethod
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasEnFecha(String date);
+
+    @WebMethod
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasFechaPaciente(String date, Long idPaciente);
+
+    @WebMethod
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(String idPaciente);
+
 }

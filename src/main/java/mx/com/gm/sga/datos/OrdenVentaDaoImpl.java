@@ -60,4 +60,28 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
         return em.find(OrdenVenta.class, maximoId);
     }
 
+    @Override
+    public List<OrdenVenta> obtenerConfirmadosEnFecha(String date) {
+        Query query = em.createQuery("select distinct(o) from VentaConceptos c join c.idOrdenVenta o where o.fechaVentaOv like :date and o.pagado=false and c.estado = 'CONFIRMADO'");
+        date += "%";
+        query.setParameter("date", date);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerConfirmadosFechaPaciente(String date, Long idPaciente) {
+         Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o join v.idPacienteVc p where p.idP = :idPaciente and o.fechaVentaOv like :date and v.pagado=false and c.estado = 'CONFIRMADO'");
+        date += "%";
+        query.setParameter("date", date);
+        query.setParameter("idPaciente", idPaciente);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerConfirmadosPaciente(String idPaciente) {
+         Query query = em.createQuery("select p from VentaConceptos v join v.idPacienteVc p where p.idP = :idPaciente and v.pagado=false and c.estado = 'CONFIRMADO'");
+        query.setParameter("idPaciente", idPaciente);
+        return query.getResultList();
+    }
+
 }
