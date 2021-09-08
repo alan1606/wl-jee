@@ -39,6 +39,6 @@ public interface OrdenVentaServiceWs {
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasFechaPaciente(String date, Long idPaciente);
 
     @WebMethod
-    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(String idPaciente);
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
 
 }

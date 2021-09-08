@@ -26,7 +26,11 @@ public class PacienteDaoImpl implements PacienteDao {
 
     @Override
     public List<Pacientes> findAllPacientes() {
-        return em.createNamedQuery("Pacientes.findAll").getResultList();
+        String jpql = null;
+        Query q = null;
+        jpql = "select p from Pacientes p order by p.nombreCompletoP";
+        q = em.createQuery(jpql);
+        return q.getResultList();
     }
 
     @Override

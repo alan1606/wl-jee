@@ -69,8 +69,8 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
     }
 
     @Override
-    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(String idPaciente) {
-        return ordenVentaDao.obtenerConfirmadosEnFecha(idPaciente);
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente) {
+        return ordenVentaDao.obtenerConfirmadosPaciente(idPaciente);
     }
 
 }

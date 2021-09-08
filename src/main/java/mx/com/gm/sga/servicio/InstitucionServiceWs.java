@@ -25,5 +25,8 @@ public interface InstitucionServiceWs {
 
     @WebMethod
     public Institucion encontrarInstitucionPorNombre(Institucion institucion);
+    
+    @WebMethod
+     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
 
 }

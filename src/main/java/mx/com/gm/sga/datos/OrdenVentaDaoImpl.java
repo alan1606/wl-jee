@@ -62,7 +62,7 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
 
     @Override
     public List<OrdenVenta> obtenerConfirmadosEnFecha(String date) {
-        Query query = em.createQuery("select distinct(o) from VentaConceptos c join c.idOrdenVenta o where o.fechaVentaOv like :date and o.pagado=false and c.estado = 'CONFIRMADO'");
+        Query query = em.createQuery("select o from VentaConceptos c join c.idOrdenVenta o where o.fechaVentaOv like :date and o.pagado=false and c.estado = 'CONFIRMADO' group by o");
         date += "%";
         query.setParameter("date", date);
         return query.getResultList();
@@ -70,7 +70,7 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
 
     @Override
     public List<OrdenVenta> obtenerConfirmadosFechaPaciente(String date, Long idPaciente) {
-         Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o join v.idPacienteVc p where p.idP = :idPaciente and o.fechaVentaOv like :date and v.pagado=false and c.estado = 'CONFIRMADO'");
+        Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o where o.idPacienteOv.idP = :idPaciente and o.fechaVentaOv like :date and o.pagado = false and v.estado = 'CONFIRMADO' group by o");
         date += "%";
         query.setParameter("date", date);
         query.setParameter("idPaciente", idPaciente);
@@ -78,8 +78,8 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
     }
 
     @Override
-    public List<OrdenVenta> obtenerConfirmadosPaciente(String idPaciente) {
-         Query query = em.createQuery("select p from VentaConceptos v join v.idPacienteVc p where p.idP = :idPaciente and v.pagado=false and c.estado = 'CONFIRMADO'");
+    public List<OrdenVenta> obtenerConfirmadosPaciente(Long idPaciente) {
+         Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o where o.idPacienteOv.idP = :idPaciente and o.pagado = false and v.estado = 'CONFIRMADO' group by o");
         query.setParameter("idPaciente", idPaciente);
         return query.getResultList();
     }

@@ -48,5 +48,10 @@ public class InstitucionServiceImpl implements InstitucionService, InstitucionSe
     public List<Institucion> listarTodasInstituciones() {
         return institucionDao.findAllInstituciones();
     }
+
+    @Override
+    public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta) {
+        return institucionDao.findInstitucionByIdOrdenVenta(idOrdenVenta);
+    }
     
 }

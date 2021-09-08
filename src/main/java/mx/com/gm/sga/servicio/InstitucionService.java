@@ -21,4 +21,5 @@ public interface InstitucionService {
 
     public Institucion encontrarInstitucionPorNombre(Institucion institucion);
 
+    public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
 }

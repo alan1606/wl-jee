@@ -21,4 +21,6 @@ public interface InstitucionServiceRemote {
     public Institucion encontrarInstitucionPorId(Institucion institucion);
 
     public Institucion encontrarInstitucionPorNombre(Institucion institucion);
+    
+     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
 }

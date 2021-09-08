@@ -29,6 +29,6 @@ public interface OrdenVentaDao {
 
     public List<OrdenVenta> obtenerConfirmadosFechaPaciente(String date, Long idPaciente);
 
-    public List<OrdenVenta> obtenerConfirmadosPaciente(String idPaciente);
+    public List<OrdenVenta> obtenerConfirmadosPaciente(Long idPaciente);
     
 }

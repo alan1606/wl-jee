@@ -30,5 +30,5 @@ public interface OrdenVentaServiceRemote {
 
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasFechaPaciente(String date, Long idPaciente);
 
-    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(String idPaciente);
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
 }
