@@ -84,4 +84,9 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
         return query.getResultList();
     }
 
+    @Override
+    public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta) {
+        return em.find(OrdenVenta.class, idOrdenVenta);
+    }
+
 }

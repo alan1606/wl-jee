@@ -14,6 +14,8 @@ import mx.com.gm.sga.domain.OrdenVenta;
  */
 public interface OrdenVentaDao {
 
+    public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
+    
     public void registrarOrdenVenta(OrdenVenta orden);
 
     public List<OrdenVenta> obtenerNoPagadosEnFecha(String date);
@@ -23,7 +25,6 @@ public interface OrdenVentaDao {
     public List<OrdenVenta> obtenerNoPagadosPaciente(String idPaciente);
 
     public OrdenVenta obtenerUltimoRegistro();
- 
     
         public List<OrdenVenta> obtenerConfirmadosEnFecha(String date);
 

@@ -73,4 +73,9 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         return ordenVentaDao.obtenerConfirmadosPaciente(idPaciente);
     }
 
+    @Override
+    public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta) {
+        return ordenVentaDao.obtenerOrdenVentaPorId(idOrdenVenta);
+    }
+
 }

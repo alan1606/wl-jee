@@ -32,4 +32,7 @@ public interface OrdenVentaService {
 
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
     
+        public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
+
+    
 }
