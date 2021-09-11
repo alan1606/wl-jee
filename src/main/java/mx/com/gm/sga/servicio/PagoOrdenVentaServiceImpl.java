@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
@@ -13,6 +14,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jws.WebService;
 import mx.com.gm.sga.datos.PagoOrdenVentaDao;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.PagoOrdenVenta;
 
 /**
@@ -36,6 +38,11 @@ public class PagoOrdenVentaServiceImpl implements PagoOrdenVentaService, PagoOrd
     @Override
     public void registrarPagoOrdenVenta(PagoOrdenVenta pago) {
         pagoOrdenVentaDao.registrarPagoOrdenVenta(pago);
+    }
+
+    @Override
+    public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta) {
+        return pagoOrdenVentaDao.obtenerPagosDeOrdenVenta(ordenVenta);
     }
     
 }

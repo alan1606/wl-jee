@@ -47,9 +47,20 @@ public interface VentaConceptosDao {
     public void eliminarVentaConceptos(VentaConceptos venta);
 
     public Long findCountByEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
-    
-    public List<VentaConceptos> findAgendadosByFecha( String fecha);
-    
+
+    public List<VentaConceptos> findAgendadosByFecha(String fecha);
+
     public void actualizarVentaConceptos(VentaConceptos venta);
 
+    public List<Object[]> findCorteMatutino(String fecha);
+
+    public List<Object[]> findCorteVespertino(String fecha);
+
+    public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucion(String fecha);
+
+    public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucion(String fecha);
+
+    public List<Object> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha);
+
+    public List<Object> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha);
 }

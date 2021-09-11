@@ -121,6 +121,36 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
        ventaConceptosDao.actualizarVentaConceptos(venta);
     }
 
+    @Override
+    public List<Object[]> findCorteMatutino(String fecha) {
+        return ventaConceptosDao.findCorteMatutino(fecha);
+    }
+
+    @Override
+    public List<Object[]> findCorteVespertino(String fecha) {
+        return ventaConceptosDao.findCorteVespertino(fecha);
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucion(String fecha) {
+        return ventaConceptosDao.obtenerTotalesCorteMatutinoPorInstitucion(fecha);
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucion(String fecha) {
+        return ventaConceptosDao.obtenerTotalesCorteVespertinoPorInstitucion(fecha);
+    }
+
+    @Override
+    public List<Object> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha) {
+        return ventaConceptosDao.obtenerTotalesCorteMatutinoPorFormaDePago(fecha);
+    }
+
+    @Override
+    public List<Object> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha) {
+        return ventaConceptosDao.obtenerTotalesCorteVespertinoPorFormaDePago(fecha);
+    }
+
     
     
 }

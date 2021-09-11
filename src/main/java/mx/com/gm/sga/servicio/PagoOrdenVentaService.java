@@ -5,7 +5,9 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Local;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.PagoOrdenVenta;
 
 /**
@@ -15,4 +17,6 @@ import mx.com.gm.sga.domain.PagoOrdenVenta;
 @Local
 public interface PagoOrdenVentaService {
     public void registrarPagoOrdenVenta(PagoOrdenVenta pago);
+        public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta);
+
 }

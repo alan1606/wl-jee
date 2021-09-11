@@ -32,4 +32,5 @@ public interface OrdenVentaDao {
 
     public List<OrdenVenta> obtenerConfirmadosPaciente(Long idPaciente);
     
+    public void actualizarOrdenVenta(OrdenVenta ordenVenta);
 }

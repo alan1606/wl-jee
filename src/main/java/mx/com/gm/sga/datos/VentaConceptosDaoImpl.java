@@ -7,6 +7,7 @@ package mx.com.gm.sga.datos;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -173,8 +174,106 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
     public void actualizarVentaConceptos(VentaConceptos venta) {
         em.merge(venta);
     }
-    
-    
-    
+
+    @Override
+    public List<Object[]> findCorteMatutino(String fecha) {
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT p.nombreCompletoP, "
+                + "i.nombreInstitucion, "
+                + "o.idOv, "
+                + "o.totalEi, "
+                + "o.requiereFactura, "
+                + "p.rfcP "
+                + "from VentaConceptos v "
+                + "join v.idOrdenVenta o "
+                + "join v.idInstitucion i "
+                + "join v.idPacienteVc p "
+                + "join v.idConceptoEs c "
+                + "where o.pagado = true and v.fechaVentaVc between :fechaInicio and :fechaFin "
+                + "group by o.idOv");
+        nativeQuery.setParameter("fechaInicio", fecha + " 07:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 12:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String paciente = (String) tupla[0];
+            String institucion = (String) tupla[1];
+            Long idOv = (Long) tupla[2];
+            float totalD = (float) tupla[3];
+
+            boolean facturaB = (boolean) tupla[4];
+
+            String rfc = (String) tupla[5];
+            lista.add(new Object[]{paciente, institucion, idOv, totalD, facturaB, rfc});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
+    }
+
+    @Override
+    public List<Object[]> findCorteVespertino(String fecha) {
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT p.nombreCompletoP, "
+                + "i.nombreInstitucion, "
+                + "o.idOv, "
+                + "o.totalEi, "
+                + "o.requiereFactura, "
+                + "p.rfcP "
+                + "from VentaConceptos v "
+                + "join v.idOrdenVenta o "
+                + "join v.idInstitucion i "
+                + "join v.idPacienteVc p "
+                + "join v.idConceptoEs c "
+                + "where o.pagado = true and v.fechaVentaVc between :fechaInicio and :fechaFin "
+                + "group by o.idOv");
+        nativeQuery.setParameter("fechaInicio", fecha + " 13:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 23:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String paciente = (String) tupla[0];
+            String institucion = (String) tupla[1];
+            Long idOv = (Long) tupla[2];
+            float totalD = (float) tupla[3];
+
+            boolean facturaB = (boolean) tupla[4];
+
+            String rfc = (String) tupla[5];
+            lista.add(new Object[]{paciente, institucion, idOv, totalD, facturaB, rfc});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
+
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucion(String fecha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucion(String fecha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Object> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Object> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

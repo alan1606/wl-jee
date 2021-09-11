@@ -78,4 +78,14 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         return ordenVentaDao.obtenerOrdenVentaPorId(idOrdenVenta);
     }
 
+    @Override
+    public void actualizarOrdenVenta(OrdenVenta ordenVenta) {
+        try {
+            ordenVentaDao.actualizarOrdenVenta(ordenVenta);
+        } catch (Throwable t) {
+            contexto.setRollbackOnly();
+            t.printStackTrace(System.out);
+        }
+    }
+
 }

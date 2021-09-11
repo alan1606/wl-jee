@@ -89,4 +89,9 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
         return em.find(OrdenVenta.class, idOrdenVenta);
     }
 
+    @Override
+    public void actualizarOrdenVenta(OrdenVenta ordenVenta) {
+        em.merge(ordenVenta);
+    }
+
 }

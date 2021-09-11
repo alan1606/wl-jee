@@ -33,5 +33,6 @@ public interface OrdenVentaServiceRemote {
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
     
         public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
+    public void actualizarOrdenVenta(OrdenVenta ordenVenta);
 
 }

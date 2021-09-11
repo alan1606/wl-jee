@@ -5,6 +5,8 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.util.List;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.PagoOrdenVenta;
 
 /**
@@ -13,4 +15,5 @@ import mx.com.gm.sga.domain.PagoOrdenVenta;
  */
 public interface PagoOrdenVentaDao {
     public void registrarPagoOrdenVenta(PagoOrdenVenta pago);
+    public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta);
 }

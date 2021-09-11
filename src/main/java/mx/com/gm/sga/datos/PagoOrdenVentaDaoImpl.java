@@ -5,8 +5,11 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.PagoOrdenVenta;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,6 +28,13 @@ public class PagoOrdenVentaDaoImpl implements PagoOrdenVentaDao {
     @Override
     public void registrarPagoOrdenVenta(PagoOrdenVenta pago) {
         em.persist(pago);
+    }
+
+    @Override
+    public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta) {
+        Query query = em.createQuery("from PagoOrdenVenta v where v.idOrdenVenta.idOv = :idOrdenVenta");
+        query.setParameter("idOrdenVenta", ordenVenta.getIdOv());
+        return query.getResultList();
     }
 
 }

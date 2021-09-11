@@ -16,8 +16,9 @@ public class PruebaJPQL {
         Query q = null;
         List<Persona> personas = null;
         Persona persona = null;
-        Iterator iter = null;
-        Object[] tupla = null;
+
+
+Object[] tupla = null;
         List<String> nombres = null;
         List<Usuario> usuarios = null;
         

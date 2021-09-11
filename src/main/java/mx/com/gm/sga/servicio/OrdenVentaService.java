@@ -34,5 +34,6 @@ public interface OrdenVentaService {
     
         public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
 
-    
+     public void actualizarOrdenVenta(OrdenVenta ordenVenta);
+
 }
