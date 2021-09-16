@@ -49,10 +49,22 @@ public class Institucion implements Serializable {
     private List<VentaConceptos> ventaConceptosList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idInstitucion")
     private List<ConceptosInstitucion> conceptosInstitucionList;
-
+    @Column(name = "limite")
+    private Integer limite;
+        
     public Institucion() {
     }
 
+    public Integer getLimite() {
+        return limite;
+    }
+
+    public void setLimite(Integer limite) {
+        this.limite = limite;
+    }
+
+    
+    
     public Institucion(Long idInstitucion) {
         this.idInstitucion = idInstitucion;
     }

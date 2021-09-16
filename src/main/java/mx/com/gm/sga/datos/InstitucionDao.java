@@ -22,4 +22,7 @@ public interface InstitucionDao {
     
     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
     
+    public Integer obtenerLimiteInstitucion(Long idInstitucion);
+    
+    public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha);
 }

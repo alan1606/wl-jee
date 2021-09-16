@@ -25,8 +25,17 @@ public interface InstitucionServiceWs {
 
     @WebMethod
     public Institucion encontrarInstitucionPorNombre(Institucion institucion);
-    
+
     @WebMethod
-     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
+    public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
+
+    @WebMethod
+    public boolean aunEsPosibleAgendarEnInstitucion(Long idInstitucion, String fecha);
+
+    @WebMethod
+    public Integer obtenerLimiteInstitucion(Long idInstitucion);
+
+    @WebMethod
+    public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha);
 
 }

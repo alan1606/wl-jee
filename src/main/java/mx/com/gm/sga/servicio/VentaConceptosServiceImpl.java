@@ -33,8 +33,6 @@ import mx.com.gm.sga.domain.VentaConceptos;
 
 public class VentaConceptosServiceImpl implements VentaConceptosService, VentaConceptosServiceRemote, VentaConceptosServiceWs {
 
-    
-    
     @Inject
     private VentaConceptosDao ventaConceptosDao;
 
@@ -118,7 +116,7 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
 
     @Override
     public void actualizarVentaConceptos(VentaConceptos venta) {
-       ventaConceptosDao.actualizarVentaConceptos(venta);
+        ventaConceptosDao.actualizarVentaConceptos(venta);
     }
 
     @Override
@@ -142,15 +140,23 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
     }
 
     @Override
-    public List<Object> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha) {
+    public List<Object[]> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha) {
         return ventaConceptosDao.obtenerTotalesCorteMatutinoPorFormaDePago(fecha);
     }
 
     @Override
-    public List<Object> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha) {
+    public List<Object[]> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha) {
         return ventaConceptosDao.obtenerTotalesCorteVespertinoPorFormaDePago(fecha);
     }
 
-    
-    
+    @Override
+    public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucionArea(String fecha) {
+        return ventaConceptosDao.obtenerTotalesCorteMatutinoPorInstitucionArea(fecha);
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucionArea(String fecha) {
+        return ventaConceptosDao.obtenerTotalesCorteVespertinoPorInstitucionArea(fecha);
+    }
+
 }

@@ -53,5 +53,20 @@ public class InstitucionServiceImpl implements InstitucionService, InstitucionSe
     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta) {
         return institucionDao.findInstitucionByIdOrdenVenta(idOrdenVenta);
     }
+
+    @Override
+    public Integer obtenerLimiteInstitucion(Long idInstitucion) {
+        return institucionDao.obtenerLimiteInstitucion(idInstitucion);
+    }
+
+    @Override
+    public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha) {
+        return institucionDao.obtenerCantidadDeEstudiosHechosEnInstitucionFecha(idInstitucion, fecha);
+    }
+
+    @Override
+    public boolean aunEsPosibleAgendarEnInstitucion(Long idInstitucion, String fecha) {
+        return obtenerLimiteInstitucion(idInstitucion)>obtenerCantidadDeEstudiosHechosEnInstitucionFecha(idInstitucion, fecha);
+    }
     
 }

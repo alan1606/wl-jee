@@ -22,4 +22,11 @@ public interface InstitucionService {
     public Institucion encontrarInstitucionPorNombre(Institucion institucion);
 
     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta);
+    
+        public Integer obtenerLimiteInstitucion(Long idInstitucion);
+    public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha);
+
+    public boolean aunEsPosibleAgendarEnInstitucion(Long idInstitucion, String fecha);
+    
+    
 }

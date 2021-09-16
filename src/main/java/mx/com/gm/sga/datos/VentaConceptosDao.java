@@ -60,7 +60,12 @@ public interface VentaConceptosDao {
 
     public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucion(String fecha);
 
-    public List<Object> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha);
+    public List<Object[]> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha);
 
-    public List<Object> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha);
+    public List<Object[]> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha);
+    
+         public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucionArea(String fecha);
+
+    public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucionArea(String fecha);
+    
 }

@@ -258,22 +258,179 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     @Override
     public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucion(String fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT i.nombreInstitucion, "
+                + "count(i.idInstitucion) "
+                + "from VentaConceptos v "
+                + "join v.idInstitucion i "
+                + "where v.fechaVentaVc between :fechaInicio and :fechaFin "
+                + "group by i.idInstitucion");
+        nativeQuery.setParameter("fechaInicio", fecha + " 07:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 12:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String institucion = (String) tupla[0];
+            Long estudios = (Long) tupla[1];
+
+            lista.add(new Object[]{institucion, estudios});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
     }
 
     @Override
     public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucion(String fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT i.nombreInstitucion, "
+                + "count(i.idInstitucion) "
+                + "from VentaConceptos v "
+                + "join v.idInstitucion i "
+                + "where v.fechaVentaVc between :fechaInicio and :fechaFin "
+                + "group by i.idInstitucion");
+        nativeQuery.setParameter("fechaInicio", fecha + " 13:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 23:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String institucion = (String) tupla[0];
+            Long estudios = (Long) tupla[1];
+
+            lista.add(new Object[]{institucion, estudios});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
     }
 
     @Override
-    public List<Object> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Object[]> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha) {
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT f.formaPagoFp, "
+                + "sum(p.cantidad) "
+                + "from PagoOrdenVenta p "
+                + "join p.idOrdenVenta o "
+                + "join p.idFormaPago f "
+                + "where o.pagado = true and o.fechaVentaOv between :fechaInicio and :fechaFin group by (f.idFp)");
+        nativeQuery.setParameter("fechaInicio", fecha + " 07:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 12:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String nombreFormaPago = (String) tupla[0];
+            double institucion = (double) tupla[1];
+
+            lista.add(new Object[]{nombreFormaPago, institucion});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
     }
 
     @Override
-    public List<Object> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Object[]> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha) {
+
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT f.formaPagoFp , "
+                + "sum(p.cantidad) "
+                + "from PagoOrdenVenta p "
+                + "join p.idOrdenVenta o "
+                + "join p.idFormaPago f "
+                + "where o.pagado = true and o.fechaVentaOv between :fechaInicio and :fechaFin group by (f.idFp)");
+        nativeQuery.setParameter("fechaInicio", fecha + " 13:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 23:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String nombreFormaPago = (String) tupla[0];
+            double institucion = (double) tupla[1];
+
+            lista.add(new Object[]{nombreFormaPago, institucion});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucionArea(String fecha) {
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("select i.nombreInstitucion, a.nombreA, "
+                + "count(e.idEquipo) "
+                + "from VentaConceptos v "
+                + "join v.idInstitucion i "
+                + "join v.idEquipoDicom e "
+                + "join e.idArea a "
+                + "where v.fechaVentaVc "
+                + "between :fechaInicio and :fechaFin "
+                + "GROUP BY e.idEquipo, i.idInstitucion ");
+        nativeQuery.setParameter("fechaInicio", fecha + " 07:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 12:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String institucion = (String) tupla[0];
+            String area = (String) tupla[1];
+            Long estudios = (Long) tupla[2];
+
+            lista.add(new Object[]{institucion, area, estudios});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
+    }
+
+    @Override
+    public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucionArea(String fecha) {
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("select i.nombreInstitucion, a.nombreA, "
+                + "count(e.idEquipo) "
+                + "from VentaConceptos v "
+                + "join v.idInstitucion i "
+                + "join v.idEquipoDicom e "
+                + "join e.idArea a "
+                + "where v.fechaVentaVc "
+                + "between :fechaInicio and :fechaFin "
+                + "GROUP BY e.idEquipo, i.idInstitucion ");
+        nativeQuery.setParameter("fechaInicio", fecha + " 13:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 23:59:59");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String institucion = (String) tupla[0];
+            String area = (String) tupla[1];
+            Long estudios = (Long) tupla[2];
+
+            lista.add(new Object[]{institucion, area, estudios});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
     }
 
 }

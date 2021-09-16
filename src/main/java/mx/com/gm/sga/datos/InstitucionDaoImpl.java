@@ -20,7 +20,6 @@ public class InstitucionDaoImpl implements InstitucionDao {
     @PersistenceContext(unitName = "SgaPU")
     EntityManager em;
 
-
     @Override
     public Institucion findInstitucionById(Institucion institucion) {
         return em.find(Institucion.class, institucion.getIdInstitucion());
@@ -43,6 +42,26 @@ public class InstitucionDaoImpl implements InstitucionDao {
         Query query = em.createQuery("select i from VentaConceptos v join v.idInstitucion i where v.idOrdenVenta.idOv = :idOrdenVenta group by v.idOrdenVenta ");
         query.setParameter("idOrdenVenta", idOrdenVenta);
         return (Institucion) query.getSingleResult();
+    }
+
+    @Override
+    public Integer obtenerLimiteInstitucion(Long idInstitucion) {
+        Query query = em.createQuery("select i.limite from Institucion i where i.idInstitucion = :id");
+        query.setParameter("id", idInstitucion);
+        return (Integer) query.getSingleResult();
+    }
+
+    @Override
+    public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha) {
+        Long result = 0l;
+        try {
+            Query query = em.createQuery("select count(v.idInstitucion.idInstitucion) from VentaConceptos v where v.fechaAsignado = :fecha  and v.idInstitucion.idInstitucion = :idInstitucion group by v.idInstitucion.idInstitucion");
+            query.setParameter("fecha", fecha);
+            query.setParameter("idInstitucion", idInstitucion);
+            result = (Long) query.getSingleResult();
+        } catch (Exception e) {
+        }
+        return result;
     }
 
 }

@@ -8,6 +8,7 @@ package mx.com.gm.sga.servicio;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
@@ -135,32 +136,32 @@ public class VentaConceptosServiceRS {
             doc.add(new Paragraph("\n"));
 
             List<Object[]> conceptos = null;
+            List<Object[]> formasPago = null;
+            List<Object[]> instituciones = null;
+            List<Object[]> institucionesAreas = null;
 
             try {
-                if (turno.equals("matutino")) {
+                if (turno.equals("MATUTINO")) {
                     conceptos = ventaConceptosService.findCorteMatutino(fecha);
+                    formasPago = ventaConceptosService.obtenerTotalesCorteMatutinoPorFormaDePago(fecha);
+                    instituciones = ventaConceptosService.obtenerTotalesCorteMatutinoPorInstitucion(fecha);
+                    institucionesAreas = ventaConceptosService.obtenerTotalesCorteMatutinoPorInstitucionArea(fecha);
                 } else {
                     conceptos = ventaConceptosService.findCorteVespertino(fecha);
+                    formasPago = ventaConceptosService.obtenerTotalesCorteVespertinoPorFormaDePago(fecha);
+                    instituciones = ventaConceptosService.obtenerTotalesCorteVespertinoPorInstitucion(fecha);
+                    institucionesAreas = ventaConceptosService.obtenerTotalesCorteVespertinoPorInstitucionArea(fecha);
                 }
             } catch (Exception e) {
             }
 
-            PdfPTable table = new PdfPTable(6);
-            addTableHeader(table);
-            Object[] fila;
-            
-            for (int i = 0; i < conceptos.size(); i++) {
-                fila = conceptos.get(i);
-                Long idOv = (Long) fila[2];
-                String factura = "NO";
-                if((boolean)fila[4]){
-                    factura = "SI";
-                }
-                String estudios = obtenerEstudios(idOv);
-                addRows(table, new String[]{fila[0].toString(), fila[1].toString(),estudios, fila[3].toString(), factura, fila[5].toString()});
-            }
+            doc.add(tablaPrincipal(conceptos));
 
-            doc.add(table);
+            doc.add(tablaPagos(formasPago));
+
+            doc.add(tablaInstituciones(instituciones));
+
+            doc.add(tablaInstitucionesAreas(institucionesAreas));
 
             doc.close();
 
@@ -238,13 +239,103 @@ public class VentaConceptosServiceRS {
             table.addCell(line);
         }
     }*/
-
     private String obtenerEstudios(Long idOv) {
         String estudios = "";
-        for(VentaConceptos venta : ventaConceptosService.encontarVentaConceptosPorIdOrdenVenta(idOv)){
+        for (VentaConceptos venta : ventaConceptosService.encontarVentaConceptosPorIdOrdenVenta(idOv)) {
             estudios += (venta.getIdConceptoEs().getConceptoTo() + ", ");
         }
         return estudios;
+    }
+
+    private void addTableHeaderTotales(PdfPTable tableTotales) {
+        Stream.of("Forma de pago", "Total")
+                .forEach(columnTitle -> {
+                    PdfPCell header = new PdfPCell();
+                    header.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                    header.setBorderWidth(2);
+                    header.setPhrase(new Phrase(columnTitle));
+                    tableTotales.addCell(header);
+                });
+    }
+
+    private void addTableHeaderTotalesInstitucion(PdfPTable tableTotalesInstitucion) {
+        Stream.of("Institución", "Estudios")
+                .forEach(columnTitle -> {
+                    PdfPCell header = new PdfPCell();
+                    header.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                    header.setBorderWidth(2);
+                    header.setPhrase(new Phrase(columnTitle));
+                    tableTotalesInstitucion.addCell(header);
+                });
+    }
+
+    private Element tablaPrincipal(List<Object[]> conceptos) {
+        PdfPTable table = new PdfPTable(6);
+        addTableHeader(table);
+        Object[] fila;
+
+        for (int i = 0; i < conceptos.size(); i++) {
+            fila = conceptos.get(i);
+            Long idOv = (Long) fila[2];
+            String factura = "NO";
+            if ((boolean) fila[4]) {
+                factura = "SI";
+            }
+            String estudios = obtenerEstudios(idOv);
+            //addRows(table, new String[]{fila[0].toString(), fila[1].toString(), estudios, fila[3].toString(), factura, fila[5].toString()});
+            addRows(table, new String[]{fila[0] + "", fila[1] + "", estudios, fila[3] + "", factura, fila[5] + ""});
+
+        }
+        return table;
+    }
+
+    private Element tablaPagos(List<Object[]> formasPago) {
+        PdfPTable tableTotales = new PdfPTable(2);
+        addTableHeaderTotales(tableTotales);
+        Object[] fila;
+
+        for (int i = 0; i < formasPago.size(); i++) {
+            fila = formasPago.get(i);
+            addRows(tableTotales, new String[]{fila[0] + "", fila[1] + ""});
+        }
+
+        return tableTotales;
+
+    }
+
+    private Element tablaInstituciones(List<Object[]> instituciones) {
+        PdfPTable tableTotalesInstitucion = new PdfPTable(2);
+        addTableHeaderTotalesInstitucion(tableTotalesInstitucion);
+        Object[] fila;
+
+        for (int i = 0; i < instituciones.size(); i++) {
+            fila = instituciones.get(i);
+            addRows(tableTotalesInstitucion, new String[]{fila[0] + "", fila[1] + ""});
+        }
+        return tableTotalesInstitucion;
+    }
+
+    private Element tablaInstitucionesAreas(List<Object[]> institucionesAreas) {
+        PdfPTable tableTotalesInstitucionAreas = new PdfPTable(3);
+        addTableHeaderTotalesInstitucionAreas(tableTotalesInstitucionAreas);
+        Object[] fila;
+
+        for (int i = 0; i < institucionesAreas.size(); i++) {
+            fila = institucionesAreas.get(i);
+            addRows(tableTotalesInstitucionAreas, new String[]{fila[0] + "", fila[1] + "", fila[2] + ""});
+        }
+        return tableTotalesInstitucionAreas;
+    }
+
+    private void addTableHeaderTotalesInstitucionAreas(PdfPTable tableTotalesInstitucionAreas) {
+        Stream.of("Institución", "Área", "Total")
+                .forEach(columnTitle -> {
+                    PdfPCell header = new PdfPCell();
+                    header.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                    header.setBorderWidth(2);
+                    header.setPhrase(new Phrase(columnTitle));
+                    tableTotalesInstitucionAreas.addCell(header);
+                });
     }
 }
 
