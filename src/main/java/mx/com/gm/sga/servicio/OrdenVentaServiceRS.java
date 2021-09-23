@@ -64,5 +64,12 @@ public class OrdenVentaServiceRS {
     public List<OrdenVenta> obtenerOrdenVentaNoPagadosPaciente(@PathParam("id") String idPaciente) {
         return ordenVentaService.obtenerOrdenVentaNoPagadosPaciente(idPaciente);
     }
+    
+   @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("total/{idOrdenVenta}")//hace referencia a /personas/{id}
+    public double obtenerTotalOrdenVenta(@PathParam("idOrdenVenta") Long idOrdenVenta) {
+        return ordenVentaService.obtenerTotalDeVenta(idOrdenVenta);
+    }
 
 }

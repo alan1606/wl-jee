@@ -88,4 +88,14 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         }
     }
 
+    @Override
+    public double obtenerTotalDeVenta(Long idOrdenVenta) {
+        return ordenVentaDao.obtenerTotalDeVenta(idOrdenVenta);
+    }
+
+    @Override
+    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta) {
+         ordenVentaDao.actualizarTotalOrdenVenta(ordenVenta);
+    }
+
 }

@@ -21,6 +21,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -34,6 +36,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import mx.com.gm.sga.domain.Institucion;
+import mx.com.gm.sga.domain.MovimientoCorte;
 import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
 import mx.com.gm.sga.domain.PagoOrdenVenta;
@@ -57,6 +60,9 @@ public class VentaConceptosServiceRS {
 
     @Inject
     private PagoOrdenVentaService pagoOrdenVentaService;
+
+    @Inject
+    private MovimientoCorteService movimientoCorteService;
 
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -131,7 +137,7 @@ public class VentaConceptosServiceRS {
             //Font boldFont = new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD);
             //Font normalFont = new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.ITALIC);
 
-            doc.add(new Paragraph("Corte del " + fecha + "  En el turno " + turno));
+            doc.add(new Paragraph("Corte del " + dateToNaturalDate(fecha) + " en el turno " + turno));
             doc.add(new Paragraph("\n"));
             doc.add(new Paragraph("\n"));
 
@@ -139,6 +145,9 @@ public class VentaConceptosServiceRS {
             List<Object[]> formasPago = null;
             List<Object[]> instituciones = null;
             List<Object[]> institucionesAreas = null;
+            List<MovimientoCorte> entradasYSalidas = null;
+
+            Double caja = 0d;
 
             try {
                 if (turno.equals("MATUTINO")) {
@@ -146,14 +155,19 @@ public class VentaConceptosServiceRS {
                     formasPago = ventaConceptosService.obtenerTotalesCorteMatutinoPorFormaDePago(fecha);
                     instituciones = ventaConceptosService.obtenerTotalesCorteMatutinoPorInstitucion(fecha);
                     institucionesAreas = ventaConceptosService.obtenerTotalesCorteMatutinoPorInstitucionArea(fecha);
+                    entradasYSalidas = movimientoCorteService.obtenerMovimientosDeCorteMatutino(fecha);
                 } else {
                     conceptos = ventaConceptosService.findCorteVespertino(fecha);
                     formasPago = ventaConceptosService.obtenerTotalesCorteVespertinoPorFormaDePago(fecha);
                     instituciones = ventaConceptosService.obtenerTotalesCorteVespertinoPorInstitucion(fecha);
                     institucionesAreas = ventaConceptosService.obtenerTotalesCorteVespertinoPorInstitucionArea(fecha);
+                    entradasYSalidas = movimientoCorteService.obtenerMovimientosDeCorteVespertino(fecha);
                 }
             } catch (Exception e) {
             }
+
+            caja = obtenerEfectivo(formasPago);
+            caja = caja + calcularEfectivoEntradasSalidas(entradasYSalidas);
 
             doc.add(tablaPrincipal(conceptos));
 
@@ -161,7 +175,13 @@ public class VentaConceptosServiceRS {
 
             doc.add(tablaInstituciones(instituciones));
 
+            doc.add(tablaEntradasYSalidas(entradasYSalidas));
+
             doc.add(tablaInstitucionesAreas(institucionesAreas));
+
+            doc.add(new Paragraph("\n"));
+
+            doc.add(new Paragraph("Caja = " + caja));
 
             doc.close();
 
@@ -188,63 +208,12 @@ public class VentaConceptosServiceRS {
         }
     }
 
-    /*private String[] datosPaciente(VentaConceptos concepto) {
-        String factura = "NO";
-        String RFC = "";
-        if (concepto.getIdOrdenVenta().getRequiereFactura()) {
-            factura = "SÍ";
-            RFC = concepto.getIdPacienteVc().getRfcP();
-        }
-
-        return new String[]{
-            concepto.getIdPacienteVc().getNombreCompletoP(),
-            concepto.getIdInstitucion().getNombreInstitucion(),
-            concepto.getIdOrdenVenta().getTotalEi() + "",
-            factura,
-            RFC
-        };
-    }
-
-    private String[] datosConcepto(VentaConceptos concepto) {
-        return new String[]{
-            "",
-            concepto.getIdConceptoEs().getIdAreaTo().getNombreA(),
-            concepto.getIdConceptoEs().getConceptoTo(),
-            "",
-            ""
-        };
-    }
-
-    private void agregarFormasPago(OrdenVenta ordenVenta, PdfPTable table) {
-        List<PagoOrdenVenta> pagos = pagoOrdenVentaService.obtenerPagosDeOrdenVenta(ordenVenta);
-        for (PagoOrdenVenta pago : pagos) {
-            addRows(table, datosPago(pago));
-        }
-    }
-
-    private String[] datosPago(PagoOrdenVenta pago) {
-        return new String[]{
-            "",
-            pago.getIdFormaPago().getFormaPagoFp(),
-            pago.getCantidad() + "",
-            "",
-            ""
-        };
-    }
-
-    private void agregarEnNegritas(PdfPTable table, String[] values) {
-        Font boldFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD);
-        for (String value : values) {
-            Phrase line = new Phrase(value, boldFont);
-            table.addCell(line);
-        }
-    }*/
     private String obtenerEstudios(Long idOv) {
         String estudios = "";
         for (VentaConceptos venta : ventaConceptosService.encontarVentaConceptosPorIdOrdenVenta(idOv)) {
-            estudios += (venta.getIdConceptoEs().getConceptoTo() + ", ");
+            estudios += ("*" + venta.getIdConceptoEs().getConceptoTo() + ",\n\n");
         }
-        return estudios;
+        return estudios.substring(0, estudios.length() - 3);
     }
 
     private void addTableHeaderTotales(PdfPTable tableTotales) {
@@ -269,8 +238,10 @@ public class VentaConceptosServiceRS {
                 });
     }
 
-    private Element tablaPrincipal(List<Object[]> conceptos) {
+    private Element tablaPrincipal(List<Object[]> conceptos) throws DocumentException {
         PdfPTable table = new PdfPTable(6);
+        table.setWidthPercentage(new float[]{22.5f, 14.5f, 29.5f, 7.5f, 8.5f, 17.5f}, new Rectangle(100, 100));
+
         addTableHeader(table);
         Object[] fila;
 
@@ -289,8 +260,9 @@ public class VentaConceptosServiceRS {
         return table;
     }
 
-    private Element tablaPagos(List<Object[]> formasPago) {
+    private Element tablaPagos(List<Object[]> formasPago) throws DocumentException {
         PdfPTable tableTotales = new PdfPTable(2);
+        tableTotales.setWidthPercentage(new float[]{50, 50}, new Rectangle(100, 100));
         addTableHeaderTotales(tableTotales);
         Object[] fila;
 
@@ -303,8 +275,9 @@ public class VentaConceptosServiceRS {
 
     }
 
-    private Element tablaInstituciones(List<Object[]> instituciones) {
+    private Element tablaInstituciones(List<Object[]> instituciones) throws DocumentException {
         PdfPTable tableTotalesInstitucion = new PdfPTable(2);
+        tableTotalesInstitucion.setWidthPercentage(new float[]{50, 50}, new Rectangle(100, 100));
         addTableHeaderTotalesInstitucion(tableTotalesInstitucion);
         Object[] fila;
 
@@ -315,8 +288,9 @@ public class VentaConceptosServiceRS {
         return tableTotalesInstitucion;
     }
 
-    private Element tablaInstitucionesAreas(List<Object[]> institucionesAreas) {
+    private Element tablaInstitucionesAreas(List<Object[]> institucionesAreas) throws DocumentException {
         PdfPTable tableTotalesInstitucionAreas = new PdfPTable(3);
+        tableTotalesInstitucionAreas.setWidthPercentage(new float[]{33, 33, 34}, new Rectangle(100, 100));
         addTableHeaderTotalesInstitucionAreas(tableTotalesInstitucionAreas);
         Object[] fila;
 
@@ -336,6 +310,118 @@ public class VentaConceptosServiceRS {
                     header.setPhrase(new Phrase(columnTitle));
                     tableTotalesInstitucionAreas.addCell(header);
                 });
+    }
+
+    private Element tablaEntradasYSalidas(List<MovimientoCorte> entradasYSalidas) throws DocumentException {
+        PdfPTable tableEntradasSalidas = new PdfPTable(3);
+        tableEntradasSalidas.setWidthPercentage(new float[]{33, 33, 34}, new Rectangle(100, 100));
+        addTableHeaderEntradasSalidas(tableEntradasSalidas);
+        MovimientoCorte fila;
+        String tipo = "";
+
+        for (int i = 0; i < entradasYSalidas.size(); i++) {
+            fila = entradasYSalidas.get(i);
+            if (fila.getEntrada()) {
+                tipo = "ENTRADA";
+            } else {
+                tipo = "SALIDA";
+            }
+            addRows(tableEntradasSalidas, new String[]{tipo, fila.getDescripcion(), fila.getCantidad() + ""});
+        }
+        return tableEntradasSalidas;
+    }
+
+    private void addTableHeaderEntradasSalidas(PdfPTable tableEntradasSalidas) {
+        Stream.of("Tipo", "Descripción", "Cantidad")
+                .forEach(columnTitle -> {
+                    PdfPCell header = new PdfPCell();
+                    header.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                    header.setBorderWidth(2);
+                    header.setPhrase(new Phrase(columnTitle));
+                    tableEntradasSalidas.addCell(header);
+                });
+    }
+
+    private Double obtenerEfectivo(List<Object[]> formasPago) {
+
+        for (Object[] fila : formasPago) {
+            if (fila[0].toString().equals("EFECTIVO")) {
+                return Double.parseDouble(fila[1] + "");
+            }
+        }
+        return 0d;
+
+    }
+
+    private Double calcularEfectivoEntradasSalidas(List<MovimientoCorte> entradasYSalidas) {
+        Double total = 0d;
+        for (MovimientoCorte movimiento : entradasYSalidas) {
+            if (movimiento.getEntrada()) {
+                total += movimiento.getCantidad();
+            } else {
+                total -= movimiento.getCantidad();
+            }
+        }
+        return total;
+    }
+
+    private String dateToNaturalDate(String date) {
+        String dia = "";
+        String mes = "";
+        String anio = "";
+        for (int i = 0; i < 4; i++) {
+            anio += date.charAt(i);
+        }
+        for (int i = 5; i < 7; i++) {
+            mes += date.charAt(i);
+        }
+        for (int i = 8; i < 10; i++) {
+            dia += date.charAt(i);
+        }
+
+        switch (mes) {
+            case "01":
+                mes = "enero";
+                break;
+            case "02":
+                mes = "febrero";
+                break;
+            case "03":
+                mes = "marzo";
+                break;
+            case "04":
+                mes = "abril";
+                break;
+            case "05":
+                mes = "mayo";
+                break;
+            case "06":
+                mes = "junio";
+                break;
+            case "07":
+                mes = "julio";
+                break;
+            case "08":
+                mes = "enero";
+                break;
+            case "09":
+                mes = "agosto";
+                break;
+            case "10":
+                mes = "septiembre";
+                break;
+            case "11":
+                mes = "octubre";
+                break;
+            case "12":
+                mes = "noviembre";
+                break;
+            default:
+                mes = "diciembre";
+                break;
+        }
+
+        return dia + " de " + mes + " del " + anio;
     }
 }
 

@@ -21,7 +21,7 @@
                 </login-config>
             </webservice-endpoint>
         </ejb>
-         <ejb>
+        <ejb>
             <ejb-name>EquipoDicomServiceImpl</ejb-name>
             <webservice-endpoint>
                 <port-component-name>EquipoDicomServiceImpl</port-component-name>
@@ -60,7 +60,7 @@
         
         
         
-         <ejb>
+        <ejb>
             <ejb-name>CatalogoFormaPagoServiceImpl</ejb-name>
             <webservice-endpoint>
                 <port-component-name>CatalogoFormaPagoServiceImpl</port-component-name>
@@ -101,7 +101,7 @@
             </webservice-endpoint>
         </ejb>
         
-         <ejb>
+        <ejb>
             <ejb-name>PagoOrdenVentaServiceImpl</ejb-name>
             <webservice-endpoint>
                 <port-component-name>PagoOrdenVentaServiceImpl</port-component-name>
@@ -111,5 +111,35 @@
             </webservice-endpoint>
         </ejb>
         
+        
+        <ejb>
+            <ejb-name>MovimientoCorteServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>MovimientoCorteServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        
+         <ejb>
+            <ejb-name>UsuariosServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>UsuariosServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        
+        <ejb>
+            <ejb-name>WorklistServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>WorklistServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
     </enterprise-beans>
 </glassfish-ejb-jar>

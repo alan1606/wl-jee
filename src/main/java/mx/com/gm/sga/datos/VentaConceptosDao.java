@@ -5,7 +5,6 @@
  */
 package mx.com.gm.sga.datos;
 
-import java.util.Date;
 import java.util.List;
 import mx.com.gm.sga.domain.Conceptos;
 import mx.com.gm.sga.domain.EquipoDicom;

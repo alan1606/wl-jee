@@ -14,4 +14,6 @@ import mx.com.gm.sga.domain.CatalogoFormaPago;
  */
 public interface CatalogoFormaPagoDao {
     public List<CatalogoFormaPago> findAll();
+    public CatalogoFormaPago encontrarFormaPagoPorId(short id);
+    public CatalogoFormaPago encontrarFormaPagoPorNombre(String nombre);
 }

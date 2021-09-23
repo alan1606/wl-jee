@@ -20,4 +20,9 @@ public interface CatalogoFormaPagoServiceWs {
     @WebMethod
     public List<CatalogoFormaPago> listarTodasFormasPago();
 
+    @WebMethod
+    public CatalogoFormaPago encontrarFormaPagoPorId(short id);
+    
+    @WebMethod
+    public CatalogoFormaPago encontrarFormaPagoPorNombre(String nombre);
 }

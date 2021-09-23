@@ -47,4 +47,11 @@ public interface OrdenVentaServiceWs {
         @WebMethod
     public void actualizarOrdenVenta(OrdenVenta ordenVenta);
 
+    @WebMethod
+        public double obtenerTotalDeVenta(Long idOrdenVenta);
+        
+        @WebMethod
+    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
+
+        
 }

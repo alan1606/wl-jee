@@ -16,6 +16,8 @@
     <class>mx.com.gm.sga.domain.Areas_1</class>
     <class>mx.com.gm.sga.domain.Mexico</class>
     <class>mx.com.gm.sga.domain.PagoOrdenVenta</class>
+    <class>mx.com.gm.sga.domain.MovimientoCorte</class>
+    <class>mx.com.gm.sga.domain.Usuarios</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>

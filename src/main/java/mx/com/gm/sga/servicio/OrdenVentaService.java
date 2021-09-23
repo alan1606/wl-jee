@@ -26,14 +26,18 @@ public interface OrdenVentaService {
 
     public OrdenVenta obtenerUltimaOrdenVentaRegistrada();
 
-     public List<OrdenVenta> obtenerOrdenVentaConfirmadasEnFecha(String date);
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasEnFecha(String date);
 
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasFechaPaciente(String date, Long idPaciente);
 
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
-    
-        public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
 
-     public void actualizarOrdenVenta(OrdenVenta ordenVenta);
+    public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
+
+    public void actualizarOrdenVenta(OrdenVenta ordenVenta);
+
+    public double obtenerTotalDeVenta(Long idOrdenVenta);
+
+    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
 
 }

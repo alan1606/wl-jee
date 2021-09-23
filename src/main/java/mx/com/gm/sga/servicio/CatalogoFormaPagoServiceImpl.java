@@ -40,4 +40,14 @@ public class CatalogoFormaPagoServiceImpl implements CatalogoFormaPagoService, C
         return formasPagoDao.findAll();
     }
 
+    @Override
+    public CatalogoFormaPago encontrarFormaPagoPorId(short id) {
+        return formasPagoDao.encontrarFormaPagoPorId(id);
+    }
+
+    @Override
+    public CatalogoFormaPago encontrarFormaPagoPorNombre(String nombre) {
+        return formasPagoDao.encontrarFormaPagoPorNombre(nombre);
+    }
+
 }

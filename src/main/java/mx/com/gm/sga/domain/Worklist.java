@@ -10,44 +10,67 @@ package mx.com.gm.sga.domain;
  * @author alanm
  */
 public class Worklist {
+
+    private String host;
+    private int port; // The port to listen on
+
+    //MSH
+    private String aplicacionEnvia; //MAX 227
+    private String sendingFacility; //MAX 227
+    private String receivingApplication; //MAX 227
+    private String receivingFacility; //SAME
+    private String idMessageControl; //MAX 20
+
+    //PID
+    private String patientId; //MAX 250 va a ser la curp
+    private String nombrePaciente; //MAX 250
+    private String apellidoPaterno;
+    private String apellidoMaterno;
+    private String birthday; //MAX 26 YYYYMMDD
+    private String sex; //MALE, FEMALE, AMBIGUOUS, NOT APPLICABLE, OTHER, UKNOW
+
+    //ORC
+    private String control; //NW = NUEVO, 2 DÍGITOS, 
+    private String iDNIfOptional; //MAX 22 estático 1, aún no sabemos
+
+    //TQ1
+    private String dateTime; //26 HORA INICIO Y FECHA YYYYMMDDHHMM
+    private String priority; //De rutina MAX 250 Es un caracter que la especificación quiere R = routine T = urgencia
+
+    //OBR
+    private String motivo;
+    private String proveedor; //Creo que es opcional MAX 250 //Es el medico que refiere
+    private String procedure; //PROCEDIMIENTO MAX 250 //Es el concepto de venta_concepto, descripcion
+
+    //IPC
+    private String accessionNumber; //MAX 80  Es el id de venta concepto
+    private String solProcedure; //MAX 22 //es el id pacs
+    private String uidIdStudyInstance; //MAX 70 "1.2.250." + dTime + "." + accessionNumber;
+    private String idStepProcedure; //MAX 22 Es el id del protocolo, en dx es el que nos cambia la parte del cuerpo
+    private String modality; //MAX 16
+    private String stationName; //MAX 22 Viene de la db de equipodicom
+    private String scheduledAE; //MAX 16 Viene de la db de equipodicom
+
+    private String mensaje;
+
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
+    }
+
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
+    }
+
+    public String getApellidoMaterno() {
+        return apellidoMaterno;
+    }
+
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
+    }
+
     
-        private String host;
-        private int port; // The port to listen on
-
-        //MSH
-        private String aplicacionEnvia; //MAX 227
-        private String sendingFacility; //MAX 227
-        private String receivingApplication; //MAX 227
-        private String receivingFacility; //SAME
-        private String idMessageControl; //MAX 20
-        
-        //PID
-        private String patientId ; //MAX 250 va a ser la curp
-        private String nombrePaciente; //MAX 250
-        private String birthday; //MAX 26
-        private String sex; //MALE, FEMALE, AMBIGUOUS, NOT APPLICABLE, OTHER, UKNOW
-        
-        //ORC
-        private String control; //NW = NUEVO, 2 DÍGITOS, 
-        private String iDNIfOptional; //MAX 22
-        
-        //TQ1
-        private String dateTime; //26 HORA INICIO Y FECHA
-        private String priority; //De rutina MAX 250
-        
-        //OBR
-        private String proveedor; //Creo que es opcional MAX 250 //Es el medico que refiere
-        private String procedure; //PROCEDIMIENTO MAX 250
-        
-        //IPC
-        private String accessionNumber; //MAX 80
-        private String solProcedure; //MAX 22 //este es el nombre como aparece en el pacs requested
-        private String uidIdStudyInstance; //MAX 70
-        private String idStepProcedure; //MAX 22
-        private String modality; //MAX 16
-        private String stationName; //MAX 22
-        private String scheduledAE ; //MAX 16
-
+    
     public String getHost() {
         return host;
     }
@@ -240,11 +263,30 @@ public class Worklist {
         this.scheduledAE = scheduledAE;
     }
 
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public String getMensaje() {
+
+        String msg = "MSH|^~\\&|" + aplicacionEnvia + "|" + sendingFacility + "|" + receivingApplication + "|" + receivingFacility + "|||OMI^O23|" + idMessageControl + "|P|2.5.1\r"
+                + "PID|||" + patientId + "||" + nombrePaciente + " " + apellidoMaterno + "^" + apellidoPaterno + "|" + apellidoMaterno + "|" + birthday + "|" + sex + "\r"
+                //+ "PV1||||||2359||1234^CMP123|||||||A0||||908831\r"
+                + "NTE|||" + motivo + "|1R\r"
+                + "ORC|" + control + "|" + iDNIfOptional + "|" + iDNIfOptional + "||SC\r"
+                + "TQ1|||||||" + dateTime + "||" + priority + "||\r"
+                + "OBR|||||||||||||" + motivo + " ORB|||" + proveedor + "||||||||||||||||||||||||||||" + procedure + "\r"
+                + "IPC|" + accessionNumber + "|" + solProcedure + "|" + uidIdStudyInstance + "|" + idStepProcedure + "|" + modality + "||" + stationName + "||" + scheduledAE + "\r";
+        return msg;
+    }
+
     @Override
     public String toString() {
         return "Worklist{" + "host=" + host + ", port=" + port + ", aplicacionEnvia=" + aplicacionEnvia + ", sendingFacility=" + sendingFacility + ", receivingApplication=" + receivingApplication + ", receivingFacility=" + receivingFacility + ", idMessageControl=" + idMessageControl + ", patientId=" + patientId + ", nombrePaciente=" + nombrePaciente + ", birthday=" + birthday + ", sex=" + sex + ", control=" + control + ", iDNIfOptional=" + iDNIfOptional + ", dateTime=" + dateTime + ", priority=" + priority + ", proveedor=" + proveedor + ", procedure=" + procedure + ", accessionNumber=" + accessionNumber + ", solProcedure=" + solProcedure + ", uidIdStudyInstance=" + uidIdStudyInstance + ", idStepProcedure=" + idStepProcedure + ", modality=" + modality + ", stationName=" + stationName + ", scheduledAE=" + scheduledAE + '}';
     }
-        
-        
-        
+
 }

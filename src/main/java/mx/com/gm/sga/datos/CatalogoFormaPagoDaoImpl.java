@@ -8,6 +8,7 @@ package mx.com.gm.sga.datos;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import mx.com.gm.sga.domain.CatalogoFormaPago;
 
 /**
@@ -21,7 +22,20 @@ public class CatalogoFormaPagoDaoImpl implements CatalogoFormaPagoDao {
 
     @Override
     public List<CatalogoFormaPago> findAll() {
-        return em.createNamedQuery("CatalogoFormaPago.findAll").getResultList();
+        Query query = em.createQuery("from CatalogoFormaPago c");
+        return query.getResultList();
+    }
+
+    @Override
+    public CatalogoFormaPago encontrarFormaPagoPorId(short id) {
+        return em.find(CatalogoFormaPago.class, id);
+    }
+
+    @Override
+    public CatalogoFormaPago encontrarFormaPagoPorNombre(String nombre) {
+        Query query = em.createQuery("from CatalogoFormaPago c where c.formaPagoFp = :formaPagoFp");
+        query.setParameter("formaPagoFp", nombre);
+        return (CatalogoFormaPago) query.getSingleResult();
     }
 
 }

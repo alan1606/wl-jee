@@ -77,7 +77,7 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
 
     @Override
     public List<OrdenVenta> obtenerConfirmadosPaciente(Long idPaciente) {
-         Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o where o.idPacienteOv.idP = :idPaciente and o.pagado = false and v.estado = 'CONFIRMADO' group by o");
+        Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o where o.idPacienteOv.idP = :idPaciente and o.pagado = false and v.estado = 'CONFIRMADO' group by o");
         query.setParameter("idPaciente", idPaciente);
         return query.getResultList();
     }
@@ -90,6 +90,23 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
     @Override
     public void actualizarOrdenVenta(OrdenVenta ordenVenta) {
         em.merge(ordenVenta);
+    }
+
+    @Override
+    public double obtenerTotalDeVenta(Long idOrdenVenta) {
+        Query query = em.createQuery("select sum(c.precioPublico) from VentaConceptos v "
+                + "join v.idInstitucion i "
+                + "join ConceptosInstitucion c ON "
+                + "c.idConcepto.idTo = v.idConceptoEs.idTo and i.idInstitucion = c.idInstitucion.idInstitucion "
+                + "where v.idOrdenVenta.idOv = :idOrdenVenta");
+        query.setParameter("idOrdenVenta", idOrdenVenta);
+        return (double) query.getSingleResult();
+    }
+
+    @Override
+    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta) {
+        ordenVenta.setTotalEi(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + "")); 
+        actualizarOrdenVenta(ordenVenta);
     }
 
 }
