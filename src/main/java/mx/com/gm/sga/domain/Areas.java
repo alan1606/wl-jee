@@ -72,13 +72,11 @@ public class Areas implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "hora_inicio")
-    @Temporal(TemporalType.TIME)
-    private Date horaInicio;
+    private String horaInicio;
     @Basic(optional = false)
     @NotNull
     @Column(name = "hora_fin")
-    @Temporal(TemporalType.TIME)
-    private Date horaFin;
+    private String horaFin;
     @Basic(optional = false)
     @NotNull
     @Column(name = "duracion_minutos")
@@ -95,7 +93,7 @@ public class Areas implements Serializable {
         this.idA = idA;
     }
 
-    public Areas(Integer idA, int departamentoA, String claveA, String nombreA, Date horaInicio, Date horaFin, int duracionMinutos) {
+    public Areas(Integer idA, int departamentoA, String claveA, String nombreA, String horaInicio, String horaFin, int duracionMinutos) {
         this.idA = idA;
         this.departamentoA = departamentoA;
         this.claveA = claveA;
@@ -153,19 +151,19 @@ public class Areas implements Serializable {
         this.fechaA = fechaA;
     }
 
-    public Date getHoraInicio() {
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Date horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Date getHoraFin() {
+    public String getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Date horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
 

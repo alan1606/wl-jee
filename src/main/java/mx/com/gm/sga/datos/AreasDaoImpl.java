@@ -44,4 +44,25 @@ public class AreasDaoImpl implements AreasDao {
         return query.getResultList();
     }
 
+    @Override
+    public List<Areas> findAreasLikeNombre(String nombre) {
+          String jpql = null;
+        Query q = null;
+        jpql = "select a from Areas a where a.nombreA like :nombre";
+        q = em.createQuery(jpql);
+        nombre += "%";
+        q.setParameter("nombre", nombre);
+        return q.getResultList();
+    }
+
+    @Override
+    public void updateArea(Areas area) {
+        em.merge(area);
+    }
+
+    @Override
+    public void registrarArea(Areas area) {
+        em.persist(area);
+    }
+
 }

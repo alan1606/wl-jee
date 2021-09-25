@@ -28,4 +28,15 @@ public interface AreasServiceWs {
     
     @WebMethod
     public List<Areas> obtenerAreasPorInstitucion(Long idInstitucion);
+    
+    
+    @WebMethod
+    public List<Areas> findAreasLikeNombre(String nombre);
+
+        
+    @WebMethod
+    public void updateArea(Areas area);
+
+    @WebMethod
+    public void registrarArea(Areas area);
 }

@@ -87,7 +87,6 @@ mx\com\gm\sga\servicio\UsuariosService.class
 mx\com\gm\sga\servicio\WorklistService.class
 mx\com\gm\sga\domain\Worklist.class
 mx\com\gm\sga\servicio\PacienteServiceWs.class
-mx\com\gm\sga\datos\Prueba.class
 mx\com\gm\sga\datos\CatalogoFormaPagoDaoImpl.class
 mx\com\gm\sga\servicio\ConceptosServiceRS.class
 mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.class

@@ -24,4 +24,10 @@ public interface AreasService {
 
     public List<Areas> obtenerAreasPorInstitucion(Long idInstitucion);
 
+        public List<Areas> findAreasLikeNombre(String nombre);
+
+    public void updateArea(Areas area);
+
+    public void registrarArea(Areas area);
+    
 }

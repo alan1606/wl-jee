@@ -52,5 +52,20 @@ public class AreasServiceImpl implements AreasService, AreasServiceWs, AreasServ
     public List<Areas> obtenerAreasPorInstitucion(Long idInstitucion) {
         return areasDao.findAreasByInstitucion(idInstitucion);
     }
+
+    @Override
+    public List<Areas> findAreasLikeNombre(String nombre) {
+        return areasDao.findAreasLikeNombre(nombre);
+    }
+
+    @Override
+    public void updateArea(Areas area) {
+        areasDao.updateArea(area);
+    }
+
+    @Override
+    public void registrarArea(Areas area) {
+        areasDao.registrarArea(area);
+    }
     
 }

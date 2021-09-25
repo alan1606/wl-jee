@@ -13,12 +13,19 @@ import mx.com.gm.sga.domain.Areas;
  * @author alanm
  */
 public interface AreasDao {
-     public Areas findAreaById(Areas area);
-     
-     public List<Areas> findAllAreas();
-     
-     public Areas findAreaByNombre(String nombre);
-     
-     public List<Areas> findAreasByInstitucion(Long idInstitucion);
-     
+
+    public Areas findAreaById(Areas area);
+
+    public List<Areas> findAllAreas();
+
+    public Areas findAreaByNombre(String nombre);
+
+    public List<Areas> findAreasByInstitucion(Long idInstitucion);
+
+    public List<Areas> findAreasLikeNombre(String nombre);
+
+    public void updateArea(Areas area);
+
+    public void registrarArea(Areas area);
+
 }
