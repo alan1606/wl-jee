@@ -98,4 +98,9 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
          ordenVentaDao.actualizarTotalOrdenVenta(ordenVenta);
     }
 
+    @Override
+    public Long obtenerTotalOrdenesEnUnDia(String fecha) {
+        return ordenVentaDao.obtenerTotalOrdenesEnUnDia(fecha);
+    }
+
 }

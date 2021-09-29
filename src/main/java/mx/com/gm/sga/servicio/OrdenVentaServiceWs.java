@@ -53,5 +53,9 @@ public interface OrdenVentaServiceWs {
         @WebMethod
     public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
 
+@WebMethod    
+        public Long obtenerTotalOrdenesEnUnDia(String fecha);
+
+
         
 }

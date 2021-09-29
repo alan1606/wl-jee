@@ -105,8 +105,21 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
 
     @Override
     public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta) {
-        ordenVenta.setTotalEi(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + "")); 
+        ordenVenta.setTotalEi(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + ""));
         actualizarOrdenVenta(ordenVenta);
+    }
+
+    @Override
+    public Long obtenerTotalOrdenesEnUnDia(String fecha) {
+        Long result = 0l;
+        try {
+            Query query = em.createQuery("select count(o.idOv) from OrdenVenta o where o.fechaVentaOv like :fecha");
+            fecha += "%";
+            query.setParameter("fecha", fecha);
+            result = (Long) query.getSingleResult();
+        } catch (Exception e) {
+        }
+        return result;
     }
 
 }

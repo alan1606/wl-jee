@@ -40,4 +40,6 @@ public interface OrdenVentaService {
 
     public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
 
+    public Long obtenerTotalOrdenesEnUnDia(String fecha);
+
 }

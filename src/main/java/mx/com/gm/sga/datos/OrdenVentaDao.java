@@ -26,7 +26,7 @@ public interface OrdenVentaDao {
 
     public OrdenVenta obtenerUltimoRegistro();
     
-        public List<OrdenVenta> obtenerConfirmadosEnFecha(String date);
+    public List<OrdenVenta> obtenerConfirmadosEnFecha(String date);
 
     public List<OrdenVenta> obtenerConfirmadosFechaPaciente(String date, Long idPaciente);
 
@@ -37,4 +37,7 @@ public interface OrdenVentaDao {
     public double obtenerTotalDeVenta(Long idOrdenVenta);
     
     public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
+    
+    public Long obtenerTotalOrdenesEnUnDia(String fecha);
+    
 }
