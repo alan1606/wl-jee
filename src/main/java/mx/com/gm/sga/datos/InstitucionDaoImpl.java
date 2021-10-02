@@ -39,7 +39,7 @@ public class InstitucionDaoImpl implements InstitucionDao {
 
     @Override
     public Institucion findInstitucionByIdOrdenVenta(Long idOrdenVenta) {
-        Query query = em.createQuery("select i from VentaConceptos v join v.idInstitucion i where v.idOrdenVenta.idOv = :idOrdenVenta group by v.idOrdenVenta ");
+        Query query = em.createQuery("select i from VentaConceptos v join v.idInstitucion i where v.idOrdenVenta.idOv = :idOrdenVenta group by v.idOrdenVenta  order by i.nombreInstitucion");
         query.setParameter("idOrdenVenta", idOrdenVenta);
         return (Institucion) query.getSingleResult();
     }

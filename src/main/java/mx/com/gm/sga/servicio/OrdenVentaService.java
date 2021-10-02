@@ -31,6 +31,12 @@ public interface OrdenVentaService {
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasFechaPaciente(String date, Long idPaciente);
 
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
+    
+     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasEnFecha(String date);
+
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasFechaPaciente(String date, Long idPaciente);
+
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasPaciente(Long idPaciente);
 
     public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
 

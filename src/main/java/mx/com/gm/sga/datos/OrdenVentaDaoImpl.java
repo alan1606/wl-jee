@@ -122,4 +122,26 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
         return result;
     }
 
+    @Override
+    public List<OrdenVenta> obtenerConfirmadosPagadosEnFecha(String date) {
+        Query query = em.createQuery("select o from VentaConceptos c join c.idOrdenVenta o where c.fechaAsignado = :date  and (c.estado = 'CONFIRMADO' or c.estado = 'PAGADO') group by o");
+        query.setParameter("date", date);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerConfirmadosPagadosFechaPaciente(String date, Long idPaciente) {
+        Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o where o.idPacienteOv.idP = :idPaciente and v.fechaAsignado = :date and (v.estado = 'CONFIRMADO' or v.estado = 'PAGADO') group by o");
+        query.setParameter("date", date);
+        query.setParameter("idPaciente", idPaciente);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerConfirmadosPagadosPaciente(Long idPaciente) {
+        Query query = em.createQuery("select o from VentaConceptos v join v.idOrdenVenta o where o.idPacienteOv.idP = :idPaciente  and (v.estado = 'CONFIRMADO' or v.estado = 'PAGADO') group by o");
+        query.setParameter("idPaciente", idPaciente);
+        return query.getResultList();
+    }
+
 }

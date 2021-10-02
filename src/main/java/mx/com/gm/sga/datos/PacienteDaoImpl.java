@@ -51,7 +51,7 @@ public class PacienteDaoImpl implements PacienteDao {
         String jpql = null;
         Query q = null;
 
-        jpql = "select distinct v.pacientes from VentaConceptos v where v.fechaVentaVc like :fecha and v.enWorklist = :wl";
+        jpql = "select distinct v.pacientes from VentaConceptos v where v.fechaVentaVc like :fecha and v.enWorklist = :wl ";
 
         q = em.createQuery(jpql);
         fecha += "%";
@@ -65,7 +65,7 @@ public class PacienteDaoImpl implements PacienteDao {
     public List<Pacientes> findPacienteLikeNombre(String nombre) {
         String jpql = null;
         Query q = null;
-        jpql = "select p from Pacientes p where CONCAT(p.nombreP, ' ', p.apaternoP, ' ', p.amaternoP) like :nombre";
+        jpql = "select p from Pacientes p where CONCAT(p.nombreP, ' ', p.apaternoP, ' ', p.amaternoP) like :nombre order by p.nombreCompletoP";
         q = em.createQuery(jpql);
         nombre += "%";
         q.setParameter("nombre", nombre);
@@ -76,7 +76,7 @@ public class PacienteDaoImpl implements PacienteDao {
     public List<Pacientes> findPacienteLikeCurp(String curp) {
         String jpql = null;
         Query q = null;
-        jpql = "select p from Pacientes p where p.curpP like :curp";
+        jpql = "select p from Pacientes p where p.curpP like :curp order by p.curpP";
         q = em.createQuery(jpql);
         curp += "%";
         q.setParameter("curp", curp);

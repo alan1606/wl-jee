@@ -26,7 +26,7 @@ public class MovimientoCorteDaoImpl implements MovimientoCorteDao{
     
     @Override
     public List<MovimientoCorte> obtenerMovimientosDeCorteMatutino(String fecha) {
-        Query query = em.createQuery("from MovimientoCorte m where m.fecha between :fechaInicio and :fechaFin");
+        Query query = em.createQuery("from MovimientoCorte m where m.fecha between :fechaInicio and :fechaFin order by m.descripcion");
         query.setParameter("fechaInicio", fecha + " 07:00:00");
         query.setParameter("fechaFin", fecha + " 15:59:59");
         return query.getResultList();
@@ -34,7 +34,7 @@ public class MovimientoCorteDaoImpl implements MovimientoCorteDao{
 
     @Override
     public List<MovimientoCorte> obtenerMovimientosDeCorteVespertino(String fecha) {
-       Query query = em.createQuery("from MovimientoCorte m where m.fecha between :fechaInicio and :fechaFin");
+       Query query = em.createQuery("from MovimientoCorte m where m.fecha between :fechaInicio and :fechaFin order by m.descripcion");
         query.setParameter("fechaInicio", fecha + " 13:00:00");
         query.setParameter("fechaFin", fecha + " 23:59:59");
         return query.getResultList();

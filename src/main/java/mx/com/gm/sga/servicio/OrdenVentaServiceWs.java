@@ -40,22 +40,29 @@ public interface OrdenVentaServiceWs {
 
     @WebMethod
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPaciente(Long idPaciente);
-    
- @WebMethod
-        public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
-        
-        @WebMethod
+
+    @WebMethod
+    public OrdenVenta obtenerOrdenVentaPorId(Long idOrdenVenta);
+
+    @WebMethod
     public void actualizarOrdenVenta(OrdenVenta ordenVenta);
 
     @WebMethod
-        public double obtenerTotalDeVenta(Long idOrdenVenta);
-        
-        @WebMethod
+    public double obtenerTotalDeVenta(Long idOrdenVenta);
+
+    @WebMethod
     public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
 
-@WebMethod    
-        public Long obtenerTotalOrdenesEnUnDia(String fecha);
+    @WebMethod
+    public Long obtenerTotalOrdenesEnUnDia(String fecha);
 
+    @WebMethod
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasEnFecha(String date);
 
-        
+    @WebMethod
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasFechaPaciente(String date, Long idPaciente);
+
+    @WebMethod
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasPaciente(Long idPaciente);
+
 }

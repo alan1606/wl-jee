@@ -28,14 +28,14 @@ public class EquipoDicomDaoImpl implements EquipoDicomDao {
 
     @Override
     public List<EquipoDicom> findEquipoDicomByArea(Areas area) {
-        Query query = em.createQuery("from EquipoDicom e where e.idArea.idA = :idA");
+        Query query = em.createQuery("from EquipoDicom e where e.idArea.idA = :idA order by e.nombre");
         query.setParameter("idA", area.getIdA());
         return query.getResultList();
     }
 
     @Override
     public List<EquipoDicom> findEquipoDicomByModalidad(String modalidad) {
-        Query query = em.createQuery("from EquipoDicom e where e.modalidad = :modalidad");
+        Query query = em.createQuery("from EquipoDicom e where e.modalidad = :modalidad order by e.nombre");
         query.setParameter("modalidad", modalidad);
         return query.getResultList();
     }

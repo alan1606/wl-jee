@@ -22,7 +22,7 @@ public class CatalogoFormaPagoDaoImpl implements CatalogoFormaPagoDao {
 
     @Override
     public List<CatalogoFormaPago> findAll() {
-        Query query = em.createQuery("from CatalogoFormaPago c");
+        Query query = em.createQuery("from CatalogoFormaPago c order by c.formaPagoFp");
         return query.getResultList();
     }
 

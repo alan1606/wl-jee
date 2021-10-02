@@ -32,14 +32,14 @@ public class AreasDaoImpl implements AreasDao {
 
     @Override
     public Areas findAreaByNombre(String nombre) {
-        Query query = em.createQuery("from Areas a where a.nombreA = :nombre");
+        Query query = em.createQuery("from Areas a where a.nombreA = :nombre order by a.nombreA");
         query.setParameter("nombre", nombre);
         return (Areas) query.getSingleResult();
     }
 
     @Override
     public List<Areas> findAreasByInstitucion(Long idInstitucion) {
-        Query query = em.createQuery("select distinct(a) from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion=:idInstitucion");
+        Query query = em.createQuery("select distinct(a) from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion=:idInstitucion and c.activo = true order by a.nombreA");
         query.setParameter("idInstitucion", idInstitucion);
         return query.getResultList();
     }
@@ -48,7 +48,7 @@ public class AreasDaoImpl implements AreasDao {
     public List<Areas> findAreasLikeNombre(String nombre) {
           String jpql = null;
         Query q = null;
-        jpql = "select a from Areas a where a.nombreA like :nombre";
+        jpql = "select a from Areas a where a.nombreA like :nombre order by a.nombreA";
         q = em.createQuery(jpql);
         nombre += "%";
         q.setParameter("nombre", nombre);

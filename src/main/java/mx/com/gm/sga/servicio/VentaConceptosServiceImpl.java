@@ -28,8 +28,8 @@ import mx.com.gm.sga.domain.VentaConceptos;
  */
 @Stateless
 @WebService(endpointInterface = "mx.com.gm.sga.servicio.VentaConceptosServiceWs")
-@DeclareRoles({"ROLE_ADMIN", "ROLE_USER"})
-@RolesAllowed({"ROLE_ADMIN", "ROLE_USER"})
+@DeclareRoles({"ROLE_ADMIN", "ROLE_USER", "ROLE_GUEST"})
+@RolesAllowed({"ROLE_ADMIN", "ROLE_USER", "ROLE_GUEST"})
 
 public class VentaConceptosServiceImpl implements VentaConceptosService, VentaConceptosServiceRemote, VentaConceptosServiceWs {
 

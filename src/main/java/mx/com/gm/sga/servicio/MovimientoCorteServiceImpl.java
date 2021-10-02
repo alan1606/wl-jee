@@ -23,18 +23,17 @@ import mx.com.gm.sga.domain.MovimientoCorte;
  */
 @Stateless
 @WebService(endpointInterface = "mx.com.gm.sga.servicio.MovimientoCorteServiceWs")
-@DeclareRoles({"ROLE_ADMIN","ROLE_USER"})
-@RolesAllowed({"ROLE_ADMIN","ROLE_USER"})
+@DeclareRoles({"ROLE_ADMIN", "ROLE_USER", "ROLE_GUEST"})
+@RolesAllowed({"ROLE_ADMIN", "ROLE_USER", "ROLE_GUEST"})
 
-public class MovimientoCorteServiceImpl implements MovimientoCorteService, MovimientoCorteServiceWs{
+public class MovimientoCorteServiceImpl implements MovimientoCorteService, MovimientoCorteServiceWs {
 
-     @Inject
+    @Inject
     private MovimientoCorteDao movimientoCorteDao;
 
     @Resource
     private SessionContext contexto;
-    
-    
+
     @Override
     public List<MovimientoCorte> obtenerMovimientosDeCorteMatutino(String fecha) {
         return movimientoCorteDao.obtenerMovimientosDeCorteMatutino(fecha);
@@ -49,5 +48,5 @@ public class MovimientoCorteServiceImpl implements MovimientoCorteService, Movim
     public void registrarMovimientoCorte(MovimientoCorte movimiento) {
         movimientoCorteDao.registrarMovimientoCorte(movimiento);
     }
-    
+
 }

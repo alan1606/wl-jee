@@ -26,7 +26,7 @@ public class MexicoDaoImpl implements MexicoDao {
 
     @Override
     public List<Mexico> encontrarEstadosDeMexico() {
-        Query query = em.createQuery("select m from Mexico m group by m.dEstado");
+        Query query = em.createQuery("select m from Mexico m group by m.dEstado order by m.dEstado");
         return query.getResultList();
     }
 

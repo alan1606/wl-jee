@@ -103,4 +103,19 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         return ordenVentaDao.obtenerTotalOrdenesEnUnDia(fecha);
     }
 
+    @Override
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasEnFecha(String date) {
+        return ordenVentaDao.obtenerConfirmadosPagadosEnFecha(date);
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasFechaPaciente(String date, Long idPaciente) {
+        return ordenVentaDao.obtenerConfirmadosPagadosFechaPaciente(date, idPaciente);
+    }
+
+    @Override
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasPaciente(Long idPaciente) {
+        return ordenVentaDao.obtenerConfirmadosPagadosPaciente(idPaciente);
+    }
+
 }

@@ -34,7 +34,7 @@ public class ConceptosDaoImpl implements ConceptosDao {
         String jpql = null;
         Query q = null;
 
-        jpql = "select v.idConceptoEs from VentaConceptos v where v.idVc = :idVc ";
+        jpql = "select v.idConceptoEs from VentaConceptos v where v.idVc = :idVc order by v.idConceptoEs.conceptoTo";
 
         q = em.createQuery(jpql);
         q.setParameter("idVc", idVentaConcepto);
@@ -46,7 +46,7 @@ public class ConceptosDaoImpl implements ConceptosDao {
         String jpql = null;
         Query q = null;
 
-        jpql = "select c from Conceptos c where c.idAreaTo.idA = :idArea ";
+        jpql = "select c from Conceptos c where c.idAreaTo.idA = :idArea order by c.conceptoTo";
         q = em.createQuery(jpql);
         q.setParameter("idArea", idArea);
         return q.getResultList();
@@ -56,7 +56,7 @@ public class ConceptosDaoImpl implements ConceptosDao {
     public List<Conceptos> findByInstitucionArea(Long idInstitucion, Integer idArea) {
         String jpql = null;
         Query q = null;
-        jpql = "select o from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion = :idInstitucion and a.idA = :idArea";
+        jpql = "select o from ConceptosInstitucion c join c.idConcepto o join o.idAreaTo a where c.idInstitucion.idInstitucion = :idInstitucion and a.idA = :idArea and c.activo = true order by o.conceptoTo";
         q = em.createQuery(jpql);
         q.setParameter("idInstitucion", idInstitucion);
         q.setParameter("idArea", idArea);
