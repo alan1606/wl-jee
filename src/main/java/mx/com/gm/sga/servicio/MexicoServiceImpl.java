@@ -44,4 +44,15 @@ public class MexicoServiceImpl implements MexicoService, MexicoServiceRemote, Me
         return mexicoDao.encontrarEstadosDeMexico();
     }
 
+    @Override
+    public Mexico encontrarEstadoPorId(Integer id) {
+        return mexicoDao.encontrarEstadoPorId(id);
+    }
+
+    @Override
+    public Mexico encontrarEstadoPorNombre(String nombre) {
+        return mexicoDao.encontrarEstadoPorNombre(nombre);
+    }
+    
+
 }

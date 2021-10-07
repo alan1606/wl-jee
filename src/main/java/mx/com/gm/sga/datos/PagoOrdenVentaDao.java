@@ -16,4 +16,5 @@ import mx.com.gm.sga.domain.PagoOrdenVenta;
 public interface PagoOrdenVentaDao {
     public void registrarPagoOrdenVenta(PagoOrdenVenta pago);
     public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta);
+    public void eliminarPagoOrdenVentaPorIdOrdenVenta(Long idOrdenVenta);
 }

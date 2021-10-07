@@ -118,4 +118,9 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
         return ordenVentaDao.obtenerConfirmadosPagadosPaciente(idPaciente);
     }
 
+    @Override
+    public void eliminarOrdenVenta(OrdenVenta ordenVenta) {
+        ordenVentaDao.eliminarOrdenVenta(ordenVenta);
+    }
+
 }

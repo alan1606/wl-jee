@@ -159,4 +159,14 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.obtenerTotalesCorteVespertinoPorInstitucionArea(fecha);
     }
 
+    @Override
+    public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta) {
+        ventaConceptosDao.eliminarVentaConceptosPorIdOrdenVenta(idOrdenVenta);
+    }
+
+    @Override
+    public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta) {
+        return ventaConceptosDao.esCandidatoParaEliminarConceptosDeOrden(idOrdenVenta);
+    }
+
 }

@@ -433,4 +433,31 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
         return lista;
     }
 
+    @Override
+    public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta) {
+        List<VentaConceptos> ventas = findByIdOrdenVenta(idOrdenVenta);
+        for (VentaConceptos temporal : ventas) {
+            em.remove(em.merge(temporal));
+        }
+    }
+
+    @Override
+    public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta) {
+        Long result = 0l;
+        try {
+            Query query = em.createQuery("select count(v.idVc) from VentaConceptos v where v.idOrdenVenta.idOv = :idOrdenVenta and (v.estado = :pasar or v.estado = :tomado or v.estado = :interpretando or v.estado = :interpretado)");
+            query.setParameter("idOrdenVenta", idOrdenVenta);
+            query.setParameter("pasar", "PASAR");
+            query.setParameter("tomado", "TOMADO");
+            query.setParameter("interpretando", "INTERPRETANDO");
+            query.setParameter("interpretado", "INTERPRETADO");
+            result = (Long) query.getSingleResult();
+        } catch (Exception e) {
+        }
+        //Si hay cero estudios en esa orden de venta que van a pasar, han sido tomados o se están interpretando se dice que es candidato para eliminación
+        //Si hay por lo menos un estudio que ha sido "tomado", entonces no se puede cancelar la órden de venta
+        return result;
+
+    }
+
 }

@@ -65,11 +65,17 @@ public interface VentaConceptosServiceWs {
     @WebMethod
     public Long encontrarNumeroVentaConceptosPorEquipoFechaHora(EquipoDicom equipo, String fecha, String horaAsingnado);
 
-        @WebMethod
-            public List<VentaConceptos> findAgendadosByFecha( String fecha);
+    @WebMethod
+    public List<VentaConceptos> findAgendadosByFecha(String fecha);
 
-                    @WebMethod
+    @WebMethod
+    public void actualizarVentaConceptos(VentaConceptos venta);
 
-        public void actualizarVentaConceptos(VentaConceptos venta);
+    @WebMethod
+    public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+        
+    @WebMethod
+        public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
+
 
 }

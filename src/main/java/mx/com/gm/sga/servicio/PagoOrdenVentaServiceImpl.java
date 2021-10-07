@@ -44,5 +44,10 @@ public class PagoOrdenVentaServiceImpl implements PagoOrdenVentaService, PagoOrd
     public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta) {
         return pagoOrdenVentaDao.obtenerPagosDeOrdenVenta(ordenVenta);
     }
+
+    @Override
+    public void eliminarPagoOrdenVentaPorIdOrdenVenta(Long idOrdenVenta) {
+        pagoOrdenVentaDao.eliminarPagoOrdenVentaPorIdOrdenVenta(idOrdenVenta);
+    }
     
 }

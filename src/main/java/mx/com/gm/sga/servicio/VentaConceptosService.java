@@ -56,7 +56,7 @@ public interface VentaConceptosService {
 
     public List<Object[]> findCorteMatutino(String fecha);
 
-public List<Object[]> findCorteVespertino(String fecha);
+    public List<Object[]> findCorteVespertino(String fecha);
 
     public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucion(String fecha);
 
@@ -65,8 +65,13 @@ public List<Object[]> findCorteVespertino(String fecha);
     public List<Object[]> obtenerTotalesCorteMatutinoPorFormaDePago(String fecha);
 
     public List<Object[]> obtenerTotalesCorteVespertinoPorFormaDePago(String fecha);
-    
-     public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucionArea(String fecha);
+
+    public List<Object[]> obtenerTotalesCorteMatutinoPorInstitucionArea(String fecha);
 
     public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucionArea(String fecha);
+
+    public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+
+    public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
+
 }

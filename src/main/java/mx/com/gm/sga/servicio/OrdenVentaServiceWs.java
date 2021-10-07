@@ -65,4 +65,7 @@ public interface OrdenVentaServiceWs {
     @WebMethod
     public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasPaciente(Long idPaciente);
 
+    @WebMethod
+    public void eliminarOrdenVenta(OrdenVenta ordenVenta);
+
 }

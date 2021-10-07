@@ -46,4 +46,7 @@ public interface OrdenVentaDao {
     
     public Long obtenerTotalOrdenesEnUnDia(String fecha);
     
+    public void eliminarOrdenVenta(OrdenVenta ordenVenta);
+    
+    
 }

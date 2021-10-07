@@ -144,4 +144,10 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
         return query.getResultList();
     }
 
+    @Override
+    public void eliminarOrdenVenta(OrdenVenta ordenVenta) {
+        em.remove(em.merge(ordenVenta));
+    }
+
+
 }

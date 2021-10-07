@@ -30,4 +30,18 @@ public class MexicoDaoImpl implements MexicoDao {
         return query.getResultList();
     }
 
+    @Override
+    public Mexico encontrarEstadoPorId(Integer id) {
+        return em.find(Mexico.class, id);
+    }
+
+        
+
+    @Override
+    public Mexico encontrarEstadoPorNombre(String nombre) {
+        Query query = em.createQuery("select m from Mexico m where m.dEstado = :estado");
+        query.setParameter("estado", nombre);
+        return (Mexico) query.getSingleResult();
+    }
+
 }

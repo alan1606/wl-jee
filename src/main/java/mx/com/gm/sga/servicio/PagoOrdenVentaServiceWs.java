@@ -18,4 +18,7 @@ public interface PagoOrdenVentaServiceWs {
     @WebMethod
         public void registrarPagoOrdenVenta(PagoOrdenVenta pago);
 
+        @WebMethod
+            public void eliminarPagoOrdenVentaPorIdOrdenVenta(Long idOrdenVenta);
+
 }

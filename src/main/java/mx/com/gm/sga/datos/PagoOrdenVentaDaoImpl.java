@@ -37,4 +37,14 @@ public class PagoOrdenVentaDaoImpl implements PagoOrdenVentaDao {
         return query.getResultList();
     }
 
+    @Override
+    public void eliminarPagoOrdenVentaPorIdOrdenVenta(Long idOrdenVenta) {
+        OrdenVenta temporal = new OrdenVenta();
+        temporal.setIdOv(idOrdenVenta);
+        List<PagoOrdenVenta> pagos = obtenerPagosDeOrdenVenta(temporal);
+        for(PagoOrdenVenta pagoRealizado : pagos){
+            em.remove(em.merge(pagoRealizado));
+        }
+    }
+
 }

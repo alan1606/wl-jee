@@ -16,5 +16,6 @@ import mx.com.gm.sga.domain.Mexico;
 @Local
 public interface MexicoService {
         public List<Mexico> encontrarEstadosDeMexico();
-
+    public Mexico encontrarEstadoPorId(Integer id);
+public Mexico encontrarEstadoPorNombre(String nombre);
 }

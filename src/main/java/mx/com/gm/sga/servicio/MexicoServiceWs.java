@@ -20,4 +20,9 @@ public interface MexicoServiceWs {
     @WebMethod
     public List<Mexico> encontrarEstadosDeMexico();
 
+    @WebMethod
+        public Mexico encontrarEstadoPorId(Integer id);
+
+        @WebMethod
+        public Mexico encontrarEstadoPorNombre(String nombre);
 }

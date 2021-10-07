@@ -67,4 +67,7 @@ public interface VentaConceptosDao {
 
     public List<Object[]> obtenerTotalesCorteVespertinoPorInstitucionArea(String fecha);
     
+    public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
+    
+    public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
 }
