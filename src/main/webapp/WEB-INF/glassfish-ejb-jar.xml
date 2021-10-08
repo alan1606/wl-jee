@@ -141,5 +141,16 @@
                 </login-config>
             </webservice-endpoint>
         </ejb>
+        
+        <ejb>
+            <ejb-name>InstruccionesServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>InstruccionesServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        
     </enterprise-beans>
 </glassfish-ejb-jar>

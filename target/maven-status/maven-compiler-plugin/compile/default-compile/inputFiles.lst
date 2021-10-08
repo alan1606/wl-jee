@@ -1,6 +1,7 @@
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUUsuarioDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EncontrarObjetoJPA.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRemote.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceWs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Pacientes.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceWs.java
@@ -24,9 +25,11 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\prueba.
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDaoImpl.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceRs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceWs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoService.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\criteria\PruebaApiCriteria.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRemote.java
@@ -40,6 +43,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PagoOrdenVenta.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceWs.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceImpl.java
@@ -114,6 +118,8 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRemote.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoJPA.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDao.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceImpl.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\CatalogoFormaPago.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUPersonaDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRemote.java
