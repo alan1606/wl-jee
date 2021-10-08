@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Conceptos.findAll", query = "SELECT c FROM Conceptos c"),
     @NamedQuery(name = "Conceptos.findByIdTo", query = "SELECT c FROM Conceptos c WHERE c.idTo = :idTo"),
-    @NamedQuery(name = "Conceptos.findByConceptoTo", query = "SELECT c FROM Conceptos c WHERE c.conceptoTo = :conceptoTo order by c.conceptoTo"),
+    @NamedQuery(name = "Conceptos.findByConceptoTo", query = "SELECT c FROM Conceptos c WHERE c.conceptoTo = :conceptoTo"),
     @NamedQuery(name = "Conceptos.findByIdDepartamentoTo", query = "SELECT c FROM Conceptos c WHERE c.idDepartamentoTo = :idDepartamentoTo"),
     @NamedQuery(name = "Conceptos.findByIdTipoConceptoTo", query = "SELECT c FROM Conceptos c WHERE c.idTipoConceptoTo = :idTipoConceptoTo"),
     @NamedQuery(name = "Conceptos.findByPrecioTo", query = "SELECT c FROM Conceptos c WHERE c.precioTo = :precioTo"),
@@ -154,11 +154,16 @@ public class Conceptos implements Serializable {
     private Integer idModeloTo;
     @Column(name = "id_presentacion_to")
     private Integer idPresentacionTo;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
+    private List<ConsentimientoConcepto> consentimientoConceptoList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConceptoEs")
+    private List<VentaConceptos> ventaConceptosList;
     @JoinColumn(name = "id_area_to", referencedColumnName = "id_a")
     @ManyToOne(optional = false)
     private Areas idAreaTo;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConceptoEs")
-    private List<VentaConceptos> ventaConceptosList;
+    @JoinColumn(name = "id_instrucciones", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Instrucciones idInstrucciones;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
     private List<ConceptosInstitucion> conceptosInstitucionList;
 
@@ -414,12 +419,13 @@ public class Conceptos implements Serializable {
         this.idPresentacionTo = idPresentacionTo;
     }
 
-    public Areas getIdAreaTo() {
-        return idAreaTo;
+    @XmlTransient
+    public List<ConsentimientoConcepto> getConsentimientoConceptoList() {
+        return consentimientoConceptoList;
     }
 
-    public void setIdAreaTo(Areas idAreaTo) {
-        this.idAreaTo = idAreaTo;
+    public void setConsentimientoConceptoList(List<ConsentimientoConcepto> consentimientoConceptoList) {
+        this.consentimientoConceptoList = consentimientoConceptoList;
     }
 
     @XmlTransient
@@ -429,6 +435,22 @@ public class Conceptos implements Serializable {
 
     public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
         this.ventaConceptosList = ventaConceptosList;
+    }
+
+    public Areas getIdAreaTo() {
+        return idAreaTo;
+    }
+
+    public void setIdAreaTo(Areas idAreaTo) {
+        this.idAreaTo = idAreaTo;
+    }
+
+    public Instrucciones getIdInstrucciones() {
+        return idInstrucciones;
+    }
+
+    public void setIdInstrucciones(Instrucciones idInstrucciones) {
+        this.idInstrucciones = idInstrucciones;
     }
 
     @XmlTransient

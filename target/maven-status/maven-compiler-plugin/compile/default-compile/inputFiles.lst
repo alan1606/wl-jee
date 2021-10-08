@@ -56,10 +56,12 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDao.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Instrucciones.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRemote.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDaoImpl.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConsentimientoConcepto.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\jpql\PruebaJPQL.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDao.java
@@ -84,11 +86,14 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Firma.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PacienteConsentimientoConcepto.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\MovimientoCorte.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceWs.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Consentimiento.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRemote.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomService.java

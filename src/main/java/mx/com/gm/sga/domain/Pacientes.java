@@ -15,7 +15,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -245,6 +247,11 @@ public class Pacientes implements Serializable {
     private String alergiasP;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPacienteVc")
     private List<VentaConceptos> ventaConceptosList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPaciente")
+    private List<PacienteConsentimientoConcepto> pacienteConsentimientoConceptoList;
+    @JoinColumn(name = "id_firma", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Firma idFirma;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPacienteOv")
     private List<OrdenVenta> ordenVentaList;
 
@@ -704,6 +711,23 @@ public class Pacientes implements Serializable {
 
     public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
         this.ventaConceptosList = ventaConceptosList;
+    }
+
+    @XmlTransient
+    public List<PacienteConsentimientoConcepto> getPacienteConsentimientoConceptoList() {
+        return pacienteConsentimientoConceptoList;
+    }
+
+    public void setPacienteConsentimientoConceptoList(List<PacienteConsentimientoConcepto> pacienteConsentimientoConceptoList) {
+        this.pacienteConsentimientoConceptoList = pacienteConsentimientoConceptoList;
+    }
+
+    public Firma getIdFirma() {
+        return idFirma;
+    }
+
+    public void setIdFirma(Firma idFirma) {
+        this.idFirma = idFirma;
     }
 
     @XmlTransient

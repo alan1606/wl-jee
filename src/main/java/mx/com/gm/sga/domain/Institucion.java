@@ -29,9 +29,10 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Institucion.findAll", query = "SELECT i FROM Institucion i order by i.nombreInstitucion"),
+    @NamedQuery(name = "Institucion.findAll", query = "SELECT i FROM Institucion i"),
     @NamedQuery(name = "Institucion.findByIdInstitucion", query = "SELECT i FROM Institucion i WHERE i.idInstitucion = :idInstitucion"),
-    @NamedQuery(name = "Institucion.findByNombreInstitucion", query = "SELECT i FROM Institucion i WHERE i.nombreInstitucion = :nombreInstitucion")})
+    @NamedQuery(name = "Institucion.findByNombreInstitucion", query = "SELECT i FROM Institucion i WHERE i.nombreInstitucion = :nombreInstitucion"),
+    @NamedQuery(name = "Institucion.findByLimite", query = "SELECT i FROM Institucion i WHERE i.limite = :limite")})
 public class Institucion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,33 +46,25 @@ public class Institucion implements Serializable {
     @Size(min = 1, max = 30)
     @Column(name = "nombre_institucion")
     private String nombreInstitucion;
+    @Basic(optional = false)
+    @NotNull
+    private int limite;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idInstitucion")
     private List<VentaConceptos> ventaConceptosList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idInstitucion")
     private List<ConceptosInstitucion> conceptosInstitucionList;
-    @Column(name = "limite")
-    private Integer limite;
-        
+
     public Institucion() {
     }
 
-    public Integer getLimite() {
-        return limite;
-    }
-
-    public void setLimite(Integer limite) {
-        this.limite = limite;
-    }
-
-    
-    
     public Institucion(Long idInstitucion) {
         this.idInstitucion = idInstitucion;
     }
 
-    public Institucion(Long idInstitucion, String nombreInstitucion) {
+    public Institucion(Long idInstitucion, String nombreInstitucion, int limite) {
         this.idInstitucion = idInstitucion;
         this.nombreInstitucion = nombreInstitucion;
+        this.limite = limite;
     }
 
     public Long getIdInstitucion() {
@@ -88,6 +81,14 @@ public class Institucion implements Serializable {
 
     public void setNombreInstitucion(String nombreInstitucion) {
         this.nombreInstitucion = nombreInstitucion;
+    }
+
+    public int getLimite() {
+        return limite;
+    }
+
+    public void setLimite(int limite) {
+        this.limite = limite;
     }
 
     @XmlTransient
