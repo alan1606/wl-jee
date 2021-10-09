@@ -22,18 +22,17 @@ import mx.com.gm.sga.domain.Conceptos;
  */
 @Stateless
 @WebService(endpointInterface = "mx.com.gm.sga.servicio.ConceptosServiceWs")
-@DeclareRoles({"ROLE_ADMIN","ROLE_USER"})
-@RolesAllowed({"ROLE_ADMIN","ROLE_USER"})
+@DeclareRoles({"ROLE_ADMIN", "ROLE_USER"})
+@RolesAllowed({"ROLE_ADMIN", "ROLE_USER"})
 
-public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceRemote, ConceptosServiceWs{
+public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceRemote, ConceptosServiceWs {
 
     @Inject
     private ConceptosDao conceptosDao;
 
     @Resource
     private SessionContext contexto;
-    
-    
+
     @Override
     public Conceptos encontrarConceptoPorId(Conceptos conceptos) {
         return conceptosDao.findConceptoById(new Conceptos(conceptos.getIdTo()));
@@ -73,5 +72,10 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
     public List<Conceptos> encontrarConceptoLikeNombre(String nombre) {
         return conceptosDao.findLikeName(nombre);
     }
-    
+
+    @Override
+    public List<Conceptos> encontrarConceptosPorAreaYNombre(Integer idArea, String name) {
+        return conceptosDao.findByIdAreaName(idArea, name);
+    }
+
 }

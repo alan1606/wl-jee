@@ -31,4 +31,7 @@ public interface ConceptosService {
     public void registrarConcepto(Conceptos concepto);
 
     public List<Conceptos> encontrarConceptoLikeNombre(String nombre);
+    
+        public List<Conceptos> encontrarConceptosPorAreaYNombre(Integer idArea, String name);
+
 }

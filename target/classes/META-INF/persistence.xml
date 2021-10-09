@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence     http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="SgaPU" transaction-type="JTA">
+    <jta-data-source>jdbc/RadiologyDb</jta-data-source>
+    <class>mx.com.gm.sga.domain.Pacientes</class>
+    <class>mx.com.gm.sga.domain.Conceptos</class>
+    <class>mx.com.gm.sga.domain.Institucion</class>
+    <class>mx.com.gm.sga.domain.VentaConceptos</class>
+    <class>mx.com.gm.sga.domain.EquipoDicom</class>
+    <class>mx.com.gm.sga.domain.Areas</class>
+    <class>mx.com.gm.sga.domain.CatalogoFormaPago</class>
+    <class>mx.com.gm.sga.domain.OrdenVenta</class>
+    <class>mx.com.gm.sga.domain.ConceptosInstitucion</class>
+    <class>mx.com.gm.sga.domain.Conceptos_1</class>
+    <class>mx.com.gm.sga.domain.Institucion_1</class>
+    <class>mx.com.gm.sga.domain.Areas_1</class>
+    <class>mx.com.gm.sga.domain.Mexico</class>
+    <class>mx.com.gm.sga.domain.PagoOrdenVenta</class>
+    <class>mx.com.gm.sga.domain.MovimientoCorte</class>
+    <class>mx.com.gm.sga.domain.Usuarios</class>
+    <class>mx.com.gm.sga.domain.Firma</class>
+    <class>mx.com.gm.sga.domain.PacienteConsentimientoConcepto</class>
+    <class>mx.com.gm.sga.domain.Instrucciones</class>
+    <class>mx.com.gm.sga.domain.Consentimiento</class>
+    <class>mx.com.gm.sga.domain.ConsentimientoConcepto</class>
+    <properties>
+      <property name="eclipselink.logging.level.sql" value="FINE"/>
+      <property name="eclipselink.loggin.parameters" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>

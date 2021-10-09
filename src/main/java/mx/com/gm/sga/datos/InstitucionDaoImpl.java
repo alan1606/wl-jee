@@ -64,4 +64,21 @@ public class InstitucionDaoImpl implements InstitucionDao {
         return result;
     }
 
+    @Override
+    public List<Institucion> encontrarInstitucionesLikeNombre(String nombre) {
+        Query query = em.createQuery("from Institucion i where i.nombreInstitucion like :nombre order by i.nombreInstitucion");
+        query.setParameter("nombre", "%" + nombre + "%");
+        return query.getResultList();
+    }
+
+    @Override
+    public void registrarInstitucion(Institucion institucion) {
+        em.persist(institucion);
+    }
+
+    @Override
+    public void actualizarInstitucion(Institucion institucion) {
+        em.merge(institucion);
+    }
+
 }

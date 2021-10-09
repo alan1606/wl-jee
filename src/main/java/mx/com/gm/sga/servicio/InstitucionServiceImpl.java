@@ -22,21 +22,20 @@ import mx.com.gm.sga.domain.Institucion;
  */
 @Stateless
 @WebService(endpointInterface = "mx.com.gm.sga.servicio.InstitucionServiceWs")
-@DeclareRoles({"ROLE_ADMIN","ROLE_USER"})
-@RolesAllowed({"ROLE_ADMIN","ROLE_USER"})
+@DeclareRoles({"ROLE_ADMIN", "ROLE_USER"})
+@RolesAllowed({"ROLE_ADMIN", "ROLE_USER"})
 
-public class InstitucionServiceImpl implements InstitucionService, InstitucionServiceRemote, InstitucionServiceWs{
-    
+public class InstitucionServiceImpl implements InstitucionService, InstitucionServiceRemote, InstitucionServiceWs {
+
     @Inject
     private InstitucionDao institucionDao;
 
     @Resource
     private SessionContext contexto;
 
-
     @Override
     public Institucion encontrarInstitucionPorId(Institucion institucion) {
-        return  institucionDao.findInstitucionById(institucion);
+        return institucionDao.findInstitucionById(institucion);
     }
 
     @Override
@@ -66,7 +65,22 @@ public class InstitucionServiceImpl implements InstitucionService, InstitucionSe
 
     @Override
     public boolean aunEsPosibleAgendarEnInstitucion(Long idInstitucion, String fecha) {
-        return obtenerLimiteInstitucion(idInstitucion)>obtenerCantidadDeEstudiosHechosEnInstitucionFecha(idInstitucion, fecha);
+        return obtenerLimiteInstitucion(idInstitucion) > obtenerCantidadDeEstudiosHechosEnInstitucionFecha(idInstitucion, fecha);
     }
-    
+
+    @Override
+    public List<Institucion> encontrarInstitucionesLikeNombre(String nombre) {
+        return institucionDao.encontrarInstitucionesLikeNombre(nombre);
+    }
+
+    @Override
+    public void registrarInstitucion(Institucion institucion) {
+        institucionDao.registrarInstitucion(institucion);
+    }
+
+    @Override
+    public void actualizarInstitucion(Institucion institucion) {
+        institucionDao.actualizarInstitucion(institucion);
+    }
+
 }

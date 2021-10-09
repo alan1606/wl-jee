@@ -25,4 +25,10 @@ public interface InstitucionDao {
     public Integer obtenerLimiteInstitucion(Long idInstitucion);
     
     public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha);
+    
+    public List<Institucion> encontrarInstitucionesLikeNombre(String nombre);
+    
+    public void registrarInstitucion(Institucion institucion);
+    
+    public void actualizarInstitucion(Institucion institucion);
 }

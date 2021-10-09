@@ -38,4 +38,13 @@ public interface InstitucionServiceWs {
     @WebMethod
     public Long obtenerCantidadDeEstudiosHechosEnInstitucionFecha(Long idInstitucion, String fecha);
 
+    @WebMethod
+    public List<Institucion> encontrarInstitucionesLikeNombre(String nombre);
+
+    @WebMethod
+    public void registrarInstitucion(Institucion institucion);
+
+    @WebMethod
+    public void actualizarInstitucion(Institucion institucion);
+
 }

@@ -91,4 +91,16 @@ public class ConceptosDaoImpl implements ConceptosDao {
         return q.getResultList();
     }
 
+    @Override
+    public List<Conceptos> findByIdAreaName(Integer idArea, String name) {
+        String jpql = null;
+        Query q = null;
+
+        jpql = "select c from Conceptos c where c.conceptoTo like :nombre and c.idAreaTo.idA = :idArea order by c.idAreaTo, c.conceptoTo";
+        q = em.createQuery(jpql);
+        q.setParameter("nombre", "%"+name+"%");
+        q.setParameter("idArea", idArea);
+        return q.getResultList();
+    }
+
 }
