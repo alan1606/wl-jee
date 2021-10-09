@@ -16,10 +16,13 @@ import mx.com.gm.sga.domain.Instrucciones;
  */
 @WebService
 public interface InstruccionesServiceWs {
-    
+
     @WebMethod
     public List<Instrucciones> obtenerTodasInstrucciones();
-    
+
     @WebMethod
     public void registrarInstrucciones(Instrucciones instrucciones);
+
+    @WebMethod
+    public Instrucciones encontrarInstruccionesPorNombre(String nombre);
 }

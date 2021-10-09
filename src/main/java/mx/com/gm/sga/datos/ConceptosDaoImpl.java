@@ -70,4 +70,25 @@ public class ConceptosDaoImpl implements ConceptosDao {
         return (Conceptos) q.getSingleResult();
     }
 
+    @Override
+    public List<Conceptos> findAll() {
+        return em.createNamedQuery("Conceptos.findAll").getResultList();
+    }
+
+    @Override
+    public void save(Conceptos concepto) {
+        em.persist(concepto);
+    }
+
+    @Override
+    public List<Conceptos> findLikeName(String nombre) {
+        String jpql = null;
+        Query q = null;
+
+        jpql = "select c from Conceptos c where c.conceptoTo like :nombre order by c.conceptoTo";
+        q = em.createQuery(jpql);
+        q.setParameter("nombre", "%" + nombre + "%");
+        return q.getResultList();
+    }
+
 }

@@ -58,5 +58,20 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
     public Conceptos encontrarConceptoPorNombre(String nombre) {
         return conceptosDao.findByName(nombre);
     }
+
+    @Override
+    public List<Conceptos> encontrarTodosConceptos() {
+        return conceptosDao.findAll();
+    }
+
+    @Override
+    public void registrarConcepto(Conceptos concepto) {
+        conceptosDao.save(concepto);
+    }
+
+    @Override
+    public List<Conceptos> encontrarConceptoLikeNombre(String nombre) {
+        return conceptosDao.findLikeName(nombre);
+    }
     
 }

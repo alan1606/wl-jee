@@ -18,5 +18,6 @@ public interface InstruccionesService {
     
     public List<Instrucciones> obtenerTodasInstrucciones();
     public void registrarInstrucciones(Instrucciones instrucciones);
+    public Instrucciones encontrarInstruccionesPorNombre(String nombre);
     
 }

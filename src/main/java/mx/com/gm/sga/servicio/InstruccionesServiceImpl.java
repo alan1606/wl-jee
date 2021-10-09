@@ -42,5 +42,14 @@ public class InstruccionesServiceImpl implements InstruccionesService, Instrucci
     public void registrarInstrucciones(Instrucciones instrucciones) {
         instruccionesDao.registrarInstrucciones(instrucciones);
     }
+
+    @Override
+    public Instrucciones encontrarInstruccionesPorNombre(String nombre) {
+        return instruccionesDao.encontrarPorNombre(nombre);
+    }
+
+ 
+
+ 
     
 }

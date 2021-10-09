@@ -16,5 +16,5 @@ public interface InstruccionesDao {
     
     public List<Instrucciones> obtenerTodasInstrucciones();
     public void registrarInstrucciones(Instrucciones instrucciones);
-    
+    public Instrucciones encontrarPorNombre(String nombre);
 }

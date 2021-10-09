@@ -26,4 +26,9 @@ public interface ConceptosService {
 
     public Conceptos encontrarConceptoPorNombre(String nombre);
 
+    public List<Conceptos> encontrarTodosConceptos();
+
+    public void registrarConcepto(Conceptos concepto);
+
+    public List<Conceptos> encontrarConceptoLikeNombre(String nombre);
 }
