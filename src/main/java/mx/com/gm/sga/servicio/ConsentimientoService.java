@@ -28,4 +28,5 @@ public interface ConsentimientoService {
     
         public Consentimiento obtenerConsentimientoPorId(Long id);
 
+        public Consentimiento obtenerConsentimientoPorNombre(String nombre);
 }

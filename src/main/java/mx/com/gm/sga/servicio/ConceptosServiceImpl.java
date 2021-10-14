@@ -78,4 +78,11 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
         return conceptosDao.findByIdAreaName(idArea, name);
     }
 
+    @Override
+    public List<Conceptos> encontrarConceptosPorIdInstitucion(Long idInstitucion) {
+        return conceptosDao.findByInstitucion(idInstitucion);
+    }
+
+
+
 }

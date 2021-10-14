@@ -63,4 +63,9 @@ public class ConsentimientoServiceImpl implements ConsentimientoService, Consent
         return consentimientoDao.obtenerConsentimientoPorId(id);
     }
 
+    @Override
+    public Consentimiento obtenerConsentimientoPorNombre(String nombre) {
+        return consentimientoDao.obtenerConsentimientoPorNombre(nombre);
+    }
+
 }

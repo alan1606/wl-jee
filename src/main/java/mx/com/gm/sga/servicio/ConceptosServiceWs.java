@@ -44,4 +44,7 @@ public interface ConceptosServiceWs {
     @WebMethod
     public List<Conceptos> encontrarConceptosPorAreaYNombre(Integer idArea, String name);
 
+    @WebMethod
+            public List<Conceptos> encontrarConceptosPorIdInstitucion(Long idInstitucion);
+
 }

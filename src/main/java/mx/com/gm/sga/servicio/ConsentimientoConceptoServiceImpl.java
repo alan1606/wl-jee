@@ -12,7 +12,10 @@ import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jws.WebService;
+import mx.com.gm.sga.datos.ConceptosDao;
 import mx.com.gm.sga.datos.ConsentimientoConceptoDao;
+import mx.com.gm.sga.datos.ConsentimientoDao;
+import mx.com.gm.sga.domain.Conceptos;
 import mx.com.gm.sga.domain.ConsentimientoConcepto;
 
 /**
@@ -29,6 +32,12 @@ public class ConsentimientoConceptoServiceImpl implements ConsentimientoConcepto
     @Inject
     private ConsentimientoConceptoDao consentimientoConceptoDao;
 
+    @Inject 
+    private ConsentimientoDao consentimientoDao;
+    
+    @Inject 
+    private ConceptosDao conceptoDao;
+    
     @Resource
     private SessionContext contexto;
     
@@ -39,9 +48,16 @@ public class ConsentimientoConceptoServiceImpl implements ConsentimientoConcepto
     }
 
     @Override
-    public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto) {
+    public void registrarConsentimientoConcepto(Long idConsentimiento, Long idConcepto) {
+        ConsentimientoConcepto consentimientoConcepto = new ConsentimientoConcepto();
+        Conceptos concepto = new Conceptos();
+        concepto.setIdTo(idConcepto);
+        consentimientoConcepto.setIdConcepto(conceptoDao.findConceptoById(concepto));
+        consentimientoConcepto.setIdConsentimiento(consentimientoDao.obtenerConsentimientoPorId(idConsentimiento));
         consentimientoConceptoDao.registrarConsentimientoConcepto(consentimientoConcepto);
     }
+
+
 
     
 }

@@ -103,4 +103,15 @@ public class ConceptosDaoImpl implements ConceptosDao {
         return q.getResultList();
     }
 
+    @Override
+    public List<Conceptos> findByInstitucion(Long idInstitucion) {
+        String jpql = null;
+        Query q = null;
+
+        jpql = "select c.idConcepto from ConceptosInstitucion c where c.idInstitucion.idInstitucion = :idInstitucion";
+        q = em.createQuery(jpql);
+        q.setParameter("idInstitucion", idInstitucion);
+        return q.getResultList();
+    }
+
 }

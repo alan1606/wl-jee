@@ -35,4 +35,7 @@ public interface ConsentimientoServiceWs {
     @WebMethod
     public Consentimiento obtenerConsentimientoPorId(Long id);
 
+    @WebMethod
+    public Consentimiento obtenerConsentimientoPorNombre(String nombre);
+
 }

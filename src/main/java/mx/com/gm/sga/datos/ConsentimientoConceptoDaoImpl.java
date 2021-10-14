@@ -13,12 +13,11 @@ import mx.com.gm.sga.domain.ConsentimientoConcepto;
  *
  * @author alanm
  */
-public class ConsentimientoConceptoDaoImpl implements ConsentimientoConceptoDao{
+public class ConsentimientoConceptoDaoImpl implements ConsentimientoConceptoDao {
 
-    
     @PersistenceContext(unitName = "SgaPU")
     EntityManager em;
-    
+
     @Override
     public void eliminarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto) {
         em.remove(consentimientoConcepto);
@@ -26,7 +25,7 @@ public class ConsentimientoConceptoDaoImpl implements ConsentimientoConceptoDao{
 
     @Override
     public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto) {
-        em.persist(consentimientoConcepto);
+        em.merge(consentimientoConcepto);
     }
-    
+
 }

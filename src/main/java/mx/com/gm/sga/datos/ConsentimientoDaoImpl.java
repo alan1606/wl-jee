@@ -29,7 +29,7 @@ public class ConsentimientoDaoImpl implements ConsentimientoDao {
     public List<Consentimiento> obtenerPorIdConcepto(Long idConcepto) {
         Query query = em.createQuery("select c.idConsentimiento from ConsentimientoConcepto c where c.idConcepto.idTo = :idConcepto");
         query.setParameter("idConcepto", idConcepto);
-        return  query.getResultList();
+        return query.getResultList();
     }
 
     @Override
@@ -50,6 +50,13 @@ public class ConsentimientoDaoImpl implements ConsentimientoDao {
     @Override
     public Consentimiento obtenerConsentimientoPorId(Long id) {
         return em.find(Consentimiento.class, id);
+    }
+
+    @Override
+    public Consentimiento obtenerConsentimientoPorNombre(String nombre) {
+        Query query = em.createQuery("select c from Consentimiento c where c.nombre = :nombre");
+        query.setParameter("nombre", nombre);
+        return (Consentimiento) query.getSingleResult();
     }
 
 }

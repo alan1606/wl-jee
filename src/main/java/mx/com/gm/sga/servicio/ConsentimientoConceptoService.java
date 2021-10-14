@@ -18,5 +18,5 @@ import mx.com.gm.sga.domain.ConsentimientoConcepto;
 public interface ConsentimientoConceptoService {
      public void eliminarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
     
-    public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
+    public void registrarConsentimientoConcepto(Long idConsentimiento, Long idConcepto);
 }

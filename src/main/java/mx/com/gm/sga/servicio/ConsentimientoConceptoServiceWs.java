@@ -20,5 +20,5 @@ public interface ConsentimientoConceptoServiceWs {
     public void eliminarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
 
     @WebMethod
-    public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
+    public void registrarConsentimientoConcepto(Long idConsentimiento, Long idConcepto);
 }
