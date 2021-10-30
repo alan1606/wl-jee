@@ -460,4 +460,82 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     }
 
+    @Override
+    public List<Object[]> findCortesiasVesperinas(String fecha) {
+        Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT "
+                + "p.nombreCompletoP, "
+                + "c.conceptoTo, "
+                + "o.totalEi, "
+                + "x.cantidad "
+                + "from VentaConceptos v "
+                + "join v.idOrdenVenta o "
+                + "join v.idPacienteVc p "
+                + "join v.idConceptoEs c "
+                + "join fetch o.pagoOrdenVentaList x "
+                + "where o.pagado = true and v.fechaVentaVc between :fechaInicio and :fechaFin and x.idFormaPago.formaPagoFp = :formaPago "
+                + "group by o.idOv");
+        nativeQuery.setParameter("fechaInicio", fecha + " 13:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 23:59:59");
+        nativeQuery.setParameter("formaPago", "CORTESIA");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String paciente = (String) tupla[0];
+            String concepto = (String) tupla[1];
+            float totalD = (float) tupla[2];
+            double cantidad = (double) tupla[3];
+
+            
+            lista.add(new Object[]{paciente, concepto, totalD, cantidad});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
+
+    }
+
+    @Override
+    public List<Object[]> findCortesiasMatutinas(String fecha) {
+         Iterator iter = null;
+        Object[] tupla = null;
+        List<Object[]> lista = new ArrayList<Object[]>();
+        Query nativeQuery = em.createQuery("SELECT "
+                + "p.nombreCompletoP, "
+                + "c.conceptoTo, "
+                + "o.totalEi, "
+                + "x.cantidad "
+                + "from VentaConceptos v "
+                + "join v.idOrdenVenta o "
+                + "join v.idPacienteVc p "
+                + "join v.idConceptoEs c "
+                + "join fetch o.pagoOrdenVentaList x "
+                + "where o.pagado = true and v.fechaVentaVc between :fechaInicio and :fechaFin and x.idFormaPago.formaPagoFp = :formaPago "
+                + "group by o.idOv");
+        nativeQuery.setParameter("fechaInicio", fecha + " 07:00:00");
+        nativeQuery.setParameter("fechaFin", fecha + " 12:59:59");
+        nativeQuery.setParameter("formaPago", "CORTESIA");
+
+        iter = nativeQuery.getResultList().iterator();
+
+        while (iter.hasNext()) {
+            tupla = (Object[]) iter.next();
+            String paciente = (String) tupla[0];
+            String concepto = (String) tupla[1];
+            float totalD = (float) tupla[2];
+            double cantidad = (double) tupla[3];
+
+            
+            lista.add(new Object[]{paciente, concepto, totalD, cantidad});
+            //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
+        }
+
+        return lista;
+
+    }
+
 }

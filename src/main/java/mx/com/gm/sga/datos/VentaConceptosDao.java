@@ -70,4 +70,6 @@ public interface VentaConceptosDao {
     public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
     
     public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
+    public List<Object[]> findCortesiasVesperinas(String fecha);
+    public List<Object[]> findCortesiasMatutinas(String fecha);
 }

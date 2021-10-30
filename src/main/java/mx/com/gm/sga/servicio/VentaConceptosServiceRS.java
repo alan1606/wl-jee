@@ -146,6 +146,7 @@ public class VentaConceptosServiceRS {
             List<Object[]> instituciones = null;
             List<Object[]> institucionesAreas = null;
             List<MovimientoCorte> entradasYSalidas = null;
+            List<Object[]> cortesias = null;
 
             Double caja = 0d;
 
@@ -156,12 +157,14 @@ public class VentaConceptosServiceRS {
                     instituciones = ventaConceptosService.obtenerTotalesCorteMatutinoPorInstitucion(fecha);
                     institucionesAreas = ventaConceptosService.obtenerTotalesCorteMatutinoPorInstitucionArea(fecha);
                     entradasYSalidas = movimientoCorteService.obtenerMovimientosDeCorteMatutino(fecha);
+                    cortesias = ventaConceptosService.findCortesiasMatutinas(fecha);
                 } else {
                     conceptos = ventaConceptosService.findCorteVespertino(fecha);
                     formasPago = ventaConceptosService.obtenerTotalesCorteVespertinoPorFormaDePago(fecha);
                     instituciones = ventaConceptosService.obtenerTotalesCorteVespertinoPorInstitucion(fecha);
                     institucionesAreas = ventaConceptosService.obtenerTotalesCorteVespertinoPorInstitucionArea(fecha);
                     entradasYSalidas = movimientoCorteService.obtenerMovimientosDeCorteVespertino(fecha);
+                    cortesias = ventaConceptosService.findCortesiasVesperinas(fecha);
                 }
             } catch (Exception e) {
             }
@@ -172,6 +175,8 @@ public class VentaConceptosServiceRS {
             doc.add(tablaPrincipal(conceptos));
 
             doc.add(tablaPagos(formasPago));
+
+            doc.add(tablaCortesias(cortesias));
 
             doc.add(tablaInstituciones(instituciones));
 
@@ -331,6 +336,20 @@ public class VentaConceptosServiceRS {
         return tableEntradasSalidas;
     }
 
+    private Element tablaCortesias(List<Object[]> cortesias) throws DocumentException {
+        PdfPTable tableCortesias = new PdfPTable(4);
+        tableCortesias.setWidthPercentage(new float[]{34, 35, 15, 15}, new Rectangle(100, 100));
+        addTableHeaderCortesias(tableCortesias);
+        Object[] fila;
+        String tipo = "";
+
+        for (int i = 0; i < cortesias.size(); i++) {
+            fila = cortesias.get(i);
+            addRows(tableCortesias, new String[]{fila[0] + "", fila[1] + "", fila[2] + "", fila[3] + ""});
+        }
+        return tableCortesias;
+    }
+
     private void addTableHeaderEntradasSalidas(PdfPTable tableEntradasSalidas) {
         Stream.of("Tipo", "Descripción", "Cantidad")
                 .forEach(columnTitle -> {
@@ -422,6 +441,17 @@ public class VentaConceptosServiceRS {
         }
 
         return dia + " de " + mes + " del " + anio;
+    }
+
+    private void addTableHeaderCortesias(PdfPTable tableCortesias) {
+        Stream.of("Nombre", "Estudio", "Total", "Cobrado")
+                .forEach(columnTitle -> {
+                    PdfPCell header = new PdfPCell();
+                    header.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                    header.setBorderWidth(2);
+                    header.setPhrase(new Phrase(columnTitle));
+                    tableCortesias.addCell(header);
+                });
     }
 }
 

@@ -169,4 +169,14 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.esCandidatoParaEliminarConceptosDeOrden(idOrdenVenta);
     }
 
+    @Override
+    public List<Object[]> findCortesiasVesperinas(String fecha) {
+        return ventaConceptosDao.findCortesiasVesperinas(fecha);
+    }
+
+    @Override
+    public List<Object[]> findCortesiasMatutinas(String fecha) {
+        return ventaConceptosDao.findCortesiasMatutinas(fecha);
+    }
+
 }
