@@ -32,5 +32,19 @@ public interface EquipoDicomServiceWs {
 
     @WebMethod
     public EquipoDicom encontrarEquipoDicomPorNombre(String nombre);
+    
+    @WebMethod
+    public List<EquipoDicom> encontrarEquipoDicomLikeNombre(String nombre);
+    
+    @WebMethod
+    public List<EquipoDicom> listarEquiposDicom();
+    
+    @WebMethod
+    public void guardarEquipoDicom(EquipoDicom equipo);
+    
+    @WebMethod
+    public void actualizarEquipoDicom(EquipoDicom equipo);
+    
+    
 
 }

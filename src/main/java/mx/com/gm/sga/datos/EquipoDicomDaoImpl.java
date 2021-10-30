@@ -47,4 +47,27 @@ public class EquipoDicomDaoImpl implements EquipoDicomDao {
         return (EquipoDicom) query.getSingleResult();
     }
 
+    @Override
+    public List<EquipoDicom> encontrarEquipoDicomLikeNombre(String nombre) {
+        Query query = em.createQuery("from EquipoDicom e where e.nombre like :nombre");
+        nombre += "%";
+        query.setParameter("nombre", nombre);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<EquipoDicom> listarEquiposDicom() {
+        return em.createNamedQuery("EquipoDicom.findAll").getResultList();
+    }
+
+    @Override
+    public void guardar(EquipoDicom equipo) {
+        em.persist(equipo);
+    }
+
+    @Override
+    public void actualizar(EquipoDicom equipo) {
+        em.merge(equipo);
+    }
+
 }

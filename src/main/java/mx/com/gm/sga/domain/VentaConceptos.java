@@ -237,9 +237,15 @@ public class VentaConceptos implements Serializable {
     @JoinColumn(name = "id_institucion", referencedColumnName = "id_institucion")
     @ManyToOne(optional = false)
     private Institucion idInstitucion;
+    @JoinColumn(name = "id_medico_radiologo", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Medico idMedicoRadiologo;
     @JoinColumn(name = "id_orden_venta", referencedColumnName = "id_ov")
     @ManyToOne(optional = false)
     private OrdenVenta idOrdenVenta;
+    @JoinColumn(name = "id_tecnico", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Tecnico idTecnico;
 
     public VentaConceptos() {
     }
@@ -659,12 +665,28 @@ public class VentaConceptos implements Serializable {
         this.idInstitucion = idInstitucion;
     }
 
+    public Medico getIdMedicoRadiologo() {
+        return idMedicoRadiologo;
+    }
+
+    public void setIdMedicoRadiologo(Medico idMedicoRadiologo) {
+        this.idMedicoRadiologo = idMedicoRadiologo;
+    }
+
     public OrdenVenta getIdOrdenVenta() {
         return idOrdenVenta;
     }
 
     public void setIdOrdenVenta(OrdenVenta idOrdenVenta) {
         this.idOrdenVenta = idOrdenVenta;
+    }
+
+    public Tecnico getIdTecnico() {
+        return idTecnico;
+    }
+
+    public void setIdTecnico(Tecnico idTecnico) {
+        this.idTecnico = idTecnico;
     }
 
     @Override

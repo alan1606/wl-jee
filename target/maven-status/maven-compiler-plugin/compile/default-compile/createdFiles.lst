@@ -9,6 +9,7 @@ mx\com\gm\sga\domain\Instrucciones.class
 mx\com\gm\sga\servicio\InstruccionesServiceWs.class
 mx\com\gm\sga\datos\InstruccionesDaoImpl.class
 mx\com\gm\sga\servicio\EquipoDicomService.class
+mx\com\gm\sga\domain\Medico.class
 mx\com\gm\sga\servicio\PacienteServiceRemote.class
 mx\com\gm\sga\datos\WorklistDao.class
 mx\com\gm\sga\datos\AreasDao.class
@@ -96,6 +97,7 @@ mx\com\gm\sga\domain\CatalogoFormaPago.class
 mx\com\gm\sga\servicio\ConceptosInstitucionServiceWs.class
 mx\com\gm\sga\servicio\PacienteServiceImpl.class
 mx\com\gm\sga\servicio\WorklistServiceWs.class
+mx\com\gm\sga\domain\Tecnico.class
 mx\com\gm\sga\servicio\InstitucionServiceWs.class
 mx\com\gm\sga\servicio\MovimientoCorteServiceWs.class
 mx\com\gm\sga\datos\MovimientoCorteDao.class

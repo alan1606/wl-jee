@@ -17,4 +17,6 @@ public interface ConceptosInstitucionDao {
     
     public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion); 
     
+    public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+    
 }

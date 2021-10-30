@@ -18,4 +18,7 @@ public interface ConceptosInstitucionService {
     public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
 
     public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
+    
+        public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+
 }

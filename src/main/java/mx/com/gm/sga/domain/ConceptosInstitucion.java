@@ -36,7 +36,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "ConceptosInstitucion.findByPrecioPublico", query = "SELECT c FROM ConceptosInstitucion c WHERE c.precioPublico = :precioPublico"),
     @NamedQuery(name = "ConceptosInstitucion.findByActivo", query = "SELECT c FROM ConceptosInstitucion c WHERE c.activo = :activo"),
     @NamedQuery(name = "ConceptosInstitucion.findByIdInternoInstitucion", query = "SELECT c FROM ConceptosInstitucion c WHERE c.idInternoInstitucion = :idInternoInstitucion"),
-    @NamedQuery(name = "ConceptosInstitucion.findByPensionesClaveAnterior", query = "SELECT c FROM ConceptosInstitucion c WHERE c.pensionesClaveAnterior = :pensionesClaveAnterior")})
+    @NamedQuery(name = "ConceptosInstitucion.findByPensionesClaveAnterior", query = "SELECT c FROM ConceptosInstitucion c WHERE c.pensionesClaveAnterior = :pensionesClaveAnterior"),
+    @NamedQuery(name = "ConceptosInstitucion.findByIdContpaq", query = "SELECT c FROM ConceptosInstitucion c WHERE c.idContpaq = :idContpaq")})
 public class ConceptosInstitucion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -66,6 +67,11 @@ public class ConceptosInstitucion implements Serializable {
     @Size(max = 10)
     @Column(name = "pensiones_clave_anterior")
     private String pensionesClaveAnterior;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 50)
+    @Column(name = "id_contpaq")
+    private String idContpaq;
     @JoinColumn(name = "id_concepto", referencedColumnName = "id_to")
     @ManyToOne(optional = false)
     private Conceptos idConcepto;
@@ -80,13 +86,14 @@ public class ConceptosInstitucion implements Serializable {
         this.id = id;
     }
 
-    public ConceptosInstitucion(Long id, int limiteDiario, double precio, double precioPublico, boolean activo, String idInternoInstitucion) {
+    public ConceptosInstitucion(Long id, int limiteDiario, double precio, double precioPublico, boolean activo, String idInternoInstitucion, String idContpaq) {
         this.id = id;
         this.limiteDiario = limiteDiario;
         this.precio = precio;
         this.precioPublico = precioPublico;
         this.activo = activo;
         this.idInternoInstitucion = idInternoInstitucion;
+        this.idContpaq = idContpaq;
     }
 
     public Long getId() {
@@ -143,6 +150,14 @@ public class ConceptosInstitucion implements Serializable {
 
     public void setPensionesClaveAnterior(String pensionesClaveAnterior) {
         this.pensionesClaveAnterior = pensionesClaveAnterior;
+    }
+
+    public String getIdContpaq() {
+        return idContpaq;
+    }
+
+    public void setIdContpaq(String idContpaq) {
+        this.idContpaq = idContpaq;
     }
 
     public Conceptos getIdConcepto() {

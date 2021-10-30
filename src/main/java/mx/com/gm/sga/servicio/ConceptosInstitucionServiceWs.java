@@ -22,4 +22,8 @@ public interface ConceptosInstitucionServiceWs {
     @WebMethod
     public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion); 
     
+    @WebMethod
+        public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+
+    
 }

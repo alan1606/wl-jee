@@ -42,4 +42,9 @@ public class ConceptosInstitucionServiceImpl implements ConceptosInstitucionServ
         conceptosInstitucionDao.actualizarConceptosInstitucion(conceptoInstitucion);
     }
 
+    @Override
+    public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion) {
+        return conceptosInstitucionDao.encontrarConceptoInstitucionPorIdConceptoIdInstitucion(idConcepto, idInstitucion);
+        }
+
 }

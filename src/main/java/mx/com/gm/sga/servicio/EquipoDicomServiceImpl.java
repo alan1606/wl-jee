@@ -59,5 +59,27 @@ public class EquipoDicomServiceImpl implements EquipoDicomService, EquipoDicomSe
     public EquipoDicom encontrarEquipoDicomPorNombre(String nombre) {
         return equipoDicomDao.findEquipoDicomByNombre(nombre);
     }
+
+    @Override
+    public List<EquipoDicom> encontrarEquipoDicomLikeNombre(String nombre) {
+        return equipoDicomDao.encontrarEquipoDicomLikeNombre(nombre);
+       }
+
+    @Override
+    public List<EquipoDicom> listarEquiposDicom() {
+        return equipoDicomDao.listarEquiposDicom();
+    }
+
+    @Override
+    public void guardarEquipoDicom(EquipoDicom equipo) {
+        equipoDicomDao.guardar(equipo);
+    }
+
+    @Override
+    public void actualizarEquipoDicom(EquipoDicom equipo) {
+        equipoDicomDao.actualizar(equipo);
+    }
+
+
     
 }
