@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import mx.com.gm.sga.domain.ConceptosInstitucion;
@@ -15,15 +16,17 @@ import mx.com.gm.sga.domain.ConceptosInstitucion;
  */
 @WebService
 public interface ConceptosInstitucionServiceWs {
-    
+
     @WebMethod
     public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
-    
-    @WebMethod
-    public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion); 
-    
-    @WebMethod
-        public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
 
-    
+    @WebMethod
+    public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
+
+    @WebMethod
+    public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+
+    @WebMethod
+    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion);
+
 }

@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.datos;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -39,6 +40,13 @@ public class ConceptosInstitucionDaoImpl implements ConceptosInstitucionDao {
         query.setParameter("idInstitucion", idInstitucion);
         query.setParameter("idConcepto", idConcepto);
         return (ConceptosInstitucion) query.getSingleResult();
+    }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion) {
+        Query query = em.createQuery("select c from ConceptosInstitucion c where c.idInstitucion.idInstitucion = :idInstitucion");
+        query.setParameter("idInstitucion", idInstitucion);
+        return query.getResultList();
     }
 
 }

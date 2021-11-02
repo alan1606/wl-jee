@@ -6,12 +6,14 @@ mx\com\gm\sga\servicio\InstitucionServiceRS.class
 mx\com\gm\sga\datos\ConceptosDaoImpl.class
 mx\com\gm\sga\servicio\InstitucionServiceRemote.class
 mx\com\gm\sga\domain\Instrucciones.class
+mx\com\gm\sga\datos\PaqueteDaoImpl.class
 mx\com\gm\sga\servicio\InstruccionesServiceWs.class
 mx\com\gm\sga\datos\InstruccionesDaoImpl.class
 mx\com\gm\sga\servicio\EquipoDicomService.class
 mx\com\gm\sga\domain\Medico.class
 mx\com\gm\sga\servicio\PacienteServiceRemote.class
 mx\com\gm\sga\datos\WorklistDao.class
+mx\com\gm\sga\servicio\PaquetesServiceImpl.class
 mx\com\gm\sga\datos\AreasDao.class
 mx\com\gm\sga\servicio\AreasServiceRemote.class
 mx\com\gm\sga\servicio\PagoOrdenVentaServiceRS.class
@@ -22,8 +24,10 @@ mx\com\gm\sga\datos\VentaConceptosDaoImpl.class
 mx\com\gm\sga\datos\InstruccionesDao.class
 mx\com\gm\sga\servicio\MexicoServiceWs.class
 mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.class
+mx\com\gm\sga\servicio\PaquetesService.class
 mx\com\gm\sga\servicio\OrdenVentaServiceRS.class
 mx\com\gm\sga\datos\InstitucionDao.class
+mx\com\gm\sga\domain\Paquete.class
 mx\com\gm\sga\servicio\PacienteService.class
 mx\com\gm\sga\servicio\AreasServiceWs.class
 mx\com\gm\sga\datos\UsuariosDao.class
@@ -34,6 +38,7 @@ mx\com\gm\sga\servicio\ConceptosInstitucionServiceImpl.class
 mx\com\gm\sga\servicio\ConsentimientoServiceWs.class
 mx\com\gm\sga\datos\PagoOrdenVentaDao.class
 mx\com\gm\sga\servicio\ConsentimientoConceptoServiceImpl.class
+mx\com\gm\sga\datos\ConceptoPaqueteDaoImpl.class
 mx\com\gm\sga\servicio\PagoOrdenVentaService.class
 mx\com\gm\sga\servicio\ConceptosInstitucionService.class
 mx\com\gm\sga\servicio\VentaConceptosServiceImpl.class
@@ -47,6 +52,7 @@ mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRemote.class
 mx\com\gm\sga\servicio\EquipoDicomServiceRS.class
 mx\com\gm\sga\servicio\InstruccionesServiceRs.class
 mx\com\gm\sga\servicio\EquipoDicomServiceImpl.class
+mx\com\gm\sga\datos\ConceptoPaqueteDao.class
 mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.class
 mx\com\gm\sga\datos\VentaConceptosDao.class
 mx\com\gm\sga\servicio\ConsentimientoService.class
@@ -86,10 +92,12 @@ mx\com\gm\sga\servicio\CatalogoFormaPagoServiceWs.class
 mx\com\gm\sga\datos\OrdenVentaDao.class
 mx\com\gm\sga\domain\Areas.class
 mx\com\gm\sga\servicio\InstruccionesServiceImpl.class
+mx\com\gm\sga\datos\PaqueteDao.class
 mx\com\gm\sga\servicio\InstruccionesService.class
 mx\com\gm\sga\datos\ConceptosDao.class
 mx\com\gm\sga\domain\PagoOrdenVenta.class
 mx\com\gm\sga\servicio\UsuariosServiceImpl.class
+mx\com\gm\sga\domain\ConceptoPaquete.class
 mx\com\gm\sga\servicio\MovimientoCorteService.class
 mx\com\gm\sga\datos\PacienteDaoImpl.class
 mx\com\gm\sga\servicio\AreasService.class
@@ -103,6 +111,7 @@ mx\com\gm\sga\servicio\MovimientoCorteServiceWs.class
 mx\com\gm\sga\datos\MovimientoCorteDao.class
 mx\com\gm\sga\datos\ConsentimientoConceptoDaoImpl.class
 mx\com\gm\sga\servicio\UsuariosService.class
+mx\com\gm\sga\servicio\PaquetesServiceWs.class
 mx\com\gm\sga\servicio\WorklistService.class
 mx\com\gm\sga\domain\Worklist.class
 mx\com\gm\sga\servicio\PacienteServiceWs.class

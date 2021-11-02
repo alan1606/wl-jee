@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
@@ -46,5 +47,10 @@ public class ConceptosInstitucionServiceImpl implements ConceptosInstitucionServ
     public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion) {
         return conceptosInstitucionDao.encontrarConceptoInstitucionPorIdConceptoIdInstitucion(idConcepto, idInstitucion);
         }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion) {
+        return conceptosInstitucionDao.obtenerConceptosInstitucionPorIdInstitucion(idInstitucion);
+    }
 
 }

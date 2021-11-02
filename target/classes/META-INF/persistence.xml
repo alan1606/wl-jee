@@ -28,6 +28,13 @@
     <class>mx.com.gm.sga.domain.Tecnico</class>
     <class>mx.com.gm.sga.domain.Firma_1</class>
     <class>mx.com.gm.sga.domain.Pacientes_1</class>
+    <class>mx.com.gm.sga.datos.Paquete</class>
+    <class>mx.com.gm.sga.datos.Conceptos</class>
+    <class>mx.com.gm.sga.datos.Instrucciones</class>
+    <class>mx.com.gm.sga.datos.Areas</class>
+    <class>mx.com.gm.sga.domain.Paquete</class>
+    <class>mx.com.gm.sga.domain.ConceptoPaquete</class>
+    <class>mx.com.gm.sga.datos.ConceptoPaqueteDao</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>

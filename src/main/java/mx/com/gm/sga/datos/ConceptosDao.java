@@ -23,4 +23,5 @@ public interface ConceptosDao {
     public List<Conceptos> findLikeName(String nombre);
     public List<Conceptos> findByIdAreaName(Integer idArea, String name);
     public List<Conceptos> findByInstitucion(Long idInstitucion);
+   
 }

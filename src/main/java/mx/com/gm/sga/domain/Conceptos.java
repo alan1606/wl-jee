@@ -155,17 +155,13 @@ public class Conceptos implements Serializable {
     @Column(name = "id_presentacion_to")
     private Integer idPresentacionTo;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
-    private List<ConsentimientoConcepto> consentimientoConceptoList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConceptoEs")
-    private List<VentaConceptos> ventaConceptosList;
+    private List<ConceptoPaquete> conceptoPaqueteList;
     @JoinColumn(name = "id_area_to", referencedColumnName = "id_a")
     @ManyToOne(optional = false)
     private Areas idAreaTo;
     @JoinColumn(name = "id_instrucciones", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Instrucciones idInstrucciones;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
-    private List<ConceptosInstitucion> conceptosInstitucionList;
 
     public Conceptos() {
     }
@@ -420,21 +416,12 @@ public class Conceptos implements Serializable {
     }
 
     @XmlTransient
-    public List<ConsentimientoConcepto> getConsentimientoConceptoList() {
-        return consentimientoConceptoList;
+    public List<ConceptoPaquete> getConceptoPaqueteList() {
+        return conceptoPaqueteList;
     }
 
-    public void setConsentimientoConceptoList(List<ConsentimientoConcepto> consentimientoConceptoList) {
-        this.consentimientoConceptoList = consentimientoConceptoList;
-    }
-
-    @XmlTransient
-    public List<VentaConceptos> getVentaConceptosList() {
-        return ventaConceptosList;
-    }
-
-    public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
-        this.ventaConceptosList = ventaConceptosList;
+    public void setConceptoPaqueteList(List<ConceptoPaquete> conceptoPaqueteList) {
+        this.conceptoPaqueteList = conceptoPaqueteList;
     }
 
     public Areas getIdAreaTo() {
@@ -451,15 +438,6 @@ public class Conceptos implements Serializable {
 
     public void setIdInstrucciones(Instrucciones idInstrucciones) {
         this.idInstrucciones = idInstrucciones;
-    }
-
-    @XmlTransient
-    public List<ConceptosInstitucion> getConceptosInstitucionList() {
-        return conceptosInstitucionList;
-    }
-
-    public void setConceptosInstitucionList(List<ConceptosInstitucion> conceptosInstitucionList) {
-        this.conceptosInstitucionList = conceptosInstitucionList;
     }
 
     @Override

@@ -1,142 +1,151 @@
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUUsuarioDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EncontrarObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Pacientes.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\EquipoDicom.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Areas.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceRs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\prueba.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceRs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\criteria\PruebaApiCriteria.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\asociaciones\ClienteAsociacionesJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Mexico.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PagoOrdenVenta.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Institucion.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Instrucciones.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConsentimientoConcepto.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\jpql\PruebaJPQL.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Usuarios.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Worklist.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Conceptos.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Firma.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PacienteConsentimientoConcepto.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\MovimientoCorte.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Consentimiento.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\VentaConceptos.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\OrdenVenta.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\cascade\PersistenciaCascadaJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoSesionLarga.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EliminarObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Medico.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\CatalogoFormaPago.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUPersonaDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\PersistirObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Tecnico.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConceptosInstitucion.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\jpql\PruebaJPQL.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\MovimientoCorte.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Pacientes.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\WorklistDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\EquipoDicomDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoSesionLarga.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Instrucciones.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\EquipoDicomService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PaquetesServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Areas.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConsentimientoDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Worklist.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\PaqueteDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\PacienteConsentimientoConcepto.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\PacienteDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PacienteServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\AreasDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConsentimientoDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MexicoServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConceptosDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\ConsentimientoConcepto.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PacienteService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\asociaciones\ClienteAsociacionesJPA.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\prueba.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\AreasServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\ConceptosInstitucion.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\VentaConceptosDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\VentaConceptosService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\MexicoDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\WorklistService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Medico.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\EquipoDicom.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\PacienteDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PacienteServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\WorklistServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\PagoOrdenVenta.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Usuarios.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstruccionesService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstitucionService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MexicoServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\InstitucionDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\UsuariosDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\VentaConceptosDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MexicoService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PaquetesService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoJPA.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\WorklistDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\AreasService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\AreasServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\WorklistServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConsentimientoService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\AreasServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\OrdenVenta.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConceptoPaqueteDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\NUPersonaDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EncontrarObjetoJPA.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Conceptos.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Consentimiento.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\MexicoDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\UsuariosService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\NUUsuarioDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PaquetesServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\InstruccionesDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\criteria\PruebaApiCriteria.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Institucion.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\OrdenVentaDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConceptosDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\OrdenVentaService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\PaqueteDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Tecnico.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\UsuariosDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\OrdenVentaDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConceptoPaqueteDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\EquipoDicomDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoService.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Firma.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\CatalogoFormaPago.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\InstruccionesDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceRs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Mexico.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\AreasServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\Paquete.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRemote.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\PersistirObjetoJPA.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRS.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\VentaConceptos.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\AreasDaoImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\domain\ConceptoPaquete.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceWs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDao.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\WorklistServiceRs.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EliminarObjetoJPA.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceImpl.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\cliente\cascade\PersistenciaCascadaJPA.java
+D:\Descargas\sga-jee-web\api-wl\src\main\java\mx\com\gm\sga\datos\InstitucionDao.java

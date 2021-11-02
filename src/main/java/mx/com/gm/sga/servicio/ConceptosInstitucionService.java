@@ -5,6 +5,7 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.ejb.Local;
 import mx.com.gm.sga.domain.ConceptosInstitucion;
 
@@ -18,7 +19,9 @@ public interface ConceptosInstitucionService {
     public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
 
     public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
-    
-        public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+
+    public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+
+    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion);
 
 }

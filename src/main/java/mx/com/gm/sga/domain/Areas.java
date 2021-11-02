@@ -81,8 +81,6 @@ public class Areas implements Serializable {
     @NotNull
     @Column(name = "duracion_minutos")
     private int duracionMinutos;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idArea")
-    private List<EquipoDicom> equipoDicomList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAreaTo")
     private List<Conceptos> conceptosList;
 
@@ -173,15 +171,6 @@ public class Areas implements Serializable {
 
     public void setDuracionMinutos(int duracionMinutos) {
         this.duracionMinutos = duracionMinutos;
-    }
-
-    @XmlTransient
-    public List<EquipoDicom> getEquipoDicomList() {
-        return equipoDicomList;
-    }
-
-    public void setEquipoDicomList(List<EquipoDicom> equipoDicomList) {
-        this.equipoDicomList = equipoDicomList;
     }
 
     @XmlTransient
