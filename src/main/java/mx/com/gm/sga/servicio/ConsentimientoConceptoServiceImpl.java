@@ -44,6 +44,7 @@ public class ConsentimientoConceptoServiceImpl implements ConsentimientoConcepto
     
     @Override
     public void eliminarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto) {
+        consentimientoConcepto = consentimientoConceptoDao.buscarConsentimientoConceptoPorIdConsentimientoIdConcepto(consentimientoConcepto.getIdConsentimiento().getId(), consentimientoConcepto.getIdConcepto().getIdTo());
         consentimientoConceptoDao.eliminarConsentimientoConcepto(consentimientoConcepto);
     }
 

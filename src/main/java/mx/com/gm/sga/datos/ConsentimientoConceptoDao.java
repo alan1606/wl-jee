@@ -17,4 +17,6 @@ public interface ConsentimientoConceptoDao {
     
     public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
     
+    public ConsentimientoConcepto buscarConsentimientoConceptoPorIdConsentimientoIdConcepto(Long idConsentimiento, Long idConcepto);
+    
 }
