@@ -42,7 +42,7 @@ public interface OrdenVentaDao {
     
     public double obtenerTotalDeVenta(Long idOrdenVenta);
     
-    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta);
+    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta, String institucion);
     
     public Long obtenerTotalOrdenesEnUnDia(String fecha);
     

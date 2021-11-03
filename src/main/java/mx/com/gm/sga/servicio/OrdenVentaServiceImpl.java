@@ -14,7 +14,9 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jws.WebService;
 import mx.com.gm.sga.datos.OrdenVentaDao;
+import mx.com.gm.sga.datos.VentaConceptosDao;
 import mx.com.gm.sga.domain.OrdenVenta;
+import mx.com.gm.sga.domain.VentaConceptos;
 
 /**
  *
@@ -29,6 +31,9 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
 
     @Inject
     private OrdenVentaDao ordenVentaDao;
+    
+    @Inject
+    private VentaConceptosDao ventaConceptosDao;
 
     @Resource
     private SessionContext contexto;
@@ -95,7 +100,8 @@ public class OrdenVentaServiceImpl implements OrdenVentaService, OrdenVentaServi
 
     @Override
     public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta) {
-         ordenVentaDao.actualizarTotalOrdenVenta(ordenVenta);
+        List<VentaConceptos> conceptos = ventaConceptosDao.findByIdOrdenVenta(ordenVenta.getIdOv());
+         ordenVentaDao.actualizarTotalOrdenVenta(ordenVenta, conceptos.get(0).getIdInstitucion().getNombreInstitucion());
     }
 
     @Override

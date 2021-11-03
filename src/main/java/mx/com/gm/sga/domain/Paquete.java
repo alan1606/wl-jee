@@ -67,13 +67,11 @@ public class Paquete implements Serializable {
     @NotNull
     @Column(name = "precio_sin_descuento")
     private double precioSinDescuento;
+    @JoinColumn(name = "id_concepto", referencedColumnName = "id_to")
+    @ManyToOne(optional = false)
+    private Conceptos idConcepto;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPaquete")
     private List<ConceptoPaquete> conceptoPaqueteList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
-    private List<Paquete> paqueteList;
-    @JoinColumn(name = "id_concepto", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Paquete idConcepto;
 
     public Paquete() {
     }
@@ -139,6 +137,14 @@ public class Paquete implements Serializable {
         this.precioSinDescuento = precioSinDescuento;
     }
 
+    public Conceptos getIdConcepto() {
+        return idConcepto;
+    }
+
+    public void setIdConcepto(Conceptos idConcepto) {
+        this.idConcepto = idConcepto;
+    }
+
     @XmlTransient
     public List<ConceptoPaquete> getConceptoPaqueteList() {
         return conceptoPaqueteList;
@@ -146,23 +152,6 @@ public class Paquete implements Serializable {
 
     public void setConceptoPaqueteList(List<ConceptoPaquete> conceptoPaqueteList) {
         this.conceptoPaqueteList = conceptoPaqueteList;
-    }
-
-    @XmlTransient
-    public List<Paquete> getPaqueteList() {
-        return paqueteList;
-    }
-
-    public void setPaqueteList(List<Paquete> paqueteList) {
-        this.paqueteList = paqueteList;
-    }
-
-    public Paquete getIdConcepto() {
-        return idConcepto;
-    }
-
-    public void setIdConcepto(Paquete idConcepto) {
-        this.idConcepto = idConcepto;
     }
 
     @Override

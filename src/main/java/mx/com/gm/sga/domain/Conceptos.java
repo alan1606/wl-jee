@@ -154,6 +154,12 @@ public class Conceptos implements Serializable {
     private Integer idModeloTo;
     @Column(name = "id_presentacion_to")
     private Integer idPresentacionTo;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConceptoEs")
+    private List<VentaConceptos> ventaConceptosList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
+    private List<Paquete> paqueteList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
+    private List<ConsentimientoConcepto> consentimientoConceptoList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
     private List<ConceptoPaquete> conceptoPaqueteList;
     @JoinColumn(name = "id_area_to", referencedColumnName = "id_a")
@@ -162,6 +168,8 @@ public class Conceptos implements Serializable {
     @JoinColumn(name = "id_instrucciones", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Instrucciones idInstrucciones;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
+    private List<ConceptosInstitucion> conceptosInstitucionList;
 
     public Conceptos() {
     }
@@ -416,6 +424,33 @@ public class Conceptos implements Serializable {
     }
 
     @XmlTransient
+    public List<VentaConceptos> getVentaConceptosList() {
+        return ventaConceptosList;
+    }
+
+    public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
+        this.ventaConceptosList = ventaConceptosList;
+    }
+
+    @XmlTransient
+    public List<Paquete> getPaqueteList() {
+        return paqueteList;
+    }
+
+    public void setPaqueteList(List<Paquete> paqueteList) {
+        this.paqueteList = paqueteList;
+    }
+
+    @XmlTransient
+    public List<ConsentimientoConcepto> getConsentimientoConceptoList() {
+        return consentimientoConceptoList;
+    }
+
+    public void setConsentimientoConceptoList(List<ConsentimientoConcepto> consentimientoConceptoList) {
+        this.consentimientoConceptoList = consentimientoConceptoList;
+    }
+
+    @XmlTransient
     public List<ConceptoPaquete> getConceptoPaqueteList() {
         return conceptoPaqueteList;
     }
@@ -438,6 +473,15 @@ public class Conceptos implements Serializable {
 
     public void setIdInstrucciones(Instrucciones idInstrucciones) {
         this.idInstrucciones = idInstrucciones;
+    }
+
+    @XmlTransient
+    public List<ConceptosInstitucion> getConceptosInstitucionList() {
+        return conceptosInstitucionList;
+    }
+
+    public void setConceptosInstitucionList(List<ConceptosInstitucion> conceptosInstitucionList) {
+        this.conceptosInstitucionList = conceptosInstitucionList;
     }
 
     @Override

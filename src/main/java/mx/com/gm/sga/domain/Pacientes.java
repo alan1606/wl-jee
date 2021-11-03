@@ -247,11 +247,11 @@ public class Pacientes implements Serializable {
     private String alergiasP;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPacienteVc")
     private List<VentaConceptos> ventaConceptosList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPaciente")
-    private List<PacienteConsentimientoConcepto> pacienteConsentimientoConceptoList;
     @JoinColumn(name = "id_firma", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Firma idFirma;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPaciente")
+    private List<PacienteConsentimientoConcepto> pacienteConsentimientoConceptoList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPacienteOv")
     private List<OrdenVenta> ordenVentaList;
 
@@ -713,6 +713,14 @@ public class Pacientes implements Serializable {
         this.ventaConceptosList = ventaConceptosList;
     }
 
+    public Firma getIdFirma() {
+        return idFirma;
+    }
+
+    public void setIdFirma(Firma idFirma) {
+        this.idFirma = idFirma;
+    }
+
     @XmlTransient
     public List<PacienteConsentimientoConcepto> getPacienteConsentimientoConceptoList() {
         return pacienteConsentimientoConceptoList;
@@ -720,14 +728,6 @@ public class Pacientes implements Serializable {
 
     public void setPacienteConsentimientoConceptoList(List<PacienteConsentimientoConcepto> pacienteConsentimientoConceptoList) {
         this.pacienteConsentimientoConceptoList = pacienteConsentimientoConceptoList;
-    }
-
-    public Firma getIdFirma() {
-        return idFirma;
-    }
-
-    public void setIdFirma(Firma idFirma) {
-        this.idFirma = idFirma;
     }
 
     @XmlTransient

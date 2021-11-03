@@ -231,21 +231,15 @@ public class VentaConceptos implements Serializable {
     @JoinColumn(name = "id_equipo_dicom", referencedColumnName = "id_equipo")
     @ManyToOne(optional = false)
     private EquipoDicom idEquipoDicom;
-    @JoinColumn(name = "id_paciente_vc", referencedColumnName = "id_p")
-    @ManyToOne(optional = false)
-    private Pacientes idPacienteVc;
     @JoinColumn(name = "id_institucion", referencedColumnName = "id_institucion")
     @ManyToOne(optional = false)
     private Institucion idInstitucion;
-    @JoinColumn(name = "id_medico_radiologo", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Medico idMedicoRadiologo;
     @JoinColumn(name = "id_orden_venta", referencedColumnName = "id_ov")
     @ManyToOne(optional = false)
     private OrdenVenta idOrdenVenta;
-    @JoinColumn(name = "id_tecnico", referencedColumnName = "id")
+    @JoinColumn(name = "id_paciente_vc", referencedColumnName = "id_p")
     @ManyToOne(optional = false)
-    private Tecnico idTecnico;
+    private Pacientes idPacienteVc;
 
     public VentaConceptos() {
     }
@@ -649,14 +643,6 @@ public class VentaConceptos implements Serializable {
         this.idEquipoDicom = idEquipoDicom;
     }
 
-    public Pacientes getIdPacienteVc() {
-        return idPacienteVc;
-    }
-
-    public void setIdPacienteVc(Pacientes idPacienteVc) {
-        this.idPacienteVc = idPacienteVc;
-    }
-
     public Institucion getIdInstitucion() {
         return idInstitucion;
     }
@@ -665,13 +651,7 @@ public class VentaConceptos implements Serializable {
         this.idInstitucion = idInstitucion;
     }
 
-    public Medico getIdMedicoRadiologo() {
-        return idMedicoRadiologo;
-    }
-
-    public void setIdMedicoRadiologo(Medico idMedicoRadiologo) {
-        this.idMedicoRadiologo = idMedicoRadiologo;
-    }
+  
 
     public OrdenVenta getIdOrdenVenta() {
         return idOrdenVenta;
@@ -681,14 +661,15 @@ public class VentaConceptos implements Serializable {
         this.idOrdenVenta = idOrdenVenta;
     }
 
-    public Tecnico getIdTecnico() {
-        return idTecnico;
+    public Pacientes getIdPacienteVc() {
+        return idPacienteVc;
     }
 
-    public void setIdTecnico(Tecnico idTecnico) {
-        this.idTecnico = idTecnico;
+    public void setIdPacienteVc(Pacientes idPacienteVc) {
+        this.idPacienteVc = idPacienteVc;
     }
 
+    
     @Override
     public int hashCode() {
         int hash = 0;

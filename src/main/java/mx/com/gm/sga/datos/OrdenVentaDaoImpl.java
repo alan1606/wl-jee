@@ -104,8 +104,14 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
     }
 
     @Override
-    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta) {
-        ordenVenta.setTotalEi(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + ""));
+    public void actualizarTotalOrdenVenta(OrdenVenta ordenVenta, String institucion) {
+        if (institucion.equals("PARTICULAR")) {
+            ordenVenta.setTotalEi(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + ""));
+        } else {
+            ordenVenta.setTotalEl(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + ""));
+            ordenVenta.setTotalEi(0f);
+        }
+
         actualizarOrdenVenta(ordenVenta);
     }
 
@@ -148,6 +154,5 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
     public void eliminarOrdenVenta(OrdenVenta ordenVenta) {
         em.remove(em.merge(ordenVenta));
     }
-
 
 }

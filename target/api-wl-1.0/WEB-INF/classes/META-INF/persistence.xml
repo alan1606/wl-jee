@@ -35,6 +35,11 @@
     <class>mx.com.gm.sga.domain.Paquete</class>
     <class>mx.com.gm.sga.domain.ConceptoPaquete</class>
     <class>mx.com.gm.sga.datos.ConceptoPaqueteDao</class>
+    <class>mx.com.gm.sga.domain.ConceptoPaquete_1</class>
+    <class>mx.com.gm.sga.domain.ConceptosInstitucion_1</class>
+    <class>mx.com.gm.sga.domain.Multimedia</class>
+    <class>mx.com.gm.sga.domain.Departamentos</class>
+    <class>mx.com.gm.sga.domain.Sucursales</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>
