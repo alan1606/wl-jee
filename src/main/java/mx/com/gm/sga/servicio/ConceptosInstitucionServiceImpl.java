@@ -53,4 +53,19 @@ public class ConceptosInstitucionServiceImpl implements ConceptosInstitucionServ
         return conceptosInstitucionDao.obtenerConceptosInstitucionPorIdInstitucion(idInstitucion);
     }
 
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosLikeNombrePorPorIdInstitucion(String nombre, Long idInstitucion) {
+        return conceptosInstitucionDao.obtenerConceptosLikeNombrePorPorIdInstitucion(nombre, idInstitucion);
+    }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosLikeNombrePorPorIdInstitucionPorArea(String nombre, Long idInstitucion, int idArea) {
+        return conceptosInstitucionDao.obtenerConceptosLikeNombrePorPorIdInstitucionPorArea(nombre, idInstitucion, idArea);
+    }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosPorPorIdInstitucionPorArea(Long idInstitucion, int idArea) {
+        return conceptosInstitucionDao.obtenerConceptosPorPorIdInstitucionPorArea(idInstitucion, idArea);
+    }
+
 }

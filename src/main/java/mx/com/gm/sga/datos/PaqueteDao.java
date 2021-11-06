@@ -19,5 +19,6 @@ public interface PaqueteDao {
     public void registrarPaquete(Paquete paquete);
     public void modificarPaquete(Paquete paquete);
     public void eliminarPaquete(Paquete paquete);
-    
+    public Paquete obtenerPaquetePorNombre(String nombre);
+    public List<Paquete> obtenerPaquetesLikeNombre(String nombre);
 }

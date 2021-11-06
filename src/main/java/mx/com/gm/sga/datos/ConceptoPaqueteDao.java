@@ -7,7 +7,7 @@ package mx.com.gm.sga.datos;
 
 import java.util.List;
 import mx.com.gm.sga.domain.ConceptoPaquete;
-import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
 
 /**
  *
@@ -19,6 +19,8 @@ public interface ConceptoPaqueteDao {
 
     public void eliminarConceptoPaquete(ConceptoPaquete conceptoPaquete);
 
-    public List<Conceptos> obtenerConceptosDePaquete(Long idPaquete);
+    public List<ConceptosInstitucion> obtenerConceptosDePaquete(Long idPaquete);
 
+    public ConceptoPaquete buscarConceptoPaquetePorIdConceptoPorIdPaquete(Long idConcepto, Long idPaquete);
+    
 }

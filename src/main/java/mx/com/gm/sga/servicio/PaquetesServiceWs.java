@@ -9,7 +9,7 @@ import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import mx.com.gm.sga.domain.ConceptoPaquete;
-import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
 import mx.com.gm.sga.domain.Paquete;
 
 /**
@@ -41,6 +41,12 @@ public interface PaquetesServiceWs {
     public void eliminarConceptoPaquete(ConceptoPaquete conceptoPaquete);
 
     @WebMethod
-    public List<Conceptos> obtenerConceptosDePaquete(Long idPaquete);
+    public List<ConceptosInstitucion> obtenerConceptosDePaquete(Long idPaquete);
+
+    @WebMethod
+    public Paquete obtenerPaquetePorNombre(String nombre);
+
+    @WebMethod
+    public List<Paquete> obtenerPaquetesLikeNombre(String nombre);
 
 }

@@ -8,7 +8,7 @@ package mx.com.gm.sga.servicio;
 import java.util.List;
 import javax.ejb.Local;
 import mx.com.gm.sga.domain.ConceptoPaquete;
-import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
 import mx.com.gm.sga.domain.Paquete;
 
 /**
@@ -32,6 +32,9 @@ public interface PaquetesService {
 
     public void eliminarConceptoPaquete(ConceptoPaquete conceptoPaquete);
 
-    public List<Conceptos> obtenerConceptosDePaquete(Long idPaquete);
+    public List<ConceptosInstitucion> obtenerConceptosDePaquete(Long idPaquete);
 
+        public Paquete obtenerPaquetePorNombre(String nombre);
+  public List<Paquete> obtenerPaquetesLikeNombre(String nombre);
+    
 }

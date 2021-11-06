@@ -50,12 +50,11 @@ public class Paquete implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha_inicio")
-    @Temporal(TemporalType.DATE)
-    private Date fechaInicio;
+    private String fechaInicio;
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha_fin")
-    private int fechaFin;
+    private String fechaFin;
     @Basic(optional = false)
     @NotNull
     private double precio;
@@ -80,7 +79,7 @@ public class Paquete implements Serializable {
         this.id = id;
     }
 
-    public Paquete(Long id, Date fechaInicio, int fechaFin, double precio, short porcentajeDescuento, double precioSinDescuento) {
+    public Paquete(Long id, String fechaInicio, String fechaFin, double precio, short porcentajeDescuento, double precioSinDescuento) {
         this.id = id;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -97,19 +96,19 @@ public class Paquete implements Serializable {
         this.id = id;
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public int getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(int fechaFin) {
+    public void setFechaFin(String fechaFin) {
         this.fechaFin = fechaFin;
     }
 

@@ -17,6 +17,7 @@ import mx.com.gm.sga.datos.ConceptoPaqueteDao;
 import mx.com.gm.sga.datos.PaqueteDao;
 import mx.com.gm.sga.domain.ConceptoPaquete;
 import mx.com.gm.sga.domain.Conceptos;
+import mx.com.gm.sga.domain.ConceptosInstitucion;
 import mx.com.gm.sga.domain.Paquete;
 
 /**
@@ -76,8 +77,18 @@ public class PaquetesServiceImpl implements PaquetesService, PaquetesServiceWs{
     }
 
     @Override
-    public List<Conceptos> obtenerConceptosDePaquete(Long idPaquete) {
+    public List<ConceptosInstitucion> obtenerConceptosDePaquete(Long idPaquete) {
         return conceptoPaqueteDao.obtenerConceptosDePaquete(idPaquete);
+    }
+
+    @Override
+    public Paquete obtenerPaquetePorNombre(String nombre) {
+        return paqueteDao.obtenerPaquetePorNombre(nombre);
+    }
+
+    @Override
+    public List<Paquete> obtenerPaquetesLikeNombre(String nombre) {
+        return paqueteDao.obtenerPaquetesLikeNombre(nombre);
     }
     
 }
