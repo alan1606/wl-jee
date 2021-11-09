@@ -114,4 +114,9 @@ public class ConceptosDaoImpl implements ConceptosDao {
         return q.getResultList();
     }
 
+    @Override
+    public void actualizarConcepto(Conceptos concepto) {
+        em.merge(concepto);
+    }
+
 }

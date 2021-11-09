@@ -83,6 +83,11 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
         return conceptosDao.findByInstitucion(idInstitucion);
     }
 
+    @Override
+    public void actualizarConcepto(Conceptos concepto) {
+        conceptosDao.actualizarConcepto(concepto);
+    }
+
 
 
 }
