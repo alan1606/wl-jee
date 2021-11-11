@@ -166,8 +166,9 @@ public class WorklistDaoImpl implements WorklistDao {
 
     @Override
     public void registrarEnWorklistPorOrdenVenta(long idOrdenVenta) {
-        Query query = em.createQuery("from VentaConceptos v where v.idOrdenVenta.idOv = :idOrdenVenta and v.idConceptoEs.dicom = 1");
+        Query query = em.createQuery("from VentaConceptos v where v.idOrdenVenta.idOv = :idOrdenVenta and v.idConceptoEs.dicom = :true");
         query.setParameter("idOrdenVenta", idOrdenVenta);
+        query.setParameter("true", Short.parseShort("1"));
         List<VentaConceptos> estudios = query.getResultList();
         for(VentaConceptos venta : estudios){
             registrarEnWorklist(venta.getIdVc());

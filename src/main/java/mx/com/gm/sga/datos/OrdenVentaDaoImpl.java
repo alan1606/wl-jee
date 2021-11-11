@@ -111,7 +111,7 @@ public class OrdenVentaDaoImpl implements OrdenVentaDao {
             ordenVenta.setTotalEl(Float.parseFloat(obtenerTotalDeVenta(ordenVenta.getIdOv()) + ""));
             ordenVenta.setTotalEi(0f);
         }
-
+        //Debe haber una forma de indicar que va a ser un paquete y nada más cobrar el concepto paquete
         actualizarOrdenVenta(ordenVenta);
     }
 
