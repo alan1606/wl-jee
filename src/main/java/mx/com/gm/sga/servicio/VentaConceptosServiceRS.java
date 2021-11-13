@@ -9,22 +9,15 @@ import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Stream;
 import javax.ejb.Stateless;
@@ -37,9 +30,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import mx.com.gm.sga.domain.Institucion;
 import mx.com.gm.sga.domain.MovimientoCorte;
-import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.Pacientes;
-import mx.com.gm.sga.domain.PagoOrdenVenta;
 import mx.com.gm.sga.domain.VentaConceptos;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -421,18 +412,15 @@ public class VentaConceptosServiceRS {
                 mes = "julio";
                 break;
             case "08":
-                mes = "enero";
-                break;
-            case "09":
                 mes = "agosto";
                 break;
-            case "10":
+            case "09":
                 mes = "septiembre";
                 break;
-            case "11":
+            case "10":
                 mes = "octubre";
                 break;
-            case "12":
+            case "11":
                 mes = "noviembre";
                 break;
             default:
