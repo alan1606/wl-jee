@@ -45,6 +45,9 @@
     <class>mx.com.gm.sga.domain.Devolucion</class>
     <class>mx.com.gm.sga.domain.DatosFacturacion</class>
     <class>mx.com.gm.sga.domain.Cfdi_1</class>
+    <class>mx.com.gm.sga.domain.Antecedentes</class>
+    <class>mx.com.gm.sga.domain.AntecedenteEstudio</class>
+    <class>mx.com.gm.sga.domain.AntecedentesAreas</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>
