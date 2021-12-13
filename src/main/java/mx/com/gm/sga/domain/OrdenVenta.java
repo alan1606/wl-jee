@@ -284,7 +284,7 @@ public class OrdenVenta implements Serializable {
     @NotNull
     private boolean pagado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
-    private List<VentaConceptos> ventaConceptosList;
+    private List<Devolucion> devolucionList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
     private List<PagoOrdenVenta> pagoOrdenVentaList;
     @JoinColumn(name = "id_forma_pago", referencedColumnName = "id_fp")
@@ -803,12 +803,12 @@ public class OrdenVenta implements Serializable {
     }
 
     @XmlTransient
-    public List<VentaConceptos> getVentaConceptosList() {
-        return ventaConceptosList;
+    public List<Devolucion> getDevolucionList() {
+        return devolucionList;
     }
 
-    public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
-        this.ventaConceptosList = ventaConceptosList;
+    public void setDevolucionList(List<Devolucion> devolucionList) {
+        this.devolucionList = devolucionList;
     }
 
     @XmlTransient

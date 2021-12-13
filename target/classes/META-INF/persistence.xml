@@ -40,6 +40,11 @@
     <class>mx.com.gm.sga.domain.Multimedia</class>
     <class>mx.com.gm.sga.domain.Departamentos</class>
     <class>mx.com.gm.sga.domain.Sucursales</class>
+    <class>mx.com.gm.sga.domain.NewEntity</class>
+    <class>mx.com.gm.sga.domain.Cfdi</class>
+    <class>mx.com.gm.sga.domain.Devolucion</class>
+    <class>mx.com.gm.sga.domain.DatosFacturacion</class>
+    <class>mx.com.gm.sga.domain.Cfdi_1</class>
     <properties>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.loggin.parameters" value="true"/>

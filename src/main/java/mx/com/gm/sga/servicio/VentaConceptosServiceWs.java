@@ -73,9 +73,11 @@ public interface VentaConceptosServiceWs {
 
     @WebMethod
     public void eliminarVentaConceptosPorIdOrdenVenta(Long idOrdenVenta);
-        
-    @WebMethod
-        public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
 
+    @WebMethod
+    public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
+
+    @WebMethod
+    public void actualizarEstadoVentaConceptosPorIdOrdenVenta(Long idOrdenVenta, String estado);
 
 }

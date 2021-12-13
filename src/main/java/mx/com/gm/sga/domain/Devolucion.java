@@ -6,9 +6,8 @@
 package mx.com.gm.sga.domain;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,24 +16,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author alanm
  */
 @Entity
-@Table(name = "pago_orden_venta")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "PagoOrdenVenta.findAll", query = "SELECT p FROM PagoOrdenVenta p"),
-    @NamedQuery(name = "PagoOrdenVenta.findById", query = "SELECT p FROM PagoOrdenVenta p WHERE p.id = :id"),
-    @NamedQuery(name = "PagoOrdenVenta.findByCantidad", query = "SELECT p FROM PagoOrdenVenta p WHERE p.cantidad = :cantidad")})
-public class PagoOrdenVenta implements Serializable {
+    @NamedQuery(name = "Devolucion.findAll", query = "SELECT d FROM Devolucion d"),
+    @NamedQuery(name = "Devolucion.findById", query = "SELECT d FROM Devolucion d WHERE d.id = :id"),
+    @NamedQuery(name = "Devolucion.findByFecha", query = "SELECT d FROM Devolucion d WHERE d.fecha = :fecha")})
+public class Devolucion implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -43,28 +38,27 @@ public class PagoOrdenVenta implements Serializable {
     private Long id;
     @Basic(optional = false)
     @NotNull
-    private double cantidad;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPagoOrdenVenta")
-    private List<DatosFacturacion> datosFacturacionList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPagoOrdenVenta")
-    private List<Devolucion> devolucionList;
+    private String fecha;
     @JoinColumn(name = "id_forma_pago", referencedColumnName = "id_fp")
     @ManyToOne(optional = false)
     private CatalogoFormaPago idFormaPago;
     @JoinColumn(name = "id_orden_venta", referencedColumnName = "id_ov")
     @ManyToOne(optional = false)
     private OrdenVenta idOrdenVenta;
+    @JoinColumn(name = "id_pago_orden_venta", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private PagoOrdenVenta idPagoOrdenVenta;
 
-    public PagoOrdenVenta() {
+    public Devolucion() {
     }
 
-    public PagoOrdenVenta(Long id) {
+    public Devolucion(Long id) {
         this.id = id;
     }
 
-    public PagoOrdenVenta(Long id, double cantidad) {
+    public Devolucion(Long id, String fecha) {
         this.id = id;
-        this.cantidad = cantidad;
+        this.fecha = fecha;
     }
 
     public Long getId() {
@@ -75,30 +69,12 @@ public class PagoOrdenVenta implements Serializable {
         this.id = id;
     }
 
-    public double getCantidad() {
-        return cantidad;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setCantidad(double cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    @XmlTransient
-    public List<DatosFacturacion> getDatosFacturacionList() {
-        return datosFacturacionList;
-    }
-
-    public void setDatosFacturacionList(List<DatosFacturacion> datosFacturacionList) {
-        this.datosFacturacionList = datosFacturacionList;
-    }
-
-    @XmlTransient
-    public List<Devolucion> getDevolucionList() {
-        return devolucionList;
-    }
-
-    public void setDevolucionList(List<Devolucion> devolucionList) {
-        this.devolucionList = devolucionList;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public CatalogoFormaPago getIdFormaPago() {
@@ -117,6 +93,14 @@ public class PagoOrdenVenta implements Serializable {
         this.idOrdenVenta = idOrdenVenta;
     }
 
+    public PagoOrdenVenta getIdPagoOrdenVenta() {
+        return idPagoOrdenVenta;
+    }
+
+    public void setIdPagoOrdenVenta(PagoOrdenVenta idPagoOrdenVenta) {
+        this.idPagoOrdenVenta = idPagoOrdenVenta;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -127,10 +111,10 @@ public class PagoOrdenVenta implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof PagoOrdenVenta)) {
+        if (!(object instanceof Devolucion)) {
             return false;
         }
-        PagoOrdenVenta other = (PagoOrdenVenta) object;
+        Devolucion other = (Devolucion) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -139,7 +123,7 @@ public class PagoOrdenVenta implements Serializable {
 
     @Override
     public String toString() {
-        return "mx.com.gm.sga.domain.PagoOrdenVenta[ id=" + id + " ]";
+        return "mx.com.gm.sga.domain.Devolucion[ id=" + id + " ]";
     }
     
 }

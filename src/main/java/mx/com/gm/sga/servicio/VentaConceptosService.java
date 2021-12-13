@@ -76,4 +76,6 @@ public interface VentaConceptosService {
         public List<Object[]> findCortesiasVesperinas(String fecha);
     public List<Object[]> findCortesiasMatutinas(String fecha);
 
+        public void actualizarEstadoVentaConceptosPorIdOrdenVenta(Long idOrdenVenta, String estado);
+
 }

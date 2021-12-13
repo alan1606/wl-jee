@@ -72,4 +72,6 @@ public interface VentaConceptosDao {
     public Long esCandidatoParaEliminarConceptosDeOrden(Long idOrdenVenta);
     public List<Object[]> findCortesiasVesperinas(String fecha);
     public List<Object[]> findCortesiasMatutinas(String fecha);
+    
+    public void actualizarEstadoVentaConceptosPorIdOrdenVenta(Long idOrdenVenta, String estado);
 }

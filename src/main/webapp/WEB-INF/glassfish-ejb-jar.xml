@@ -173,5 +173,33 @@
                 </login-config>
             </webservice-endpoint>
         </ejb>
+          <ejb>
+            <ejb-name>CfdiServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>CfdiServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        <ejb>
+            <ejb-name>DatosFacturacionServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>DatosFacturacionServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
+        
+        <ejb>
+            <ejb-name>DevolucionServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>DevolucionServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
     </enterprise-beans>
 </glassfish-ejb-jar>

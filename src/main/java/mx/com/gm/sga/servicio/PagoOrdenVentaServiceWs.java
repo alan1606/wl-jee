@@ -5,8 +5,10 @@
  */
 package mx.com.gm.sga.servicio;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import mx.com.gm.sga.domain.OrdenVenta;
 import mx.com.gm.sga.domain.PagoOrdenVenta;
 
 /**
@@ -20,5 +22,8 @@ public interface PagoOrdenVentaServiceWs {
 
         @WebMethod
             public void eliminarPagoOrdenVentaPorIdOrdenVenta(Long idOrdenVenta);
+
+            @WebMethod
+               public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(OrdenVenta ordenVenta);
 
 }

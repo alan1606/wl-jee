@@ -179,4 +179,9 @@ public class VentaConceptosServiceImpl implements VentaConceptosService, VentaCo
         return ventaConceptosDao.findCortesiasMatutinas(fecha);
     }
 
+    @Override
+    public void actualizarEstadoVentaConceptosPorIdOrdenVenta(Long idOrdenVenta, String estado) {
+        ventaConceptosDao.actualizarEstadoVentaConceptosPorIdOrdenVenta(idOrdenVenta, estado);
+    }
+
 }

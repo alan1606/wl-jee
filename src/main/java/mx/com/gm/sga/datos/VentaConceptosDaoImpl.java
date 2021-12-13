@@ -490,7 +490,6 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
             float totalD = (float) tupla[2];
             double cantidad = (double) tupla[3];
 
-            
             lista.add(new Object[]{paciente, concepto, totalD, cantidad});
             //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
         }
@@ -501,7 +500,7 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
 
     @Override
     public List<Object[]> findCortesiasMatutinas(String fecha) {
-         Iterator iter = null;
+        Iterator iter = null;
         Object[] tupla = null;
         List<Object[]> lista = new ArrayList<Object[]>();
         Query nativeQuery = em.createQuery("SELECT "
@@ -529,13 +528,20 @@ public class VentaConceptosDaoImpl implements VentaConceptosDao {
             float totalD = (float) tupla[2];
             double cantidad = (double) tupla[3];
 
-            
             lista.add(new Object[]{paciente, concepto, totalD, cantidad});
             //log.debug("nombre:" + nombre + ", apellido:" + apellido + ", email:" + email) ;
         }
 
         return lista;
 
+    }
+
+    @Override
+    public void actualizarEstadoVentaConceptosPorIdOrdenVenta(Long idOrdenVenta, String estado) {
+        findByIdOrdenVenta(idOrdenVenta).forEach(v -> {
+            v.setEstado(estado);
+            em.merge(v);
+        });
     }
 
 }
