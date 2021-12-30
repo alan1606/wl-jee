@@ -24,5 +24,5 @@ public interface ConceptosDao {
     public List<Conceptos> findByIdAreaName(Integer idArea, String name);
     public List<Conceptos> findByInstitucion(Long idInstitucion);
    public void actualizarConcepto(Conceptos concepto);
-    
+    public Conceptos obtenerUltimoConceptoRegistrado();
 }

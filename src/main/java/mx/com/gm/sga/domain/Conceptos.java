@@ -62,7 +62,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Conceptos.findByIdUmedidaTo", query = "SELECT c FROM Conceptos c WHERE c.idUmedidaTo = :idUmedidaTo"),
     @NamedQuery(name = "Conceptos.findByIdMarcaTo", query = "SELECT c FROM Conceptos c WHERE c.idMarcaTo = :idMarcaTo"),
     @NamedQuery(name = "Conceptos.findByIdModeloTo", query = "SELECT c FROM Conceptos c WHERE c.idModeloTo = :idModeloTo"),
-    @NamedQuery(name = "Conceptos.findByIdPresentacionTo", query = "SELECT c FROM Conceptos c WHERE c.idPresentacionTo = :idPresentacionTo")})
+    @NamedQuery(name = "Conceptos.findByIdPresentacionTo", query = "SELECT c FROM Conceptos c WHERE c.idPresentacionTo = :idPresentacionTo"),
+    @NamedQuery(name = "Conceptos.findByRequiereSaberAntecedentes", query = "SELECT c FROM Conceptos c WHERE c.requiereSaberAntecedentes = :requiereSaberAntecedentes")})
 public class Conceptos implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -154,10 +155,16 @@ public class Conceptos implements Serializable {
     private Integer idModeloTo;
     @Column(name = "id_presentacion_to")
     private Integer idPresentacionTo;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "requiere_saber_antecedentes")
+    private boolean requiereSaberAntecedentes;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConceptoEs")
     private List<VentaConceptos> ventaConceptosList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
     private List<Paquete> paqueteList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
+    private List<AntecedenteConcepto> antecedenteConceptoList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
     private List<ConsentimientoConcepto> consentimientoConceptoList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConcepto")
@@ -178,7 +185,7 @@ public class Conceptos implements Serializable {
         this.idTo = idTo;
     }
 
-    public Conceptos(Long idTo, String conceptoTo, short idDepartamentoTo, short idTipoConceptoTo, float precioTo, float precioUrgenciaTo, int usuarioTo, int idConvenioTo, float precioM, float precioMu) {
+    public Conceptos(Long idTo, String conceptoTo, short idDepartamentoTo, short idTipoConceptoTo, float precioTo, float precioUrgenciaTo, int usuarioTo, int idConvenioTo, float precioM, float precioMu, boolean requiereSaberAntecedentes) {
         this.idTo = idTo;
         this.conceptoTo = conceptoTo;
         this.idDepartamentoTo = idDepartamentoTo;
@@ -189,6 +196,7 @@ public class Conceptos implements Serializable {
         this.idConvenioTo = idConvenioTo;
         this.precioM = precioM;
         this.precioMu = precioMu;
+        this.requiereSaberAntecedentes = requiereSaberAntecedentes;
     }
 
     public Long getIdTo() {
@@ -423,6 +431,14 @@ public class Conceptos implements Serializable {
         this.idPresentacionTo = idPresentacionTo;
     }
 
+    public boolean getRequiereSaberAntecedentes() {
+        return requiereSaberAntecedentes;
+    }
+
+    public void setRequiereSaberAntecedentes(boolean requiereSaberAntecedentes) {
+        this.requiereSaberAntecedentes = requiereSaberAntecedentes;
+    }
+
     @XmlTransient
     public List<VentaConceptos> getVentaConceptosList() {
         return ventaConceptosList;
@@ -439,6 +455,15 @@ public class Conceptos implements Serializable {
 
     public void setPaqueteList(List<Paquete> paqueteList) {
         this.paqueteList = paqueteList;
+    }
+
+    @XmlTransient
+    public List<AntecedenteConcepto> getAntecedenteConceptoList() {
+        return antecedenteConceptoList;
+    }
+
+    public void setAntecedenteConceptoList(List<AntecedenteConcepto> antecedenteConceptoList) {
+        this.antecedenteConceptoList = antecedenteConceptoList;
     }
 
     @XmlTransient

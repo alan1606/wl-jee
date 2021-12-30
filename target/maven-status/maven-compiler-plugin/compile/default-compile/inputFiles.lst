@@ -23,12 +23,15 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceWs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceRs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CfdiDaoImpl.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PaqueteDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\prueba.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteEstudioDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoService.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteEstudioDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceRs.java
@@ -47,6 +50,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDaoImpl.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteConceptoIds.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Mexico.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PagoOrdenVenta.java
@@ -75,11 +79,15 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\M
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceWs.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesServiceWs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DevolucionDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Instrucciones.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRS.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteConceptoDao.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Antecedentes.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDaoImpl.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteConceptoDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRemote.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDaoImpl.java
@@ -95,8 +103,11 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Usuarios.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRS.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedentesDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistService.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteConcepto.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CfdiDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Worklist.java
@@ -107,6 +118,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Conceptos.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDao.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteEstudio.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DatosFacturacionDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesService.java
@@ -123,6 +135,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Devolucion.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceWs.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedentesDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Consentimiento.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasService.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiServiceImpl.java
@@ -150,6 +163,7 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRemote.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DatosFacturacionDaoImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoJPA.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Medico.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Paquete.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionService.java
@@ -163,5 +177,6 @@ C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servici
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDao.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRS.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\PersistirObjetoJPA.java
+C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Tecnico.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceImpl.java
 C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConceptosInstitucion.java

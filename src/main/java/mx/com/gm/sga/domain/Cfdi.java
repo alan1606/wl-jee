@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Cfdi.findAll", query = "SELECT c FROM Cfdi c order by c.descripcion"),
+    @NamedQuery(name = "Cfdi.findAll", query = "SELECT c FROM Cfdi c"),
     @NamedQuery(name = "Cfdi.findByClave", query = "SELECT c FROM Cfdi c WHERE c.clave = :clave"),
     @NamedQuery(name = "Cfdi.findByDescripcion", query = "SELECT c FROM Cfdi c WHERE c.descripcion = :descripcion")})
 public class Cfdi implements Serializable {

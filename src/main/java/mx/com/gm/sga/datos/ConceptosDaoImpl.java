@@ -98,7 +98,7 @@ public class ConceptosDaoImpl implements ConceptosDao {
 
         jpql = "select c from Conceptos c where c.conceptoTo like :nombre and c.idAreaTo.idA = :idArea order by c.idAreaTo, c.conceptoTo";
         q = em.createQuery(jpql);
-        q.setParameter("nombre", "%"+name+"%");
+        q.setParameter("nombre", "%" + name + "%");
         q.setParameter("idArea", idArea);
         return q.getResultList();
     }
@@ -117,6 +117,17 @@ public class ConceptosDaoImpl implements ConceptosDao {
     @Override
     public void actualizarConcepto(Conceptos concepto) {
         em.merge(concepto);
+    }
+
+    @Override
+    public Conceptos obtenerUltimoConceptoRegistrado() {
+        String jpql = null;
+        Query q = null;
+
+        jpql = "select c from Conceptos c order by c.idTo DESC";
+        q = em.createQuery(jpql);
+        q.setMaxResults(1);
+        return (Conceptos) q.getSingleResult();
     }
 
 }

@@ -37,5 +37,7 @@ public interface ConceptosService {
             public List<Conceptos> encontrarConceptosPorIdInstitucion(Long idInstitucion);
 
             public void actualizarConcepto(Conceptos concepto);
+                public Conceptos obtenerUltimoConceptoRegistrado();
+
 }
 

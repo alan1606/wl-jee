@@ -50,4 +50,7 @@ public interface ConceptosServiceWs {
     @WebMethod
     public void actualizarConcepto(Conceptos concepto);
 
+    @WebMethod
+        public Conceptos obtenerUltimoConceptoRegistrado();
+
 }

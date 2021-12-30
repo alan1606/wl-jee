@@ -201,5 +201,15 @@
                 </login-config>
             </webservice-endpoint>
         </ejb>
+        
+             <ejb>
+            <ejb-name>AntecedentesServiceImpl</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>AntecedentesServiceImpl</port-component-name>
+                <login-config>
+                    <auth-method>BASIC</auth-method>
+                </login-config>
+            </webservice-endpoint>
+        </ejb>
     </enterprise-beans>
 </glassfish-ejb-jar>

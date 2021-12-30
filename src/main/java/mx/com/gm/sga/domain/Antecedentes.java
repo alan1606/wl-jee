@@ -44,6 +44,8 @@ public class Antecedentes implements Serializable {
     private String nombre;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAntecedente")
     private List<AntecedenteEstudio> antecedenteEstudioList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAntecedente")
+    private List<AntecedenteConcepto> antecedenteConceptoList;
 
     public Antecedentes() {
     }
@@ -80,6 +82,15 @@ public class Antecedentes implements Serializable {
 
     public void setAntecedenteEstudioList(List<AntecedenteEstudio> antecedenteEstudioList) {
         this.antecedenteEstudioList = antecedenteEstudioList;
+    }
+
+    @XmlTransient
+    public List<AntecedenteConcepto> getAntecedenteConceptoList() {
+        return antecedenteConceptoList;
+    }
+
+    public void setAntecedenteConceptoList(List<AntecedenteConcepto> antecedenteConceptoList) {
+        this.antecedenteConceptoList = antecedenteConceptoList;
     }
 
     @Override

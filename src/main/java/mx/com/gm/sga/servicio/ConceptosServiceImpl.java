@@ -88,6 +88,11 @@ public class ConceptosServiceImpl implements ConceptosService, ConceptosServiceR
         conceptosDao.actualizarConcepto(concepto);
     }
 
+    @Override
+    public Conceptos obtenerUltimoConceptoRegistrado() {
+        return conceptosDao.obtenerUltimoConceptoRegistrado();
+    }
+
 
 
 }

@@ -8,7 +8,9 @@ package mx.com.gm.sga.domain;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,12 +21,14 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -234,12 +238,20 @@ public class VentaConceptos implements Serializable {
     @JoinColumn(name = "id_institucion", referencedColumnName = "id_institucion")
     @ManyToOne(optional = false)
     private Institucion idInstitucion;
+    @JoinColumn(name = "id_medico_radiologo", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Medico idMedicoRadiologo;
     @JoinColumn(name = "id_orden_venta", referencedColumnName = "id_ov")
     @ManyToOne(optional = false)
     private OrdenVenta idOrdenVenta;
     @JoinColumn(name = "id_paciente_vc", referencedColumnName = "id_p")
     @ManyToOne(optional = false)
     private Pacientes idPacienteVc;
+    @JoinColumn(name = "id_tecnico", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Tecnico idTecnico;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idVentaConcepto")
+    private List<AntecedenteEstudio> antecedenteEstudioList;
 
     public VentaConceptos() {
     }
@@ -651,7 +663,13 @@ public class VentaConceptos implements Serializable {
         this.idInstitucion = idInstitucion;
     }
 
-  
+    public Medico getIdMedicoRadiologo() {
+        return idMedicoRadiologo;
+    }
+
+    public void setIdMedicoRadiologo(Medico idMedicoRadiologo) {
+        this.idMedicoRadiologo = idMedicoRadiologo;
+    }
 
     public OrdenVenta getIdOrdenVenta() {
         return idOrdenVenta;
@@ -669,7 +687,23 @@ public class VentaConceptos implements Serializable {
         this.idPacienteVc = idPacienteVc;
     }
 
-    
+    public Tecnico getIdTecnico() {
+        return idTecnico;
+    }
+
+    public void setIdTecnico(Tecnico idTecnico) {
+        this.idTecnico = idTecnico;
+    }
+
+    @XmlTransient
+    public List<AntecedenteEstudio> getAntecedenteEstudioList() {
+        return antecedenteEstudioList;
+    }
+
+    public void setAntecedenteEstudioList(List<AntecedenteEstudio> antecedenteEstudioList) {
+        this.antecedenteEstudioList = antecedenteEstudioList;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;

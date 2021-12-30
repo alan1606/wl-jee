@@ -38,6 +38,9 @@ public class AntecedenteEstudio implements Serializable {
     @JoinColumn(name = "id_antecedente", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Antecedentes idAntecedente;
+    @JoinColumn(name = "id_venta_concepto", referencedColumnName = "id_vc")
+    @ManyToOne(optional = false)
+    private VentaConceptos idVentaConcepto;
 
     public AntecedenteEstudio() {
     }
@@ -60,6 +63,14 @@ public class AntecedenteEstudio implements Serializable {
 
     public void setIdAntecedente(Antecedentes idAntecedente) {
         this.idAntecedente = idAntecedente;
+    }
+
+    public VentaConceptos getIdVentaConcepto() {
+        return idVentaConcepto;
+    }
+
+    public void setIdVentaConcepto(VentaConceptos idVentaConcepto) {
+        this.idVentaConcepto = idVentaConcepto;
     }
 
     @Override

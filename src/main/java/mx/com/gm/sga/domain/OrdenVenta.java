@@ -284,9 +284,11 @@ public class OrdenVenta implements Serializable {
     @NotNull
     private boolean pagado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
-    private List<Devolucion> devolucionList;
+    private List<VentaConceptos> ventaConceptosList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
     private List<PagoOrdenVenta> pagoOrdenVentaList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenVenta")
+    private List<Devolucion> devolucionList;
     @JoinColumn(name = "id_forma_pago", referencedColumnName = "id_fp")
     @ManyToOne(optional = false)
     private CatalogoFormaPago idFormaPago;
@@ -803,12 +805,12 @@ public class OrdenVenta implements Serializable {
     }
 
     @XmlTransient
-    public List<Devolucion> getDevolucionList() {
-        return devolucionList;
+    public List<VentaConceptos> getVentaConceptosList() {
+        return ventaConceptosList;
     }
 
-    public void setDevolucionList(List<Devolucion> devolucionList) {
-        this.devolucionList = devolucionList;
+    public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
+        this.ventaConceptosList = ventaConceptosList;
     }
 
     @XmlTransient
@@ -818,6 +820,15 @@ public class OrdenVenta implements Serializable {
 
     public void setPagoOrdenVentaList(List<PagoOrdenVenta> pagoOrdenVentaList) {
         this.pagoOrdenVentaList = pagoOrdenVentaList;
+    }
+
+    @XmlTransient
+    public List<Devolucion> getDevolucionList() {
+        return devolucionList;
+    }
+
+    public void setDevolucionList(List<Devolucion> devolucionList) {
+        this.devolucionList = devolucionList;
     }
 
     public CatalogoFormaPago getIdFormaPago() {

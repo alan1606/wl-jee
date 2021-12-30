@@ -763,5 +763,5 @@ public class Pacientes implements Serializable {
     public String toString() {
         return "mx.com.gm.sga.domain.Pacientes[ idP=" + idP + " ]";
     }
-
+    
 }

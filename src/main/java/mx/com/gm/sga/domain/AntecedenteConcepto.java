@@ -6,9 +6,7 @@
 package mx.com.gm.sga.domain;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,38 +15,37 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author alanm
  */
 @Entity
-@Table(name = "antecedentes_areas")
+@Table(name = "antecedente_concepto")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "AntecedentesAreas.findAll", query = "SELECT a FROM AntecedentesAreas a"),
-    @NamedQuery(name = "AntecedentesAreas.findById", query = "SELECT a FROM AntecedentesAreas a WHERE a.id = :id")})
-public class AntecedentesAreas implements Serializable {
+    @NamedQuery(name = "AntecedenteConcepto.findAll", query = "SELECT a FROM AntecedenteConcepto a"),
+    @NamedQuery(name = "AntecedenteConcepto.findById", query = "SELECT a FROM AntecedenteConcepto a WHERE a.id = :id")})
+public class AntecedenteConcepto implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     private Long id;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAntecedente")
-    private List<AntecedentesAreas> antecedentesAreasList;
     @JoinColumn(name = "id_antecedente", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private AntecedentesAreas idAntecedente;
+    private Antecedentes idAntecedente;
+    @JoinColumn(name = "id_concepto", referencedColumnName = "id_to")
+    @ManyToOne(optional = false)
+    private Conceptos idConcepto;
 
-    public AntecedentesAreas() {
+    public AntecedenteConcepto() {
     }
 
-    public AntecedentesAreas(Long id) {
+    public AntecedenteConcepto(Long id) {
         this.id = id;
     }
 
@@ -60,21 +57,20 @@ public class AntecedentesAreas implements Serializable {
         this.id = id;
     }
 
-    @XmlTransient
-    public List<AntecedentesAreas> getAntecedentesAreasList() {
-        return antecedentesAreasList;
-    }
-
-    public void setAntecedentesAreasList(List<AntecedentesAreas> antecedentesAreasList) {
-        this.antecedentesAreasList = antecedentesAreasList;
-    }
-
-    public AntecedentesAreas getIdAntecedente() {
+    public Antecedentes getIdAntecedente() {
         return idAntecedente;
     }
 
-    public void setIdAntecedente(AntecedentesAreas idAntecedente) {
+    public void setIdAntecedente(Antecedentes idAntecedente) {
         this.idAntecedente = idAntecedente;
+    }
+
+    public Conceptos getIdConcepto() {
+        return idConcepto;
+    }
+
+    public void setIdConcepto(Conceptos idConcepto) {
+        this.idConcepto = idConcepto;
     }
 
     @Override
@@ -87,10 +83,10 @@ public class AntecedentesAreas implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof AntecedentesAreas)) {
+        if (!(object instanceof AntecedenteConcepto)) {
             return false;
         }
-        AntecedentesAreas other = (AntecedentesAreas) object;
+        AntecedenteConcepto other = (AntecedenteConcepto) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -99,7 +95,7 @@ public class AntecedentesAreas implements Serializable {
 
     @Override
     public String toString() {
-        return "mx.com.gm.sga.domain.AntecedentesAreas[ id=" + id + " ]";
+        return "mx.com.gm.sga.domain.AntecedenteConcepto[ id=" + id + " ]";
     }
     
 }
