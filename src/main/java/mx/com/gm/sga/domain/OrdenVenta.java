@@ -6,7 +6,6 @@
 package mx.com.gm.sga.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -22,8 +21,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -74,7 +71,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "OrdenVenta.findByPDescPro", query = "SELECT o FROM OrdenVenta o WHERE o.pDescPro = :pDescPro"),
     @NamedQuery(name = "OrdenVenta.findByDescDPro", query = "SELECT o FROM OrdenVenta o WHERE o.descDPro = :descDPro"),
     @NamedQuery(name = "OrdenVenta.findByTDescPro", query = "SELECT o FROM OrdenVenta o WHERE o.tDescPro = :tDescPro"),
-    @NamedQuery(name = "OrdenVenta.findByMedicoCOv", query = "SELECT o FROM OrdenVenta o WHERE o.medicoCOv = :medicoCOv"),
     @NamedQuery(name = "OrdenVenta.findByMedicoEiOv", query = "SELECT o FROM OrdenVenta o WHERE o.medicoEiOv = :medicoEiOv"),
     @NamedQuery(name = "OrdenVenta.findByMedicoElOv", query = "SELECT o FROM OrdenVenta o WHERE o.medicoElOv = :medicoElOv"),
     @NamedQuery(name = "OrdenVenta.findByPersonalSOv", query = "SELECT o FROM OrdenVenta o WHERE o.personalSOv = :personalSOv"),
@@ -225,8 +221,6 @@ public class OrdenVenta implements Serializable {
     @Size(max = 65535)
     @Column(name = "observaciones_s_ov")
     private String observacionesSOv;
-    @Column(name = "medico_c_ov")
-    private Integer medicoCOv;
     @Column(name = "medico_ei_ov")
     private Integer medicoEiOv;
     @Column(name = "medico_el_ov")
@@ -292,6 +286,9 @@ public class OrdenVenta implements Serializable {
     @JoinColumn(name = "id_forma_pago", referencedColumnName = "id_fp")
     @ManyToOne(optional = false)
     private CatalogoFormaPago idFormaPago;
+    @JoinColumn(name = "medico_c_ov", referencedColumnName = "id")
+    @ManyToOne
+    private Medico medicoCOv;
     @JoinColumn(name = "id_paciente_ov", referencedColumnName = "id_p")
     @ManyToOne(optional = false)
     private Pacientes idPacienteOv;
@@ -652,14 +649,6 @@ public class OrdenVenta implements Serializable {
         this.observacionesSOv = observacionesSOv;
     }
 
-    public Integer getMedicoCOv() {
-        return medicoCOv;
-    }
-
-    public void setMedicoCOv(Integer medicoCOv) {
-        this.medicoCOv = medicoCOv;
-    }
-
     public Integer getMedicoEiOv() {
         return medicoEiOv;
     }
@@ -837,6 +826,14 @@ public class OrdenVenta implements Serializable {
 
     public void setIdFormaPago(CatalogoFormaPago idFormaPago) {
         this.idFormaPago = idFormaPago;
+    }
+
+    public Medico getMedicoCOv() {
+        return medicoCOv;
+    }
+
+    public void setMedicoCOv(Medico medicoCOv) {
+        this.medicoCOv = medicoCOv;
     }
 
     public Pacientes getIdPacienteOv() {

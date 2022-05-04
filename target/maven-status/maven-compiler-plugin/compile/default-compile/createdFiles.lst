@@ -8,6 +8,7 @@ mx\com\gm\sga\domain\Devolucion.class
 mx\com\gm\sga\datos\ConceptosDaoImpl.class
 mx\com\gm\sga\servicio\InstitucionServiceRemote.class
 mx\com\gm\sga\domain\Instrucciones.class
+mx\com\gm\sga\datos\MedicoDaoImpl.class
 mx\com\gm\sga\datos\PaqueteDaoImpl.class
 mx\com\gm\sga\servicio\InstruccionesServiceWs.class
 mx\com\gm\sga\datos\InstruccionesDaoImpl.class
@@ -58,12 +59,14 @@ mx\com\gm\sga\servicio\VentaConceptosServiceRemote.class
 mx\com\gm\sga\servicio\AntecedentesServiceImpl.class
 mx\com\gm\sga\servicio\VentaConceptosServiceRS.class
 mx\com\gm\sga\domain\Conceptos.class
+mx\com\gm\sga\servicio\MedicoService.class
 mx\com\gm\sga\servicio\UsuariosServiceWs.class
 mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRemote.class
 mx\com\gm\sga\servicio\EquipoDicomServiceRS.class
 mx\com\gm\sga\servicio\InstruccionesServiceRs.class
 mx\com\gm\sga\servicio\EquipoDicomServiceImpl.class
 mx\com\gm\sga\datos\CfdiDaoImpl.class
+mx\com\gm\sga\datos\MedicoDao.class
 mx\com\gm\sga\domain\DatosFacturacion.class
 mx\com\gm\sga\datos\ConceptoPaqueteDao.class
 mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.class
@@ -87,6 +90,7 @@ mx\com\gm\sga\servicio\WorklistServiceRs.class
 mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.class
 mx\com\gm\sga\servicio\DatosFacturacionServiceWs.class
 mx\com\gm\sga\servicio\EquipoDicomServiceRemote.class
+mx\com\gm\sga\servicio\MedicoServiceImpl.class
 mx\com\gm\sga\servicio\OrdenVentaServiceWs.class
 mx\com\gm\sga\servicio\CatalogoFormaPagoServiceImpl.class
 mx\com\gm\sga\servicio\DevolucionServiceImpl.class
@@ -101,6 +105,7 @@ mx\com\gm\sga\domain\Mexico.class
 mx\com\gm\sga\datos\WorklistDaoImpl.class
 mx\com\gm\sga\datos\MexicoDao.class
 mx\com\gm\sga\domain\Firma.class
+mx\com\gm\sga\servicio\MedicoServiceWs.class
 mx\com\gm\sga\domain\Pacientes.class
 mx\com\gm\sga\domain\MovimientoCorte.class
 mx\com\gm\sga\servicio\DatosFacturacionService.class

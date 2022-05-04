@@ -65,8 +65,7 @@ public class Tecnico implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha_nacimiento")
-    @Temporal(TemporalType.DATE)
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTecnico")
     private List<VentaConceptos> ventaConceptosList;
 
@@ -77,7 +76,7 @@ public class Tecnico implements Serializable {
         this.id = id;
     }
 
-    public Tecnico(Integer id, String nombres, String apellidos, String correo, String telefono, Date fechaNacimiento) {
+    public Tecnico(Integer id, String nombres, String apellidos, String correo, String telefono, String fechaNacimiento) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -126,11 +125,11 @@ public class Tecnico implements Serializable {
         this.telefono = telefono;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

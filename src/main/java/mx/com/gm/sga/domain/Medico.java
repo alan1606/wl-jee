@@ -32,18 +32,18 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Medico.findAll", query = "SELECT m FROM Medico m"),
+    @NamedQuery(name = "Medico.findAll", query = "SELECT m FROM Medico m order by m.nombres"),
     @NamedQuery(name = "Medico.findById", query = "SELECT m FROM Medico m WHERE m.id = :id"),
     @NamedQuery(name = "Medico.findByNombres", query = "SELECT m FROM Medico m WHERE m.nombres = :nombres"),
     @NamedQuery(name = "Medico.findByApellidos", query = "SELECT m FROM Medico m WHERE m.apellidos = :apellidos"),
-    @NamedQuery(name = "Medico.findByEspecialidad", query = "SELECT m FROM Medico m WHERE m.especialidad = :especialidad"),
+    @NamedQuery(name = "Medico.findByEspecialidad", query = "SELECT m FROM Medico m WHERE m.especialidad = :especialidad order by m.nombres"),
     @NamedQuery(name = "Medico.findByTelefono", query = "SELECT m FROM Medico m WHERE m.telefono = :telefono"),
     @NamedQuery(name = "Medico.findByCorreo", query = "SELECT m FROM Medico m WHERE m.correo = :correo"),
     @NamedQuery(name = "Medico.findByDireccion", query = "SELECT m FROM Medico m WHERE m.direccion = :direccion"),
     @NamedQuery(name = "Medico.findByFechaNacimiento", query = "SELECT m FROM Medico m WHERE m.fechaNacimiento = :fechaNacimiento"),
     @NamedQuery(name = "Medico.findByWhatsapp", query = "SELECT m FROM Medico m WHERE m.whatsapp = :whatsapp"),
     @NamedQuery(name = "Medico.findByToken", query = "SELECT m FROM Medico m WHERE m.token = :token"),
-    @NamedQuery(name = "Medico.findByRadiologo", query = "SELECT m FROM Medico m WHERE m.radiologo = :radiologo")})
+    @NamedQuery(name = "Medico.findByRadiologo", query = "SELECT m FROM Medico m WHERE m.radiologo = :radiologo order by m.nombres")})
 public class Medico implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -78,8 +78,7 @@ public class Medico implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha_nacimiento")
-    @Temporal(TemporalType.DATE)
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 15)
@@ -93,6 +92,8 @@ public class Medico implements Serializable {
     private boolean radiologo;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idMedicoRadiologo")
     private List<VentaConceptos> ventaConceptosList;
+    @OneToMany(mappedBy = "medicoCOv")
+    private List<OrdenVenta> ordenVentaList;
 
     public Medico() {
     }
@@ -101,7 +102,7 @@ public class Medico implements Serializable {
         this.id = id;
     }
 
-    public Medico(Integer id, String nombres, String apellidos, String especialidad, String telefono, String correo, String direccion, Date fechaNacimiento, String whatsapp, String token, boolean radiologo) {
+    public Medico(Integer id, String nombres, String apellidos, String especialidad, String telefono, String correo, String direccion, String fechaNacimiento, String whatsapp, String token, boolean radiologo) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -171,11 +172,11 @@ public class Medico implements Serializable {
         this.direccion = direccion;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -210,6 +211,15 @@ public class Medico implements Serializable {
 
     public void setVentaConceptosList(List<VentaConceptos> ventaConceptosList) {
         this.ventaConceptosList = ventaConceptosList;
+    }
+
+    @XmlTransient
+    public List<OrdenVenta> getOrdenVentaList() {
+        return ordenVentaList;
+    }
+
+    public void setOrdenVentaList(List<OrdenVenta> ordenVentaList) {
+        this.ordenVentaList = ordenVentaList;
     }
 
     @Override
