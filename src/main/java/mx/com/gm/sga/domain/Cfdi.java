@@ -103,7 +103,7 @@ public class Cfdi implements Serializable {
 
     @Override
     public String toString() {
-        return "mx.com.gm.sga.domain.Cfdi[ clave=" + clave + " ]";
+        return descripcion + " : " + clave;
     }
     
 }

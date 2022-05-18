@@ -1,187 +1,187 @@
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUUsuarioDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EncontrarObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Pacientes.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MedicoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\EquipoDicom.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Areas.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MedicoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Cfdi.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceRs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CfdiDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PaqueteDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\prueba.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteEstudioDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteEstudioDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MedicoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceRs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MedicoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\criteria\PruebaApiCriteria.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\asociaciones\ClienteAsociacionesJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteConceptoIds.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Mexico.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PagoOrdenVenta.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PaqueteDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Institucion.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DevolucionDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DevolucionDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MedicoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Instrucciones.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteConceptoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Antecedentes.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteConceptoDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConsentimientoConcepto.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\jpql\PruebaJPQL.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConceptoPaquete.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Usuarios.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedentesDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteConcepto.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\CfdiDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Worklist.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Conceptos.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteEstudio.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DatosFacturacionDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\DatosFacturacion.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Firma.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\PacienteConsentimientoConcepto.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\MovimientoCorte.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Devolucion.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedentesDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Consentimiento.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\VentaConceptos.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\OrdenVenta.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptoPaqueteDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\cascade\PersistenciaCascadaJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoSesionLarga.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptoPaqueteDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EliminarObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\DatosFacturacionDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Medico.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Paquete.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionService.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesServiceWs.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\CatalogoFormaPago.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\NUPersonaDaoImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRemote.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDao.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRS.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\PersistirObjetoJPA.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\Tecnico.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceImpl.java
-C:\Users\alanm\Documents\api worklist\wl-jee\src\main\java\mx\com\gm\sga\domain\ConceptosInstitucion.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteConceptoDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Mexico.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteEstudio.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteConcepto.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoJPA.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EliminarObjetoJPA.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\CatalogoFormaPago.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\ConceptosInstitucion.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\EncontrarObjetoJPA.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Paquete.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\OrdenVenta.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Cfdi.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\ConceptoPaquete.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Devolucion.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\MedicoDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Pacientes.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\InstruccionesDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\asociaciones\ClienteAsociacionesJPA.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteEstudioDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptoPaqueteDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Institucion.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\DatosFacturacionDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Medico.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\PacienteDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Firma.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedentesDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\MexicoDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\CfdiDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\DatosFacturacionDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\VentaConceptos.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\DevolucionServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Usuarios.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\CatalogoFormaPagoDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Tecnico.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\OrdenVentaServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedentesDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\VentaConceptosDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\jpql\PruebaJPQL.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptoPaqueteDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MexicoServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\AntecedenteConceptoIds.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceRs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\PersistirObjetoJPA.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteEstudioDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Consentimiento.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\DatosFacturacionServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MedicoServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Worklist.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AntecedentesServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Antecedentes.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\MedicoDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MedicoServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\PacienteConsentimientoConcepto.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\UsuariosDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceRs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MovimientoCorteServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\DevolucionDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\PaqueteDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\UsuariosServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\CfdiDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\PagoOrdenVentaDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\MedicoService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\InstitucionDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\ConsentimientoConcepto.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceRemote.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CatalogoFormaPagoService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\cascade\PersistenciaCascadaJPA.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\EquipoDicom.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PagoOrdenVentaServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\criteria\PruebaApiCriteria.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\OrdenVentaDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\AreasServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoConceptoServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Instrucciones.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstruccionesServiceRs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PacienteServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\DevolucionDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\PagoOrdenVenta.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosInstitucionServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConsentimientoConceptoDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Conceptos.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\PaqueteDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\WorklistDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConsentimientoServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\EquipoDicomServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\CfdiServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AntecedenteConceptoDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\Areas.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\MovimientoCorteDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\WorklistServiceWs.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\EquipoDicomDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\NUPersonaDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\PaquetesServiceImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\cliente\ciclovidajpa\ActualizarObjetoSesionLarga.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\MovimientoCorte.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\prueba.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\domain\DatosFacturacion.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\AreasDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\ConceptosInstitucionDao.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\InstitucionService.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\VentaConceptosServiceRS.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\datos\NUUsuarioDaoImpl.java
+C:\Users\Ultrasonido\Documents\GitHub\wl-jee\src\main\java\mx\com\gm\sga\servicio\ConceptosServiceRS.java

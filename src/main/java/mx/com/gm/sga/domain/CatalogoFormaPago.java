@@ -131,7 +131,7 @@ public class CatalogoFormaPago implements Serializable {
 
     @Override
     public String toString() {
-        return "mx.com.gm.sga.domain.CatalogoFormaPago[ idFp=" + idFp + " ]";
+        return formaPagoFp;
     }
     
 }

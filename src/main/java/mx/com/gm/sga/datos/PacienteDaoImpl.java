@@ -67,8 +67,7 @@ public class PacienteDaoImpl implements PacienteDao {
         Query q = null;
         jpql = "select p from Pacientes p where CONCAT(p.nombreP, ' ', p.apaternoP, ' ', p.amaternoP) like :nombre order by p.nombreCompletoP";
         q = em.createQuery(jpql);
-        nombre += "%";
-        q.setParameter("nombre", nombre);
+        q.setParameter("nombre", "%" + nombre + "%");
         return q.getResultList();
     }
 
