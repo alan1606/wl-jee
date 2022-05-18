@@ -37,4 +37,6 @@ public interface MedicoService {
     public List<Medico> buscarMedicoPorCorreo(String correo);
 
     public void actualizarMedico(Medico medico);
+    
+    public List<Medico> buscarRerefenteLikeNombre(String nombre);
 }

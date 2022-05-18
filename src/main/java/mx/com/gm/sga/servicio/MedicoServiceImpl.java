@@ -87,5 +87,10 @@ public class MedicoServiceImpl implements MedicoService, MedicoServiceWs{
     public void actualizarMedico(Medico medico) {
         medicoDao.actualizarMedico(medico);
     }
+
+    @Override
+    public List<Medico> buscarRerefenteLikeNombre(String nombre) {
+        return medicoDao.buscarReferenteLikeNombre(nombre);
+    }
     
 }

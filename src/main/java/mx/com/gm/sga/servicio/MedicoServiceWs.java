@@ -50,4 +50,7 @@ public interface MedicoServiceWs {
     @WebMethod
     public void actualizarMedico(Medico medico);
 
+    @WebMethod
+    public List<Medico> buscarRerefenteLikeNombre(String nombre);
+
 }

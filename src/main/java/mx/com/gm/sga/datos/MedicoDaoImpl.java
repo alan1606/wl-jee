@@ -95,4 +95,12 @@ public class MedicoDaoImpl implements MedicoDao {
         em.merge(medico);
     }
 
+    @Override
+    public List<Medico> buscarReferenteLikeNombre(String nombre) {
+        Query query = em.createQuery("select m from Medico m where m.radiologo = false "
+                + "and upper(concat(m.nombres, ' ' , m.apellidos)) like upper(:nombre)");
+        query.setParameter("nombre", "%" + nombre + "%");
+        return query.getResultList();
+    }
+
 }
