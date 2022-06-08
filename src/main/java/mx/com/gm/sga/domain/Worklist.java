@@ -274,12 +274,12 @@ public class Worklist {
     public String getMensaje() {
 
         String msg = "MSH|^~\\&|" + aplicacionEnvia + "|" + sendingFacility + "|" + receivingApplication + "|" + receivingFacility + "|||OMI^O23|" + idMessageControl + "|P|2.5.1\r"
-                + "PID|||" + patientId + "||" + nombrePaciente + " " + apellidoMaterno + "^" + apellidoPaterno + "|" + apellidoMaterno + "|" + birthday + "|" + sex + "\r"
+                + "PID|||" + patientId + "||" + apellidoPaterno + " " + apellidoMaterno +  "^" + nombrePaciente + "|" + apellidoMaterno + "|" + birthday + "|" + sex + "\r"
                 //+ "PV1||||||2359||1234^CMP123|||||||A0||||908831\r"
                 + "NTE|||" + motivo + "|1R\r"
                 + "ORC|" + control + "|" + iDNIfOptional + "|" + iDNIfOptional + "||SC\r"
                 + "TQ1|||||||" + dateTime + "||" + priority + "||\r"
-                + "OBR|||||||||||||" + motivo + " ORB|||" + proveedor + "||||||||||||||||||||||||||||" + procedure + "\r"
+                + "OBR|||||||||||||" + motivo + "ORB|||" + proveedor + "||||||||||||||||||||||||||||" + procedure + "\r"
                 + "IPC|" + accessionNumber + "|" + solProcedure + "|" + uidIdStudyInstance + "|" + idStepProcedure + "|" + modality + "||" + stationName + "||" + scheduledAE + "\r";
         return msg;
     }

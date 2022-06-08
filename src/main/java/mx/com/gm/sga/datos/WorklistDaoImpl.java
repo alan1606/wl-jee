@@ -103,7 +103,7 @@ public class WorklistDaoImpl implements WorklistDao {
         //OBR
         worklist.setMotivo(estudio.getMotivoVisitaVc());
         worklist.setProveedor("MEDICO REFERENTE");
-        worklist.setProcedure(estudio.getIdConceptoEs().getDescripcionTo());
+        worklist.setProcedure(estudio.getIdConceptoEs().getConceptoTo());
 
         //IPC
         worklist.setAccessionNumber(estudio.getIdVc() + "");
